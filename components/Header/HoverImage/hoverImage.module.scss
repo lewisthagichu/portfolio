@@ -1,21 +1,43 @@
 .imageContainer{
-    display: block;
-    width: 300px;
-    height: 300px;
     position: absolute;
-    right: 0;
-    z-index: -1;
+    width: 360px;
+    height: 240px;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 0;
+    right: 5vw;
     
     img{
-        // border-radius: 50%;
+        opacity: 0.6;
+        border-radius: 10px;
         object-fit: cover;
         height: 100%;
         width: 100%;
     }
 }
 
-@media only screen and (max-width: 1000px) {
-   
+@media only screen and (max-width: 1600px) {   
+    .imageContainer{
+        width: 360px;
+        height: 180px;
+    }    
+}
+
+@media only screen and (max-width: 1460px) {   
+    .imageContainer{
+        width: 300px;
+        height: 180px;
+    }    
+}
+
+@media only screen and (max-width: 1300px) {   
+    .imageContainer{
+        width: 260px;
+        height: 160px;
+    }    
+}
+
+@media only screen and (max-width: 1024px) {   
     .imageContainer{
         display: none;
     }

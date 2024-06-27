@@ -5,23 +5,22 @@ import { motion } from 'framer-motion';
 import { height } from '@/utils/anim';
 import Body from '../Body/Body';
 import ContactDetails from '../ContactDetails/ContactDetails';
-import HoverImage from '../HoverImage/HoverImage';
 
 const links = [
   {
     title: 'About',
     to: '/about',
-    src: 'home.png',
+    src: 'about.webp',
   },
   {
     title: 'Work',
-    to: '/work',
-    src: 'lookbook.png',
+    to: '/projects',
+    src: 'projects.webp',
   },
   {
     title: 'Contact',
     to: '/contact',
-    src: 'contact.png',
+    src: 'contact.jpg',
   },
 ];
 
@@ -49,10 +48,6 @@ function Nav() {
             links={links}
             selectedLink={selectedLink}
             setSelectedLink={setSelectedLink}
-          />
-          <HoverImage
-            src={links[selectedLink.index]?.src}
-            isActive={selectedLink.isActive}
           />
         </div>
       </div>

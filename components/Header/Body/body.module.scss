@@ -5,23 +5,31 @@
     margin-top: 160px;
     font-family: "Archivo Black", sans-serif;
 
+    .wrapper {
+        position: relative;   
+        display: flex;
+        align-items: center;     
+    }
+
     a{
         color: #E8E7CB;
         text-decoration: none;
         text-transform: uppercase;
+        p{
+            display: flex;
+            overflow: hidden;
+            font-size: 9vw;
+            padding-right: 2vw;        
+            padding-top: 10px;
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing: -10px;
+            
+        }
     }
 
-    p{
-        display: flex;
-        overflow: hidden;
-        font-size: 9vw;
-        padding-right: 2vw;        
-        padding-top: 10px;
-        font-weight: 400;
-        line-height: 1.1;
-        letter-spacing: -10px;
-        
-    }
+
+
 }
 
 @media only screen and (max-width: 1200px) {
