@@ -1,0 +1,60 @@
+.body{
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin-top: 160px;
+    font-family: "Archivo Black", sans-serif;
+
+    a{
+        color: #E8E7CB;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    p{
+        display: flex;
+        overflow: hidden;
+        font-size: 9vw;
+        padding-right: 2vw;        
+        padding-top: 10px;
+        font-weight: 400;
+        line-height: 1.1;
+        letter-spacing: -10px;
+        
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+   
+    .body{
+        margin-top: 200px;
+        
+        p{  
+            letter-spacing: -8px;   
+            line-height: 1.6;       
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+   
+    .body{
+        justify-content: center;
+        margin-top: 0;
+        
+        p{  
+            letter-spacing: -8px;   
+            line-height: 1.6;       
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    
+    .body{
+        p{  
+            letter-spacing: -4px;
+            font-size: 12vw;          
+        }
+    }
+}

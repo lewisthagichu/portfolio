@@ -1,0 +1,27 @@
+.nav{
+    overflow: hidden;
+    background-color: #8EAEB6;
+ 
+    .wrapper{
+        position: relative;
+         display: grid;
+         grid-template-columns: 1fr 2fr;
+         gap: 16px;
+         height: 100%;
+         padding: 0 8rem;
+     }
+ 
+     .container{
+         display: flex;        
+     }
+ }
+ 
+ @media only screen and (max-width: 1000px) {
+     .nav{
+         .wrapper{
+            padding: 0 2rem;
+            
+         }
+     }
+ }
+

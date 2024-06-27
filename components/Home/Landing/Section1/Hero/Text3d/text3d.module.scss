@@ -1,0 +1,45 @@
+.textContainer{
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.4s;
+    transform-style: preserve-3d;
+    font-family: "DrukCond", sans-serif;
+
+    p {
+        font-size: 12vw;
+        font-weight: 700;
+        transition: all 0.4s;
+        color: #E8E7CB;
+        line-height: 1;
+    }
+
+    .secondary{
+        transform: rotateX(-90deg) translateY(3.5vw);
+        transform-origin: bottom center;
+        position: absolute;
+        color: black;
+        top: 0;
+        opacity: 0;
+    }
+
+    &:hover {
+        transform: rotateX(90deg);
+    }
+      
+    &:hover .secondary{
+        opacity: 1;
+    }
+      
+    &:hover .primary{
+        transform: translateY(-100%);
+        opacity: 0;
+    } 
+  }
+  
+
+
+  
+
+  
+  
+   
