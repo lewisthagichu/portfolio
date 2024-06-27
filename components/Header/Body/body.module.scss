@@ -23,46 +23,51 @@
             padding-top: 10px;
             font-weight: 400;
             line-height: 1.1;
-            letter-spacing: -10px;
-            
+            letter-spacing: -10px;            
         }
     }
-
-
-
 }
 
-@media only screen and (max-width: 1200px) {
-   
+@media only screen and (max-width: 1600px) {   
     .body{
-        margin-top: 200px;
-        
+        margin-top: 200px;        
         p{  
-            letter-spacing: -8px;   
+            letter-spacing: -6px;   
             line-height: 1.6;       
         }
     }
 }
 
-@media only screen and (max-width: 1024px) {
-   
+@media only screen and (max-width: 1024px) {   
     .body{
-        justify-content: center;
-        margin-top: 0;
-        
-        p{  
-            letter-spacing: -8px;   
-            line-height: 1.6;       
+        a{
+            p{  
+                letter-spacing: -4px;  
+                line-height: 1.8;    
+            }
+        }       
+    }
+}
+
+@media only screen and (max-width: 768px) {    
+    .body{
+        a{
+            p{  
+                letter-spacing: -2px;
+                font-size: 12vw;  
+                line-height: 1.6;        
+            }
         }
     }
 }
 
-@media only screen and (max-width: 768px) {
-    
+@media only screen and (max-width: 600px) {    
     .body{
-        p{  
-            letter-spacing: -4px;
-            font-size: 12vw;          
+        a {
+            p{  
+                letter-spacing: 0px;
+                line-height: 1.4;       
+            }
         }
     }
 }
