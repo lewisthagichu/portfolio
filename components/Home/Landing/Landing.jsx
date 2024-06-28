@@ -10,7 +10,7 @@ function Landing() {
 
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ['start start', 'end end'],
+    offset: ['start start', '200vh end'],
   });
   return (
     <div ref={container} className={styles.container}>

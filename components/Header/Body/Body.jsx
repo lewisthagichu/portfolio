@@ -15,6 +15,7 @@ function Body({ links, selectedLink, setSelectedLink }) {
           <div className="wrapper">
             {selectedLink.isActive && selectedLink.index == index && (
               <HoverImage
+                key={`i_${index}`}
                 src={links[selectedLink.index]?.src}
                 isActive={selectedLink.isActive}
               />
