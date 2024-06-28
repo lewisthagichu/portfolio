@@ -12,12 +12,12 @@ function Section2({ parentYProgress }) {
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ['start end', 'end'],
+    offset: ['start end', '100vh end'],
   });
 
   const backgroundColor = useTransform(
     scrollYProgress,
-    [0, 0.33, 1],
+    [0, 0.99, 1],
     ['black', 'black', '#B6B6B6']
   );
 

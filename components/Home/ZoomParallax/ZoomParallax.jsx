@@ -29,37 +29,44 @@ function ZoomParallax() {
     {
       src: Picture1,
       scale: scale4,
+      sizes: '50vw',
     },
     {
       src: Picture2,
       scale: scale5,
+      sizes: '35vw',
     },
     {
       src: Picture3,
       scale: scale6,
+      sizes: '20vw',
     },
     {
       src: Picture4,
       scale: scale5,
+      sizes: '25vw',
     },
     {
       src: Picture5,
       scale: scale6,
+      sizes: '20vw',
     },
     {
       src: Picture6,
       scale: scale8,
+      sizes: '30vw',
     },
     {
       src: Picture7,
       scale: scale9,
+      sizes: '15vw',
     },
   ];
 
   return (
     <div ref={container} className={styles.container}>
       <div className={styles.sticky}>
-        {pictures.map(({ src, scale }, index) => {
+        {pictures.map(({ src, scale, sizes }, index) => {
           return (
             <motion.div key={index} style={{ scale }} className={styles.el}>
               <div className={styles.imageContainer}>
