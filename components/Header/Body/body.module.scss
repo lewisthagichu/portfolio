@@ -1,61 +1,75 @@
 .body{
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
-    margin-top: 160px;
+    padding-top: 160px;
     font-family: "Archivo Black", sans-serif;
 
     .wrapper {
         position: relative;   
-        display: flex;
-        align-items: center;     
-    }
+        // display: flex;
+        // background-color: red;
 
-    a{
-        color: #E8E7CB;
-        text-decoration: none;
-        text-transform: uppercase;
-        p{
-            display: flex;
-            overflow: hidden;
-            font-size: 9vw;
-            padding-right: 2vw;        
-            padding-top: 10px;
-            font-weight: 400;
-            line-height: 1.1;
-            letter-spacing: -10px;            
+        a{
+            color: #E8E7CB;
+            text-decoration: none;
+            text-transform: uppercase;
+            p{
+                display: flex;
+                overflow: hidden;
+                font-size: 9vw;
+                padding-right: 2vw;        
+                padding-top: 10px;
+                font-weight: 400;
+                line-height: 1.1;
+                letter-spacing: -10px;            
+            }
         }
     }
+
 }
 
 @media only screen and (max-width: 1600px) {   
     .body{
-        margin-top: 200px;        
+        padding-top: 200px;      
+
         p{  
-            letter-spacing: -6px;   
+            letter-spacing: 6px;   
             line-height: 1.6;       
         }
     }
 }
 
-@media only screen and (max-width: 1024px) {   
+@media only screen and (max-width: 1200px) {   
     .body{
-        a{
-            p{  
-                letter-spacing: -4px;  
-                line-height: 1.8;    
-            }
-        }       
+        padding-top: 0;
+        order: 1;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // align-items: center;
+
+        .wrapper {
+            
+            a{
+                p{  
+                    letter-spacing: -4px;  
+                    line-height: 1.2;    
+                }
+            }   
+        }
+
     }
 }
 
 @media only screen and (max-width: 768px) {    
     .body{
-        a{
-            p{  
-                letter-spacing: -2px;
-                font-size: 12vw;  
-                line-height: 1.6;        
+
+        .wrapper{
+            a{
+                p{  
+                    letter-spacing: -2px;
+                    font-size: 12vw;  
+                    line-height: 1.6;        
+                }
             }
         }
     }
@@ -63,10 +77,12 @@
 
 @media only screen and (max-width: 600px) {    
     .body{
-        a {
-            p{  
-                letter-spacing: 0px;
-                line-height: 1.4;       
+        .wrapper {
+            a {
+                p{  
+                    letter-spacing: 0px;
+                    line-height: 1.4;       
+                }
             }
         }
     }

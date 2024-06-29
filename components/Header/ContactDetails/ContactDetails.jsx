@@ -28,37 +28,36 @@ function ContactDetails({ selectedLink, setSelectedLink }) {
 
   return (
     <div className={styles.container}>
-      <div className={styles.wrapper}>
-        <h5>CONTACT</h5>
-        {links.map((link) => {
-          const { text, url, index } = link;
-          return (
-            <a
-              key={`a_${index}`}
-              href={url}
-              target="_blank"
-              onMouseEnter={() => {
-                setSelectedLink({ isActive: true, index });
-              }}
-              onMouseLeave={() => {
-                setSelectedLink({ isActive: false, index });
-              }}
+      <h3>CONTACT</h3>
+
+      {links.map((link) => {
+        const { text, url, index } = link;
+        return (
+          <a
+            key={`a_${index}`}
+            href={url}
+            target="_blank"
+            onMouseEnter={() => {
+              setSelectedLink({ isActive: true, index });
+            }}
+            onMouseLeave={() => {
+              setSelectedLink({ isActive: false, index });
+            }}
+          >
+            <motion.p
+              variants={fade}
+              initial="initial"
+              animate={
+                selectedLink.isActive && selectedLink.index != index
+                  ? 'open'
+                  : 'closed'
+              }
             >
-              <motion.p
-                variants={fade}
-                initial="initial"
-                animate={
-                  selectedLink.isActive && selectedLink.index != index
-                    ? 'open'
-                    : 'closed'
-                }
-              >
-                {getChars(text)}
-              </motion.p>
-            </a>
-          );
-        })}
-      </div>
+              {getChars(text)}
+            </motion.p>
+          </a>
+        );
+      })}
     </div>
   );
 }

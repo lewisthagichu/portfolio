@@ -1,4 +1,3 @@
-'use client';
 import styles from './hero.module.scss';
 import Text3d from './Text3d/Text3d';
 
@@ -13,6 +12,10 @@ function Hero() {
         <Text3d primary={'FULL-STACK'} secondary={'FULL-STACK'} />
         <Text3d primary={'DEVELOPER'} secondary={'DEVELOPER'} />
       </div>
+
+      {/* <div className="imageContainer">
+        <Image src={bgImage} fill sizes="100vw" quality={100} alt="image" />
+      </div> */}
     </div>
   );
 }

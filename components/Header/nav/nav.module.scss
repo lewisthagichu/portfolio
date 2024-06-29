@@ -1,27 +1,32 @@
 .nav{
     overflow: hidden;
     background-color: #8EAEB6;
+    touch-action: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
  
-    .wrapper{
+    .container {
+        height: 100%;
         position: relative;
-         display: grid;
-         grid-template-columns: 1fr 2fr;
-         gap: 16px;
-         height: 100%;
-         padding: 0 8rem;
-     }
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 16px;
+        padding: 0 8rem;
+    } 
+}
  
-     .container{
-         display: flex;        
-     }
- }
- 
- @media only screen and (max-width: 1024px) {
-     .nav{
-         .wrapper{
-            padding: 0 2rem;
-            
-         }
-     }
- }
+ @media only screen and (max-width: 1200px) {
+    .nav{
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }           
+    }
+}
 
+
+ 

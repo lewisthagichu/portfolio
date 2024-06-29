@@ -2,52 +2,53 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    position: relative;
-    
+    gap: 0.3rem;
+    padding-bottom: 8rem;
 
-    .wrapper {      
-        position: absolute;
-        bottom: 160px; 
-        
-        a {
-            font-size: 18px;
-            color: #E8E7CB;
-            margin-bottom: 4px;
-        }
+    h3 {
+        font-size: 1vw;
     }
-
+    
+    a {
+        font-size: 1.6vw;
+        color: #E8E7CB;
+        padding-bottom: 0.8rem;
+    }
     
 }
 
 @media only screen and (max-width: 1200px) {
     .container{
-        .wrapper {
-            a {
-                font-size: 14px;
-            }
+        order: 2;
+        h3 {
+            font-size: 1.2vw;
+        }
+
+        a {
+            font-size: 2vw;
         }
     }
 }
 
 @media only screen and (max-width: 1024px) {
     .container{
-        .wrapper {
-            a {
-                font-size: 12px;
-            }
+        h3 {
+            font-size: 1.6vw;
         }
-    }
+        a {
+            font-size: 2.4vw;
+        }
+}
 }
 
 @media only screen and (max-width: 600px) {
     .container{
-        .wrapper {
-            h5 {
-                font-size: 10px;
-            }
-            a {
-                font-size: 8px;
-            }
+        h3 {
+            font-size: 2.4vw
+        }
+        a {
+            font-size: 3.2vw;
+            padding-bottom: 0.4rem;
         }
     }
 }

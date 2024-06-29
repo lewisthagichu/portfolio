@@ -1,8 +1,6 @@
 .header{
     position: fixed;
     width: 100%;
-    box-sizing: border-box;
-    padding: 20px;
     z-index: 3;
     background-color: transparent;
     color: #E8E7CB;
@@ -14,11 +12,7 @@
         font-size: 15px;
         font-weight: 400;
         position: relative;
-        margin: 0 6rem;
-
-        p{
-            margin: 0px;
-        }
+        margin: 2rem 8rem;
 
         a{
             text-decoration: none;
@@ -50,6 +44,7 @@
                 position: relative;
                 display: flex;
                 align-items: center;
+                z-index: 4;
             }
 
             p{
@@ -63,6 +58,7 @@
                 width: 22.5px;
                 position: relative;
                 pointer-events: none;
+                z-index: 4;
     
                 &::after, &::before{
                     content: "";

@@ -18,7 +18,7 @@ function Section2({ parentYProgress }) {
   const backgroundColor = useTransform(
     scrollYProgress,
     [0, 0.99, 1],
-    ['black', 'black', '#B6B6B6']
+    ['#00331A', '#00331A', '#B6B6B6']
   );
 
   return (

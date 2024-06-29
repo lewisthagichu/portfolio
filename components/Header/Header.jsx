@@ -12,6 +12,11 @@ function Header() {
 
   const pathname = usePathname();
 
+  const toggleNav = () => {
+    setIsActive(!isActive);
+    // document.body.style.overflow = isActive ? 'auto' : 'hidden';
+  };
+
   useEffect(() => {
     setIsActive(false);
   }, [pathname]);
@@ -19,16 +24,11 @@ function Header() {
   return (
     <div className={styles.header}>
       <div className={styles.bar}>
-        <Link onClick={() => setIsActive(false)} href="/">
+        <Link onMouseDown={() => setIsActive(false)} href="/">
           Lewis Thagichu
         </Link>
 
-        <div
-          onMouseDown={() => {
-            setIsActive(!isActive);
-          }}
-          className={styles.el}
-        >
+        <div onMouseDown={toggleNav} className={styles.el}>
           <div
             className={`${styles.burger} ${
               isActive ? styles.burgerActive : ''

@@ -38,18 +38,16 @@ function Nav() {
       exit="exit"
       className={styles.nav}
     >
-      <div className={styles.wrapper}>
+      <div className={styles.container}>
         <ContactDetails
           selectedLink={selectedLink}
           setSelectedLink={setSelectedLink}
         />
-        <div className={styles.container}>
-          <Body
-            links={links}
-            selectedLink={selectedLink}
-            setSelectedLink={setSelectedLink}
-          />
-        </div>
+        <Body
+          links={links}
+          selectedLink={selectedLink}
+          setSelectedLink={setSelectedLink}
+        />
       </div>
     </motion.div>
   );

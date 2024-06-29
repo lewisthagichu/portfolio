@@ -12,7 +12,7 @@ function Body({ links, selectedLink, setSelectedLink }) {
       {links.map((link, index) => {
         const { to, title } = link;
         return (
-          <div className="wrapper" key={`wrapper_${index}`}>
+          <div className={styles.wrapper} key={`wrapper_${index}`}>
             {selectedLink.isActive && selectedLink.index === index && (
               <HoverImage
                 key={`hover_${index}`}

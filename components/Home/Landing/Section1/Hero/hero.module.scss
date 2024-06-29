@@ -1,12 +1,11 @@
 .wrapper {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
+  position: relative;
+  height: 100%;
 
     .topLeft {
         position: absolute;
-        top: 150px;
-        left: 25px;
+        top: 15rem;
+        left: 8rem;
         display: flex;
         flex-direction: column;
         transform-style: preserve-3d;
@@ -14,8 +13,8 @@
     
     .bottomRight {
       position: absolute;
-      bottom: 75px;
-      right: 25px;
+      bottom: 7.5rem;
+      right: 8rem;
       display: flex;
       flex-direction: column;
       transform-style: preserve-3d;
