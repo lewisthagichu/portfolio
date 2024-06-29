@@ -2,6 +2,7 @@ import Head from 'next/head';
 import styles from '@/styles/Home.module.css';
 import Landing from '@/components/Home/Landing/Landing';
 import Description from '@/components/Home/Description/Description';
+import SelectedWork from '@/components/Home/SelectedWork/SelectedWork';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <div className={styles.container}>
         <Landing />
         <Description />
+        <SelectedWork />
       </div>
     </>
   );

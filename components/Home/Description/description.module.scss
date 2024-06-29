@@ -1,11 +1,11 @@
 .container {
     position: relative;
     background: linear-gradient(to bottom, #EBEBEB, #EAEAEA);
-    height: 144vh;
-    padding: 16vh 8rem 0;
+    height: 100vh;
+    padding: 12vh 16rem 0;
 
     h3 {
-        padding-bottom: 60px;
+        padding-bottom: 6rem;
         font-size: 24px;
     }
 
@@ -19,12 +19,11 @@
             display: flex;
             flex-direction: column;
             gap: 4rem;
-            // justify-content: flex-end;
-            // align-items: center;
+            align-items: flex-end;
 
             .paragraph{
                 display: flex;
-                font-size: 2vw;
+                font-size: 1.8vw;
                 line-height: 1.2;
                 max-width: 1000px;
                 color: #000;
@@ -36,12 +35,12 @@
         .expertise {
             display: flex;
             flex-direction: column;
-            margin-left: 8rem;
+            margin-left: 16rem;
             max-width: 1000px;
 
             h5 {
                 font-size: 16px;
-                padding-bottom: 4vh;
+                padding-bottom: 4rem;
                 letter-spacing: 4px;
             }
 
@@ -75,4 +74,116 @@
                 }
         }
     }
+}
+
+@media screen and (max-width: 1600px) {
+    .container {
+        padding: 12vh 8rem 0;
+    }
+}
+
+@media screen and (max-width: 1332px) {
+    .container {
+        h3 {
+            padding-bottom: 4rem;
+        }
+        .wrapper {
+            .expertise {
+                margin-left: 4rem;
+
+                h5 {
+                    padding-bottom: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1096px) {
+    .container {
+        height: 80vh;
+        padding: 16vh 8vw 0;
+        h3 {
+            padding-bottom: 2rem;
+            font-size: 20px;
+        }
+        .wrapper{
+            .description {
+                align-items: flex-start;
+            }
+
+            .expertise {
+                margin-left: 0;
+                
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 884px) {
+    .container {
+        padding-top: 24vh;
+    }
+}
+
+@media screen and (max-width: 778px) {
+    .container {
+        h3 {
+            font-size: 16px;
+        }
+
+        .wrapper{   
+            gap: 3rem;         
+            .description {
+                .paragraph {
+                    font-size: 2.4vw;
+                }
+            }
+    
+            .expertise {
+                h5 {
+                    font-size: 12px;
+                }
+
+                p {
+                    font-size: 2vw;
+                }
+                
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 512px) {
+    .container {
+        padding-top: 16vh;
+        h3 {
+            font-size: 12px;
+        }
+
+        .wrapper{
+            .description {
+                gap: 3rem;
+
+                .paragraph {
+                    font-size: 2.6vw;
+                }
+            }
+    
+            .expertise {
+                width: 100%;
+                h5 {
+                    font-size: 10px;
+                    padding-bottom: 1rem;
+                }
+
+                p {
+                    font-size: 2vw;
+                }
+                
+            }
+        }
+    }
+
 }

@@ -38,12 +38,12 @@ function Description() {
 
   const { scrollYProgress: scrollYProgress1 } = useScroll({
     target: containerRef,
-    offset: ['start 0.95', 'end 0.75'],
+    offset: ['start 0.96', 'end 0.8'],
   });
 
   const { scrollYProgress: scrollYProgress2 } = useScroll({
     target: containerRef,
-    offset: ['start 0.45', 'end 0.3'],
+    offset: ['start 0.5', 'end 0.44'],
   });
 
   const h3Opacity = useSmoothOpacity(
@@ -77,11 +77,13 @@ function Description() {
           className={styles.expertise}
         >
           <h5>EXPERTISE</h5>
-          {expertises.map((expertise, index) => (
-            <p key={`exp_${index}`}>
-              - <span>{expertise}</span>
-            </p>
-          ))}
+          <div>
+            {expertises.map((expertise, index) => (
+              <p key={`exp_${index}`}>
+                - <span>{expertise}</span>
+              </p>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>
