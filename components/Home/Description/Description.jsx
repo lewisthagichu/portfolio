@@ -38,12 +38,12 @@ function Description() {
 
   const { scrollYProgress: scrollYProgress1 } = useScroll({
     target: containerRef,
-    offset: ['start 0.9', 'end 0.7'],
+    offset: ['start 0.95', 'end 0.75'],
   });
 
   const { scrollYProgress: scrollYProgress2 } = useScroll({
     target: containerRef,
-    offset: ['start 0.4', 'end 0.25'],
+    offset: ['start 0.45', 'end 0.3'],
   });
 
   const h3Opacity = useSmoothOpacity(
