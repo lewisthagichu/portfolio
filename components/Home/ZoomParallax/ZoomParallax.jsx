@@ -73,7 +73,7 @@ function ZoomParallax() {
                 <Image
                   src={src}
                   fill
-                  sizes="80vw"
+                  sizes="90vw"
                   alt="image"
                   placeholder="blur"
                 />

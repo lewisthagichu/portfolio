@@ -3,6 +3,7 @@
 @font-face {
   font-family: 'DrukCond';
   src: url('../public/fonts/Druk_Collection/DrukCondensedFamily/DrukXCond-Super-Trial.otf');
+  font-display: block;
 }
 
 * {

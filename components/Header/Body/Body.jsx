@@ -12,29 +12,25 @@ function Body({ links, selectedLink, setSelectedLink }) {
       {links.map((link, index) => {
         const { to, title } = link;
         return (
-          <div className="wrapper">
-            {selectedLink.isActive && selectedLink.index == index && (
+          <div className="wrapper" key={`wrapper_${index}`}>
+            {selectedLink.isActive && selectedLink.index === index && (
               <HoverImage
-                key={`i_${index}`}
+                key={`hover_${index}`}
                 src={links[selectedLink.index]?.src}
                 isActive={selectedLink.isActive}
               />
             )}
             <Link
               href={to}
-              key={`l_${index}`}
-              onMouseEnter={() => {
-                setSelectedLink({ isActive: true, index });
-              }}
-              onMouseLeave={() => {
-                setSelectedLink({ isActive: false, index });
-              }}
+              key={`link_${index}`}
+              onMouseEnter={() => setSelectedLink({ isActive: true, index })}
+              onMouseLeave={() => setSelectedLink({ isActive: false, index })}
             >
               <motion.p
                 variants={fade}
                 initial="initial"
                 animate={
-                  selectedLink.isActive && selectedLink.index != index
+                  selectedLink.isActive && selectedLink.index !== index
                     ? 'open'
                     : 'closed'
                 }

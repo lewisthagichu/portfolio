@@ -1,12 +1,7 @@
-'use client';
-import { useEffect } from 'react';
 import Head from 'next/head';
-import { Inter } from 'next/font/google';
 import styles from '@/styles/Home.module.css';
 import Landing from '@/components/Home/Landing/Landing';
 import Description from '@/components/Home/Description/Description';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   return (
@@ -20,7 +15,7 @@ export default function Home() {
 
       <div className={styles.container}>
         <Landing />
-        {/* <Description /> */}
+        <Description />
       </div>
     </>
   );
