@@ -1,37 +1,49 @@
-.header{
+.container{
     position: fixed;
-    width: 100%;
+    width: 100vw;
     z-index: 3;
     background-color: transparent;
     color: #E8E7CB;
 
     .bar{
-        display: flex;
-        justify-content: center;
-        text-transform: uppercase;
-        font-size: 1.6rem;
+        margin: 2rem 6rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        font-size: 1.4rem;
         font-weight: 700;
         position: relative;
-        margin: 2rem 8rem;
+
+        // div:nth-of-type(1) {
+        //     z-index: 4;
+
+        // }
 
         a{
             text-decoration: none;
             color: #E8E7CB;
-            position: absolute;
-            left: 0;
+            display: inline-block;
+            z-index: 4;
         }
 
-        .shopContainer{
+        .region{
             display: flex;
-            gap: 30px;
-            position: absolute;
-            right: 0;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 4;
 
-            .shop{
-                display: block;
-                cursor: pointer;
+            div {
+                display: flex;
+                align-items: center;
+                width: 50%;
+                justify-content: space-between;
+
+                &:nth-of-type(2) {
+                    justify-content: flex-end;
+                    gap: 2rem;
+                }
             }
-        }
+        }        
 
         .el{
             display: flex;
@@ -58,7 +70,7 @@
                 width: 22.5px;
                 position: relative;
                 z-index: 4;
-    
+                
                 &::after, &::before{
                     content: "";
                     height: 1px;
@@ -97,15 +109,12 @@
 
 @media only screen and (max-width: 600px) {
     .header{
-        padding: 10px;
 
         .bar{
-            font-size: 12px;
-            margin: 0;
-        }
+            font-size: 1rem;
+            margin: 2rem;
+            max-width: calc(100vw - 20px * 2);
 
-        .shop{
-            display: none;
         }
     }
 }

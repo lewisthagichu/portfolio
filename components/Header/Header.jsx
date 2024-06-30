@@ -1,20 +1,20 @@
 'use client';
 import styles from './header.module.scss';
-import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { opacity } from '@/utils/anim';
-import Nav from './nav/Nav';
 import { usePathname } from 'next/navigation';
+import { useState, useEffect } from 'react';
+import { opacity } from '@/utils/anim';
+import { useDateTime } from '@/utils/useDateTime';
+import Nav from './nav/Nav';
 
 function Header() {
   const [isActive, setIsActive] = useState(false);
-
   const pathname = usePathname();
+  const dateTime = useDateTime();
 
   const toggleNav = () => {
     setIsActive(!isActive);
-    // document.body.style.overflow = isActive ? 'auto' : 'hidden';
   };
 
   useEffect(() => {
@@ -22,7 +22,7 @@ function Header() {
   }, [pathname]);
 
   return (
-    <div className={styles.header}>
+    <div className={styles.container}>
       <div className={styles.bar}>
         <Link onMouseDown={() => setIsActive(false)} href="/">
           Lewis Thagichu
@@ -32,31 +32,31 @@ function Header() {
           <div
             className={`${styles.burger} ${
               isActive ? styles.burgerActive : ''
-            } `}
+            }`}
           ></div>
           <div className={styles.label}>
             <motion.p variants={opacity} animate={isActive ? 'closed' : 'open'}>
-              Menu
+              MENU
             </motion.p>
             <motion.p
               variants={opacity}
               animate={!isActive ? 'closed' : 'open'}
             >
-              Close
+              CLOSE
             </motion.p>
           </div>
         </div>
 
-        <motion.div
-          variants={opacity}
-          animate={isActive ? 'closed' : 'open'}
-          className={styles.shopContainer}
-        >
-          <p className={styles.shop}>TWITTER</p>
-          <div className={styles.el}>
-            <p>INSTAGRAM</p>
+        <div className={styles.region}>
+          <div>
+            <p className={styles.date}>{dateTime.date}</p>
+            <p>Available for projects</p>
           </div>
-        </motion.div>
+          <div>
+            <p className={styles.time}>{dateTime.time}</p>
+            <p className={styles.location}>Nairobi, KE</p>
+          </div>
+        </div>
       </div>
 
       <AnimatePresence mode="wait">{isActive && <Nav />}</AnimatePresence>
