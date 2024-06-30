@@ -10,9 +10,10 @@
     }
     
     a {
-        font-size: 1.6vw;
+        font-size: 1.4vw;
         color: #E8E7CB;
-        padding-bottom: 0.8rem;
+        padding-bottom: 0.6rem;
+        filter: brightness(1.25);
     }
     
 }
@@ -52,3 +53,10 @@
         }
     }
 }
+
+@media only screen and (max-height: 601px) {
+    .container{
+        display: none;
+    }
+}
+

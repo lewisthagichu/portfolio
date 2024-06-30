@@ -9,8 +9,8 @@
     height: 100%;
  
     .container {
-        height: 100%;
         position: relative;
+        height: 100%;
         display: grid;
         grid-template-columns: 1fr 2fr;
         gap: 16px;
@@ -21,10 +21,9 @@
  @media only screen and (max-width: 1200px) {
     .nav{
         .container {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            grid-template-columns: 1fr;
             padding: 0 4rem;
+            grid-template-rows: 1fr auto;
         }           
     }
 }
