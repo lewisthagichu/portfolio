@@ -1,9 +1,9 @@
-.container{
+.header{
     position: fixed;
     width: 100vw;
     z-index: 3;
-    background-color: transparent;
     color: #E8E7CB;
+    // color: black;
 
     .bar{
         margin: 2rem 6rem;
@@ -13,14 +13,9 @@
         font-weight: 700;
         position: relative;
 
-        // div:nth-of-type(1) {
-        //     z-index: 4;
-
-        // }
-
         a{
             text-decoration: none;
-            color: #E8E7CB;
+            color: inherit;
             display: inline-block;
             z-index: 4;
         }
@@ -32,17 +27,25 @@
             position: relative;
             z-index: 4;
 
-            div {
+            .status {
                 display: flex;
                 align-items: center;
-                width: 50%;
-                justify-content: space-between;
-
-                &:nth-of-type(2) {
-                    justify-content: flex-end;
-                    gap: 2rem;
-                }
             }
+            
+            .blinkingDot {
+                margin-left: .4rem;
+                width: 6px;
+                height: 6px;
+                background-color: green;
+                border-radius: 50%;
+                display: inline-block;
+                animation: blink 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+              }
+           
+
+
+               
+            
         }        
 
         .el{
@@ -118,3 +121,12 @@
         }
     }
 }
+
+@keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }

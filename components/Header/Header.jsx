@@ -22,10 +22,10 @@ function Header() {
   }, [pathname]);
 
   return (
-    <div className={styles.container}>
+    <div id={styles.header} className={styles.header}>
       <div className={styles.bar}>
         <Link onMouseDown={() => setIsActive(false)} href="/">
-          Lewis Thagichu
+          LEWIS THAGICHU
         </Link>
 
         <div onMouseDown={toggleNav} className={styles.el}>
@@ -48,14 +48,12 @@ function Header() {
         </div>
 
         <div className={styles.region}>
-          <div>
-            <p className={styles.date}>{dateTime.date}</p>
-            <p>Available for projects</p>
-          </div>
-          <div>
-            <p className={styles.time}>{dateTime.time}</p>
-            <p className={styles.location}>Nairobi, KE</p>
-          </div>
+          <p className={styles.date}>{dateTime.date}</p>
+          <p className={styles.status}>
+            Available for projects <span className={styles.blinkingDot}></span>
+          </p>
+          <p className={styles.time}>{dateTime.time}</p>
+          <p className={styles.location}>Nairobi, KE</p>
         </div>
       </div>
 
