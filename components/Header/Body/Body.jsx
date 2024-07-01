@@ -5,10 +5,11 @@ import { motion } from 'framer-motion';
 import { fade } from '@/utils/anim';
 import { getChars } from '@/utils/getChars';
 import HoverImage from '../HoverImage/HoverImage';
+import { ArchivoBlack } from '@/public/fonts/fonts';
 
 function Body({ links, selectedLink, setSelectedLink }) {
   return (
-    <div className={styles.body}>
+    <div className={`${styles.body} ${ArchivoBlack.className}`}>
       <div>
         {links.map((link, index) => {
           const { to, title } = link;

@@ -6,10 +6,14 @@ import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { opacity } from '@/utils/anim';
 import { useDateTime } from '@/utils/useDateTime';
+import useHeaderContext from '@/hooks/useHeaderContext';
 import Nav from './nav/Nav';
 
 function Header() {
   const [isActive, setIsActive] = useState(false);
+  const { headerStyle } = useHeaderContext();
+  const { background, color } = headerStyle;
+
   const pathname = usePathname();
   const dateTime = useDateTime();
 
@@ -21,8 +25,14 @@ function Header() {
     setIsActive(false);
   }, [pathname]);
 
+  useEffect(() => {}, [background, color]);
+
   return (
-    <div id={styles.header} className={styles.header}>
+    <div
+      id="headd"
+      style={background ? { background, color } : {}}
+      className={styles.header}
+    >
       <div className={styles.bar}>
         <Link onMouseDown={() => setIsActive(false)} href="/">
           LEWIS THAGICHU
