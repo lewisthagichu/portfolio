@@ -16,6 +16,7 @@ function Header() {
 
   const pathname = usePathname();
   const dateTime = useDateTime();
+  // console.log('first');
 
   const toggleNav = () => {
     setIsActive(!isActive);

@@ -1,12 +1,19 @@
 .container {
     position: relative;
-    height: 100vh;
-    background: #EAEAEA;
     padding: 0 16rem;
-
+    height: 500vh;
+    background: #EAEAEA;
+    
     h3 {
         padding-bottom: 6rem;
         font-size: 24px;
+        // position: sticky;
+        // top: 20rem;
+    }
+    
+    .wrapper {
+        background: #EAEAEA;
+
     }
 
 }

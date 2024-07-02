@@ -17,8 +17,8 @@ export default function Home() {
 
       <div className={styles.container}>
         <Landing />
-        {/* <Description /> */}
-        {/* <SelectedWork /> */}
+        <Description />
+        <SelectedWork />
       </div>
     </>
   );
