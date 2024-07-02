@@ -3,6 +3,7 @@ import styles from './description.module.scss';
 import { useRef } from 'react';
 import { motion, useScroll } from 'framer-motion';
 import { expertises, paragraphs } from '@/data/descriptionData';
+import { NeuehaasBody } from '@/public/fonts/fonts';
 import useSmoothOpacity from '@/hooks/useSmoothOpacity';
 
 const Word = ({ children, progress, range }) => {
@@ -58,7 +59,7 @@ function Description() {
   );
 
   return (
-    <section className={styles.container}>
+    <section className={`${styles.container} ${NeuehaasBody.className}`}>
       <motion.h3 style={{ opacity: h3Opacity }}>ABOUT/</motion.h3>
       <div className={styles.wrapper}>
         <div ref={containerRef} className={styles.description}>

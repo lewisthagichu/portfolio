@@ -22,7 +22,7 @@ export const projects = [
   {
     title: 'Portfolio',
     description: 'A website to showcase my skills and projects.',
-    src: 'bg-img.jpg',
+    src: 'portfolio.jpg',
     link: 'https://www.ignant.com/2023/10/28/capturing-balis-many-faces-zissou-documents-the-sacred-and-the-mundane-of-a-fragile-island/',
     color: '#F6F6F9',
     tech: ['NextJS', 'Sass', 'Gsap', 'Framer-motion'],

@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { opacity } from '@/utils/anim';
 import { useDateTime } from '@/utils/useDateTime';
+import { NeuehaasBody } from '@/public/fonts/fonts';
 import useHeaderContext from '@/hooks/useHeaderContext';
 import Nav from './nav/Nav';
 
@@ -32,7 +33,7 @@ function Header() {
     <div
       id="headd"
       style={background ? { background, color } : {}}
-      className={styles.header}
+      className={`${styles.header} ${NeuehaasBody.className}`}
     >
       <div className={styles.bar}>
         <Link onMouseDown={() => setIsActive(false)} href="/">
