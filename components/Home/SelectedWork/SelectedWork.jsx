@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import Card from './Card/Card';
 import styles from './selectedWork.module.scss';
 import { projects } from '@/data/projects';
-import { useScroll, motion } from 'framer-motion';
+import { useScroll } from 'framer-motion';
 
 function SelectedWork() {
   const container = useRef(null);

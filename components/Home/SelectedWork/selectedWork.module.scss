@@ -1,54 +1,47 @@
 .container {
     position: relative;
-    padding: 0 16rem;
+    padding: 0 clamp(1rem, 4vw, 6rem);
     background: #EAEAEA;
     
     h3 {
         padding-bottom: 6rem;
-        font-size: 24px;
+        font-size: clamp(4rem,10vw,8rem)
     }
 }
 
-@media screen and (max-width: 1600px) {
-    .container {
-        padding: 0 8rem ;
-    }
-}
+// @media screen and (max-width: 1332px) {
+//     .container {
+//         h3 {
+//             padding-bottom: 4rem;
+//         }
+//     }
+// }
 
-@media screen and (max-width: 1332px) {
-    .container {
-        h3 {
-            padding-bottom: 4rem;
-        }
-    }
-}
+// @media screen and (max-width: 1096px) {
+//     .container {
+//         h3 {
+//             font-size: 20px;
+//         }
+//     }
+// }
 
-@media screen and (max-width: 1096px) {
-    .container {
-        padding: 0 8vw;
-        h3 {
-            font-size: 20px;
-        }
-    }
-}
+// @media screen and (max-width: 884px) {
+// }
 
-@media screen and (max-width: 884px) {
-}
+// @media screen and (max-width: 778px) {
+//     .container {
+//         h3 {
+//             font-size: 16px;
+//         }
+//     }
 
-@media screen and (max-width: 778px) {
-    .container {
-        h3 {
-            font-size: 16px;
-        }
-    }
+// }
 
-}
+// @media screen and (max-width: 512px) {
+//     .container {
+//         h3 {
+//             font-size: 12px;
+//         }
+//     }
 
-@media screen and (max-width: 512px) {
-    .container {
-        h3 {
-            font-size: 12px;
-        }
-    }
-
-}
+// }

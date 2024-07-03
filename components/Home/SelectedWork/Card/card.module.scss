@@ -14,13 +14,14 @@
         flex-direction: column;
         align-items: center;
         transform-origin: top;
+        will-change: transform;
 
         h2 {
             position: absolute;
             top: 1vh;
+            text-align: center;
+            font-size: clamp(4.5rem, 7vw, 8rem);
             z-index: 2;
-            font-size: 7vw;
-            // color: #fff;
         }
 
         .imageContainer {
@@ -39,11 +40,7 @@
                 }
             }
 
-        }
-        
-
-        
-
+        }    
     }
 
 

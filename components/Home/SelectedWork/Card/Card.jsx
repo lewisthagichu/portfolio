@@ -28,7 +28,7 @@ function Card({
   return (
     <div ref={container} className={styles.container}>
       <motion.div
-        style={{ scale: cardScale, top: `calc(-5vh + ${i * 25}px)` }}
+        style={{ scale: cardScale, top: `calc(-3vh + ${i * 25}px)` }}
         className={styles.card}
       >
         <h2 style={{ color }}>{title}</h2>
