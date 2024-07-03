@@ -22,7 +22,7 @@ export const projects = [
   {
     title: 'Portfolio',
     description: 'A website to showcase my skills and projects.',
-    src: 'portfolio.jpg',
+    src: 'bg-img.jpg',
     link: 'https://www.ignant.com/2023/10/28/capturing-balis-many-faces-zissou-documents-the-sacred-and-the-mundane-of-a-fragile-island/',
     color: '#EFAAC4',
     tech: ['NextJS', 'Sass', 'Gsap', 'Framer-motion'],
@@ -32,7 +32,7 @@ export const projects = [
     title: 'TicTacPlay',
     description:
       'TicTacPlay is a fun and interactive site where users can enjoy playing the classic game of Tic-Tac-Toe.',
-    src: 'tic.jpg',
+    src: 'xo.jpg',
     link: 'https://lewisthagichu.github.io/tik-tac-toe/',
     color: '#3F93E2',
     tech: ['HTML', 'CSS', 'Javascript', 'Gsap'],

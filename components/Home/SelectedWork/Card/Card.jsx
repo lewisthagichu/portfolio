@@ -23,6 +23,8 @@ function Card({
   });
 
   const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
+  const videoHeight = useTransform(scrollYProgress, [0, 1], ['150%', '0%']);
+
   const cardScale = useTransform(progress, range, [1, targetScale]);
 
   return (
@@ -37,8 +39,32 @@ function Card({
             style={{ scale: imageScale }}
             className={styles.innerView}
           >
-            <Image src={`/images/${src}`} fill sizes="90vw" alt="image" />
+            <Image
+              src={`/images/${src}`}
+              fill
+              sizes="90vw"
+              alt="image"
+              priority={true}
+            />
           </motion.div>
+
+          <div className={styles.video}>
+            <div className={styles.videoContainer}>
+              <motion.div
+                style={{ y: videoHeight, background: color }}
+                className={styles.inner}
+              >
+                {/* <Image
+                  src={`/images/${src}`}
+                  fill
+                  sizes="90vw"
+                  alt="image"
+                  placeholder="blur"
+                  blurDataURL={`/images/${src}`}
+                /> */}
+              </motion.div>
+            </div>
+          </div>
         </div>
       </motion.div>
     </div>

@@ -18,7 +18,7 @@
 
         h2 {
             position: absolute;
-            top: 1vh;
+            top: clamp(1rem, 1.2vh, 2rem);
             text-align: center;
             font-size: clamp(4.5rem, 7vw, 8rem);
             z-index: 2;
@@ -40,8 +40,60 @@
                 }
             }
 
+            .video {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 70%;
+                height: 50%;
+
+                .videoContainer {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+
+                    .inner {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        img {
+                            object-fit: cover;
+                        }
+
+                    }
+
+                }
+            }
+
+
         }    
     }
+}
 
+@media screen and (max-width: 768px) {
+    .container {
+        .card {
+            .imageContainer {
+                .video {
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        .card {
+            .imageContainer {
+                .video {
+                    width: 90%;
+                    height: 40%;
+                }
+            }
+        }
+    }
 
 }
