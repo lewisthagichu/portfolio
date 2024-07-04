@@ -3,6 +3,7 @@ import styles from '@/styles/Home.module.css';
 import Landing from '@/components/Home/Landing/Landing';
 import Description from '@/components/Home/Description/Description';
 import SelectedWork from '@/components/Home/SelectedWork/SelectedWork';
+import Contact from '@/components/Home/Contact/Contact';
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <Landing />
         <Description />
         <SelectedWork />
+        <Contact />
       </div>
     </>
   );

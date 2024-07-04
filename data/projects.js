@@ -24,7 +24,7 @@ export const projects = [
     description: 'A website to showcase my skills and projects.',
     src: 'bg-img.jpg',
     link: 'https://www.ignant.com/2023/10/28/capturing-balis-many-faces-zissou-documents-the-sacred-and-the-mundane-of-a-fragile-island/',
-    color: '#EFAAC4',
+    color: '#8EAEB6',
     tech: ['NextJS', 'Sass', 'Gsap', 'Framer-motion'],
     year: 2024,
   },

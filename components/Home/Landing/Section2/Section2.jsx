@@ -24,7 +24,7 @@ function Section2({ parentYProgress }) {
   return (
     <motion.section
       ref={containerRef}
-      style={{ backgroundColor }}
+      // style={{ backgroundColor }}
       className={styles.container}
     >
       <ZoomParallax />

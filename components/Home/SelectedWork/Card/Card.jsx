@@ -23,7 +23,7 @@ function Card({
     offset: ['start end', 'start start'],
   });
 
-  const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
+  const imageScale = useTransform(scrollYProgress, [0, 1], [1.6, 1]);
   const videoHeight = useTransform(scrollYProgress, [0, 1], ['100%', '0%']);
 
   const cardScale = useTransform(progress, range, [1, targetScale]);
@@ -31,7 +31,7 @@ function Card({
   return (
     <div ref={container} className={styles.container}>
       <motion.div
-        style={{ scale: cardScale, top: `calc(-3vh + ${i * 25}px)` }}
+        style={{ scale: cardScale, top: `calc(-3vh + ${i * 20}px)` }}
         className={styles.card}
       >
         <h2 className={coign47BoldPro.className} style={{ color }}>
@@ -51,23 +51,23 @@ function Card({
             />
           </motion.div>
 
-          <div className={styles.video}>
+          {/* <div className={styles.video}>
             <div className={styles.videoContainer}>
               <motion.div
                 style={{ y: videoHeight, background: color }}
                 className={styles.inner}
               >
-                {/* <Image
+                <Image
                   src={`/images/${src}`}
                   fill
                   sizes="90vw"
                   alt="image"
                   placeholder="blur"
                   blurDataURL={`/images/${src}`}
-                /> */}
+                />
               </motion.div>
             </div>
-          </div>
+          </div> */}
         </div>
       </motion.div>
     </div>

@@ -1,47 +1,58 @@
 .container {
     position: relative;
-    padding: 0 clamp(1rem, 4vw, 6rem);
-    background: #EAEAEA;
+    background: #EAEAEA;    
+    z-index: 1;
+    .title {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 clamp(1rem, 3vw, 6rem);
+        h3 {
+            text-transform: uppercase;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: clamp(6rem,14vw,16rem);
+            // font-size: 15vw;
+            
+            span {
+                display: inline-block;            
+            }
+
+            .selected {
+                padding-right: clamp(4rem, 10vw, 12rem);
+            }
+
+            .work {
+                width: 100%;
+                text-align: right;
+            }
+        }
+    }
+
+    .wrapper {
+        position: relative;
+        // padding: 0 clamp(1rem, 4vw, 6rem);
+        padding: 0.2rem;
+    }
     
-    h3 {
-        padding-bottom: 6rem;
-        font-size: clamp(4rem,10vw,8rem)
+    .circleContainer{
+        position: relative;
+        background-color: #EAEAEA;
+        margin-top: 12rem;
+        
+        .circle{
+            position: absolute;
+            height: 1550%;
+            width: 110%;
+            left: -10%;
+            border-radius: 0 0 50% 60%;
+            background-color: #EAEAEA;
+            z-index: 1;
+            // box-shadow: 0px 60px 50px rgba(0, 0, 0, 0.748);
+        }
     }
 }
-
-// @media screen and (max-width: 1332px) {
-//     .container {
-//         h3 {
-//             padding-bottom: 4rem;
-//         }
-//     }
-// }
-
-// @media screen and (max-width: 1096px) {
-//     .container {
-//         h3 {
-//             font-size: 20px;
-//         }
-//     }
-// }
-
-// @media screen and (max-width: 884px) {
-// }
-
-// @media screen and (max-width: 768px) {
-//     .container {
-//         h3 {
-//             font-size: 16px;
-//         }
-//     }
-
-// }
-
-// @media screen and (max-width: 512px) {
-//     .container {
-//         h3 {
-//             font-size: 12px;
-//         }
-//     }
-
-// }
