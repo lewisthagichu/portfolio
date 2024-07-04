@@ -5,7 +5,7 @@ import Lenis from 'lenis';
 function SmoothScrolling({ children }) {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.6,
+      duration: 1.8,
       easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
       direction: 'vertical',
       gestureDirection: 'vertical',

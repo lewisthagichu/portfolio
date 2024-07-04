@@ -1,25 +1,29 @@
 .wrapper {
   position: relative;
-  height: 100%;
+  height: 100vh;
 
-    .topLeft {
-        position: absolute;
-        top: 15rem;
-        left: 8rem;
-        display: flex;
-        flex-direction: column;
-        transform-style: preserve-3d;
-    }
-    
-    .bottomRight {
+  img {
+    object-fit: cover;
+  }
+
+  .topLeft {
       position: absolute;
-      bottom: 7.5rem;
-      right: 8rem;
+      top: 15rem;
+      left: 8rem;
       display: flex;
       flex-direction: column;
       transform-style: preserve-3d;
-      align-items: flex-end;
-    }
+  }
+  
+  .bottomRight {
+    position: absolute;
+    bottom: 7.5rem;
+    right: 8rem;
+    display: flex;
+    flex-direction: column;
+    transform-style: preserve-3d;
+    align-items: flex-end;
+  }
 }
 
   

@@ -13,7 +13,7 @@ export default function Home() {
         <meta name="description" content="Developed by Lewis Thagichu" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="preload" href="/images/bg-img.jpg" as="image" />
+        {/* <link rel="preload" href="/images/bg-img.jpg" as="image" /> */}
       </Head>
 
       <div className={styles.container}>
