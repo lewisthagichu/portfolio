@@ -5,7 +5,13 @@ import Lenis from 'lenis';
 function SmoothScrolling({ children }) {
   useEffect(() => {
     const lenis = new Lenis({
-      // lerp: 0.05,
+      duration: 1.6,
+      easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
+      direction: 'vertical',
+      gestureDirection: 'vertical',
+      smooth: true,
+      smoothTouch: false,
+      touchMultiplier: 2,
     });
 
     function raf(time) {

@@ -18,10 +18,12 @@
 
         h2 {
             position: absolute;
-            top: clamp(1rem, 1.2vh, 2rem);
+            top: clamp(1.6rem, 1.2vh, 3rem);
             text-align: center;
-            font-size: clamp(4.5rem, 7vw, 8rem);
+            // font-size: clamp(4.5rem, 7vw, 8rem);
+            font-size: 120px;
             z-index: 2;
+            text-transform: uppercase;
         }
 
         .imageContainer {
@@ -45,7 +47,7 @@
                 left: 50%;
                 top: 50%;
                 transform: translate(-50%, -50%);
-                width: 70%;
+                width: 60%;
                 height: 50%;
 
                 .videoContainer {

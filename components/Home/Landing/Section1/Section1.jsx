@@ -5,10 +5,10 @@ import Hero from './Hero/Hero';
 
 function Section1({ parentYProgress }) {
   const scale = useTransform(parentYProgress, [0, 1], [1, 0.8]);
-  const rotate = useTransform(parentYProgress, [0, 1], [0, -5]);
+  // const rotate = useTransform(parentYProgress, [0, 1], [0, -5]);
 
   return (
-    <motion.section style={{ scale, rotate }} className={styles.container}>
+    <motion.section style={{}} className={styles.container}>
       <Hero />
     </motion.section>
   );
