@@ -10,6 +10,7 @@
     .sliderContainer {
         position: relative;
         display: flex;
+        top: 5vh;
         flex-direction: column;
         gap: 0rem;
 
@@ -81,7 +82,28 @@
                 }
             }
         }
-
     }
+
+    .socials {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 2vw 4rem;
+        color: #fff;
+        font-size: clamp(14px, 1.2vw, 19px);
+
+        .links {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 1.2vw;
+
+            a {
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+    }
+
 
 }
