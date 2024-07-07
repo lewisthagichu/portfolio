@@ -87,15 +87,13 @@
         }
     }
 
-
-
     .socials {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 0 2vw 4rem;
         color: #fff;
-        font-size: clamp(14px, 1.2vw, 19px);
+        font-size: clamp(12px, 1.2vw, 19px);
 
         .links {
             display: flex;
@@ -116,6 +114,10 @@
     .container {
         .btnClick {
             top: 60%;
+
+            a{
+                font-size: 10px;
+            }
         }
     }
     

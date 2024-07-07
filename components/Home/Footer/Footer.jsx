@@ -23,7 +23,7 @@ function Footer() {
   let direction = -1;
 
   useEffect(() => {
-    requestAnimationFrame(animate);
+    // requestAnimationFrame(animate);
   }, []);
 
   const animate = () => {
@@ -137,7 +137,7 @@ function Footer() {
 
       <button className={styles.btnClick}>
         <Link href="/contact">
-          <span>Drop me an email</span>
+          <span>Get in touch</span>
         </Link>
       </button>
 
