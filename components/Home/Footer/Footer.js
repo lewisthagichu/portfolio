@@ -2,13 +2,22 @@
 import styles from './footer.module.scss';
 import Link from 'next/link';
 import { DrukCond, NeuehaasBody } from '@/public/fonts/fonts';
-import gsap from 'gsap';
 import { useEffect, useRef } from 'react';
+import { useScroll, useTransform, motion } from 'framer-motion';
+import gsap from 'gsap';
 
 function Footer() {
+  const container = useRef(null);
   const firstText = useRef(null);
   const secondText = useRef(null);
   const slider = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ['start end', 'end end'],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [-500, 0]);
 
   let xPercent = 0;
   let direction = -1;
@@ -30,7 +39,11 @@ function Footer() {
   };
 
   return (
-    <div className={`${styles.container} ${NeuehaasBody.className}`}>
+    <motion.div
+      ref={container}
+      style={{ y }}
+      className={`${styles.container} ${NeuehaasBody.className}`}
+    >
       <div className={styles.tag}></div>
 
       <div className={styles.sliderContainer}>
@@ -122,7 +135,7 @@ function Footer() {
         </div>
       </div>
 
-      <button className={`${styles.btnClick} ${NeuehaasBody.className}`}>
+      <button className={styles.btnClick}>
         <Link href="/contact">
           <span>Drop me an email</span>
         </Link>
@@ -137,7 +150,7 @@ function Footer() {
           <a href="https://x.com/thagichucodes">X</a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
