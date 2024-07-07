@@ -1,15 +1,42 @@
+'use client';
 import styles from './footer.module.scss';
 import Link from 'next/link';
-import { ArchivoBlack, DrukCond, NeuehaasBody } from '@/public/fonts/fonts';
+import { DrukCond, NeuehaasBody } from '@/public/fonts/fonts';
+import gsap from 'gsap';
+import { useEffect, useRef } from 'react';
 
 function Footer() {
+  const firstText = useRef(null);
+  const secondText = useRef(null);
+  const slider = useRef(null);
+
+  let xPercent = 0;
+  let direction = -1;
+
+  useEffect(() => {
+    requestAnimationFrame(animate);
+  }, []);
+
+  const animate = () => {
+    if (xPercent < -100) {
+      xPercent = 0;
+    } else if (xPercent > 0) {
+      xPercent = -100;
+    }
+    gsap.set(firstText.current, { xPercent: xPercent });
+    gsap.set(secondText.current, { xPercent: xPercent });
+    requestAnimationFrame(animate);
+    xPercent += 0.1 * direction;
+  };
+
   return (
     <div className={`${styles.container} ${NeuehaasBody.className}`}>
       <div className={styles.tag}></div>
+
       <div className={styles.sliderContainer}>
-        <div className={`${styles.slider} ${DrukCond.className}`}>
-          <p>
-            Let's talk{' '}
+        <div ref={slider} className={`${styles.slider} ${DrukCond.className}`}>
+          <p ref={firstText}>
+            Let's work together
             <span>
               <svg
                 version="1.0"
@@ -50,8 +77,8 @@ function Footer() {
               </svg>
             </span>
           </p>
-          <p>
-            Let's talk{' '}
+          <p ref={secondText}>
+            Let's work together
             <span>
               <svg
                 version="1.0"
@@ -93,12 +120,13 @@ function Footer() {
             </span>
           </p>
         </div>
-        <div className={styles.btnClick}>
+        {/* <div className={styles.btnClick}>
           <Link href="/contact">
             <span>Drop me an email</span>
           </Link>
-        </div>
+        </div> */}
       </div>
+
       <div className={styles.socials}>
         <p>© Lewis Thagichu 2024 </p>
         <div className={styles.links}>

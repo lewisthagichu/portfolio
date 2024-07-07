@@ -8,23 +8,25 @@
     overflow: hidden;
 
     .sliderContainer {
-        position: relative;
-        display: flex;
-        top: 5vh;
-        flex-direction: column;
-        gap: 0rem;
+        // position: relative;
+        // display: flex;
+        // top: 5vh;
+        // flex-direction: column;
+        // gap: 0rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
 
         .slider {
             position: relative;
             white-space: nowrap;
 
             p {
-                position: relative;
-                font-size: clamp(6rem, 16vw, 20rem);
+                font-size: clamp(8rem, 22vw, 36vw);
                 font-weight: 500;
                 color: #fff;  
                 text-transform: uppercase; 
-                letter-spacing: 2px;
+                letter-spacing: 4px;
         
 
                 span {
@@ -41,7 +43,7 @@
 
             p:nth-of-type(2) {
                 position: absolute;
-                left: 50%;
+                left: 100%;
                 top: 0;
             }
         }
