@@ -122,11 +122,11 @@ function Footer() {
         </div>
       </div>
 
-      <div className={`${styles.btnClick} ${NeuehaasBody.className}`}>
+      <button className={`${styles.btnClick} ${NeuehaasBody.className}`}>
         <Link href="/contact">
           <span>Drop me an email</span>
         </Link>
-      </div>
+      </button>
 
       <div className={styles.socials}>
         <p>© Lewis Thagichu 2024 </p>
