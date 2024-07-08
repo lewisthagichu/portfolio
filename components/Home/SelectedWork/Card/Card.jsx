@@ -3,7 +3,7 @@ import styles from './card.module.scss';
 import Image from 'next/image';
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ArgesCond, ArgesBold, coign47BoldPro } from '@/public/fonts/fonts';
+import { ArgesBold } from '@/public/fonts/fonts';
 
 function Card({
   i,
@@ -23,15 +23,15 @@ function Card({
     offset: ['start end', 'start start'],
   });
 
-  const imageScale = useTransform(scrollYProgress, [0, 1], [1.6, 1]);
-  const videoHeight = useTransform(scrollYProgress, [0, 1], ['100%', '0%']);
+  const imageScale = useTransform(scrollYProgress, [0, 1], [1, 1]);
+  const videoHeight = useTransform(scrollYProgress, [0, 1], ['50%', '0%']);
 
   const cardScale = useTransform(progress, range, [1, targetScale]);
 
   return (
     <div ref={container} className={styles.container}>
       <motion.div
-        style={{ scale: cardScale, top: `calc(-3vh + ${i * 20}px)` }}
+        style={{ top: `calc(10vh + ${i * 25}px)` }}
         className={styles.card}
       >
         <h2 className={ArgesBold.className} style={{ color }}>
@@ -45,29 +45,29 @@ function Card({
             <Image
               src={`/images/${src}`}
               fill
-              sizes="90vw"
+              sizes="100vw"
               alt="image"
               priority={true}
             />
           </motion.div>
 
-          {/* <div className={styles.video}>
+          <div className={styles.video}>
             <div className={styles.videoContainer}>
               <motion.div
                 style={{ y: videoHeight, background: color }}
                 className={styles.inner}
               >
-                <Image
+                {/* <Image
                   src={`/images/${src}`}
                   fill
                   sizes="90vw"
                   alt="image"
                   placeholder="blur"
                   blurDataURL={`/images/${src}`}
-                />
+                /> */}
               </motion.div>
             </div>
-          </div> */}
+          </div>
         </div>
       </motion.div>
     </div>

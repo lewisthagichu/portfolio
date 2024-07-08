@@ -40,20 +40,15 @@ function SelectedWork() {
     offset: ['start start', 'end start'],
   });
 
-  // const backgroundColor = useTransform(
-  //   containerProgress2,
-  //   [0, 0.03, 1],
-  //   ['#EAEAEA', '#8EAEB6', '#8EAEB6']
-  // );
   const backgroundColor = useTransform(
     containerProgress2,
     [0, 0.05, 1],
-    ['#EAEAEA', '#000', '#000']
+    ['#EAEAEA', '#1C1D20', '#1C1D20']
   );
   const color = useTransform(
     containerProgress2,
     [0, 0.05, 1],
-    ['#000', '#fff', '#fff']
+    ['#1C1D20', '#fff', '#fff']
   );
 
   return (
@@ -70,7 +65,7 @@ function SelectedWork() {
       </motion.div>
       <div ref={wrapper} className={styles.wrapper}>
         {projects.map((project, i) => {
-          const targetScale = 1 - (projects.length - i) * 0.04;
+          const targetScale = 1 - (projects.length - i) * 0.03;
           return (
             <Card
               key={`c_${i}`}

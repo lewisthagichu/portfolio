@@ -23,7 +23,7 @@ function Footer() {
   let direction = -1;
 
   useEffect(() => {
-    // requestAnimationFrame(animate);
+    requestAnimationFrame(animate);
   }, []);
 
   const animate = () => {

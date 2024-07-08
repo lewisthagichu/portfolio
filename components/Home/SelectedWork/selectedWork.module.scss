@@ -19,7 +19,6 @@
             flex-direction: column;
             align-items: center;
             font-size: clamp(6rem,14vw,16rem);
-            // font-size: 15vw;
             
             span {
                 display: inline-block;            
@@ -38,18 +37,17 @@
 
     .wrapper {
         position: relative;
-        // padding: 0 clamp(1rem, 4vw, 6rem);
-        padding: 0.2rem;
+        padding: 0 clamp(1rem, 4vw, 6rem);
     }
     
     .btnClick {       
         background-color: transparent;
         border: none;
+        margin: calc(10vh + 40px) 0 2rem;
 
         a {
             position: relative;
             display: inline-block;
-            background-color: #2c2a2a;
             padding: 18px 30px;
             border-radius: 99px;
             text-decoration: none;
@@ -58,6 +56,7 @@
             vertical-align: baseline;
             color: #fff;
             width:max-content;
+            border: 1px solid white;
             
             span {
                 position: relative;
@@ -83,8 +82,8 @@
     
     .circleContainer{
         position: relative;
-        background-color: #000;
-        margin-top: 12rem;
+        background-color: #1C1D20;
+        // margin-top: 12rem;
         
         .circle{
             position: absolute;

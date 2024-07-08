@@ -8,7 +8,7 @@
     
     .card {
         position: relative;
-        height: 80%;
+        height: 100%;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -18,9 +18,9 @@
 
         h2 {
             position: absolute;
-            top: clamp(3rem, 1.6vh, 6rem);
+            top: clamp(1rem, 1vh, 2rem);
             text-align: center;
-            font-size: clamp(8rem, 7vw, 12rem);
+            font-size: clamp(6rem, 7vw, 12rem);
             z-index: 2;
             text-transform: uppercase;
             font-weight: 700;
@@ -31,30 +31,33 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
+            border-radius: 8px;
 
             .innerView {
                 position: relative;
-                height: 100%;
+                height: 90%;
                 width: 100%;
 
                 img {
                     object-fit: cover;
+                    
                 }
             }
+
 
             .video {
                 position: absolute;
                 left: 50%;
-                top: 50%;
+                top: 44%;
                 transform: translate(-50%, -50%);
-                width: 60%;
-                height: 50%;
-
+                width: 768px;
+                height: 432px;
+                
                 .videoContainer {
                     position: relative;
                     width: 100%;
                     height: 100%;
-
+                    
                     .inner {
                         position: relative;
                         width: 100%;
@@ -73,17 +76,31 @@
     }
 }
 
+@media screen and (max-width: 1024px) {
+    .container {
+        .card {
+            .imageContainer {
+                .video {
+                    width: 512px;
+                    height: 288px;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 768px) {
     .container {
         .card {
             .imageContainer {
                 .video {
-                    width: 80%;
+                    top: 42%;
+                    width: 512px;
+                    height: 288px;
                 }
             }
         }
     }
-
 }
 
 @media screen and (max-width: 600px) {
@@ -91,8 +108,8 @@
         .card {
             .imageContainer {
                 .video {
-                    width: 90%;
-                    height: 40%;
+                    width: 384px;
+                    height: 216px;
                 }
             }
         }
