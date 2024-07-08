@@ -3,7 +3,7 @@ import styles from './card.module.scss';
 import Image from 'next/image';
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { coign47BoldPro } from '@/public/fonts/fonts';
+import { ArgesCond, ArgesBold, coign47BoldPro } from '@/public/fonts/fonts';
 
 function Card({
   i,
@@ -34,7 +34,7 @@ function Card({
         style={{ scale: cardScale, top: `calc(-3vh + ${i * 20}px)` }}
         className={styles.card}
       >
-        <h2 className={coign47BoldPro.className} style={{ color }}>
+        <h2 className={ArgesBold.className} style={{ color }}>
           {title}
         </h2>
         <div className={styles.imageContainer}>

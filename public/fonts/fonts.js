@@ -15,4 +15,19 @@ const coign47BoldPro = localFont({
   src: './coign-47-bold-pro.ttf',
 });
 
-export { DrukCond, ArchivoBlack, NeuehaasBody, coign47BoldPro };
+const ArgesCond = localFont({
+  src: './ArgesCond.ttf',
+});
+
+const ArgesBold = localFont({
+  src: './ArgesBold.ttf',
+});
+
+export {
+  ArgesCond,
+  ArgesBold,
+  DrukCond,
+  ArchivoBlack,
+  NeuehaasBody,
+  coign47BoldPro,
+};

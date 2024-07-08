@@ -40,10 +40,20 @@ function SelectedWork() {
     offset: ['start start', 'end start'],
   });
 
+  // const backgroundColor = useTransform(
+  //   containerProgress2,
+  //   [0, 0.03, 1],
+  //   ['#EAEAEA', '#8EAEB6', '#8EAEB6']
+  // );
   const backgroundColor = useTransform(
     containerProgress2,
-    [0, 0.03, 1],
-    ['#EAEAEA', '#8EAEB6', '#8EAEB6']
+    [0, 0.05, 1],
+    ['#EAEAEA', '#000', '#000']
+  );
+  const color = useTransform(
+    containerProgress2,
+    [0, 0.05, 1],
+    ['#000', '#fff', '#fff']
   );
 
   return (
@@ -53,10 +63,10 @@ function SelectedWork() {
       className={styles.container}
     >
       <motion.div style={{ opacity, scale, y }} className={styles.title}>
-        <h3 className={DrukCond.className}>
+        <motion.h3 style={{ color }} className={DrukCond.className}>
           <span className={styles.selected}>selected</span>
           <span className={styles.work}>work/</span>
-        </h3>
+        </motion.h3>
       </motion.div>
       <div ref={wrapper} className={styles.wrapper}>
         {projects.map((project, i) => {

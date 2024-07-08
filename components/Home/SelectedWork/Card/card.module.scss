@@ -21,9 +21,9 @@
             top: clamp(3rem, 1.6vh, 6rem);
             text-align: center;
             font-size: clamp(8rem, 7vw, 12rem);
-            // font-size: 120px;
             z-index: 2;
             text-transform: uppercase;
+            font-weight: 700;
         }
 
         .imageContainer {
