@@ -40,12 +40,12 @@ function Description() {
 
   const { scrollYProgress: scrollYProgress1 } = useScroll({
     target: containerRef,
-    offset: ['start 0.96', 'end 0.8'],
+    offset: ['start 0.98', 'end 0.9'],
   });
 
   const { scrollYProgress: scrollYProgress2 } = useScroll({
     target: containerRef,
-    offset: ['start 0.5', 'end 0.44'],
+    offset: ['start 0.4', 'end 0.34'],
   });
 
   const divOpacity = useSmoothOpacity(
@@ -82,9 +82,9 @@ function Description() {
           </div>
         </motion.div>
       </div>
-      <button className="btnClick">
+      <button className={`btnClick ${styles.btnClickDescription}`}>
         <Link href="/projects">
-          <span>View all projects</span>
+          <span>More About Me</span>
         </Link>
       </button>
     </section>
