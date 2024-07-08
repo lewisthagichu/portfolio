@@ -5,6 +5,7 @@ import { motion, useScroll } from 'framer-motion';
 import { expertises, paragraphs } from '@/data/descriptionData';
 import { NeuehaasBody } from '@/public/fonts/fonts';
 import useSmoothOpacity from '@/hooks/useSmoothOpacity';
+import Link from 'next/link';
 
 const Word = ({ children, progress, range }) => {
   const smoothOpacity = useSmoothOpacity(progress, range, [0, 1]);
@@ -47,11 +48,6 @@ function Description() {
     offset: ['start 0.5', 'end 0.44'],
   });
 
-  const h3Opacity = useSmoothOpacity(
-    scrollYProgress1,
-    [0, 0.1, 1],
-    [0.2, 1, 1]
-  );
   const divOpacity = useSmoothOpacity(
     scrollYProgress2,
     [0, 0.9, 1],
@@ -60,7 +56,6 @@ function Description() {
 
   return (
     <section className={`${styles.container} ${NeuehaasBody.className}`}>
-      <motion.h3 style={{ opacity: h3Opacity }}>ABOUT/</motion.h3>
       <div className={styles.wrapper}>
         <div ref={containerRef} className={styles.description}>
           {paragraphs.map((paragraph, paragraphIndex) => (
@@ -77,7 +72,7 @@ function Description() {
           style={{ opacity: divOpacity }}
           className={styles.expertise}
         >
-          <h5>EXPERTISE</h5>
+          <h5>SKILLS</h5>
           <div>
             {expertises.map((expertise, index) => (
               <p key={`exp_${index}`}>
@@ -87,6 +82,11 @@ function Description() {
           </div>
         </motion.div>
       </div>
+      <button className="btnClick">
+        <Link href="/projects">
+          <span>View all projects</span>
+        </Link>
+      </button>
     </section>
   );
 }

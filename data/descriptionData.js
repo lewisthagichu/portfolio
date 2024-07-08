@@ -5,10 +5,10 @@ export const paragraphs = [
 
 export const expertises = [
   'Responsive Web Design',
+  'API Development',
   'Interactive Design',
-  'User Experience Optimization',
+  'Creative Development',
   'Database Management',
-  'Performance Optimization',
-  'API Development and Integration',
   'Version Control',
+  'Performance Optimization',
 ];

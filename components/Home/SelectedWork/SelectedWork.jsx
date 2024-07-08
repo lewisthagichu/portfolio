@@ -78,7 +78,7 @@ function SelectedWork() {
           );
         })}
       </div>
-      <button className={styles.btnClick}>
+      <button className={`btnClick ${styles.btnClickSelected}`}>
         <Link href="/projects">
           <span>View all projects</span>
         </Link>

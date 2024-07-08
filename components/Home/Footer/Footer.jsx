@@ -135,7 +135,7 @@ function Footer() {
         </div>
       </div>
 
-      <button className={styles.btnClick}>
+      <button className={`btnClick ${styles.btnClickFooter}`}>
         <Link href="/contact">
           <span>Get in touch</span>
         </Link>

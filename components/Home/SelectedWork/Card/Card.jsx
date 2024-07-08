@@ -23,15 +23,15 @@ function Card({
     offset: ['start end', 'start start'],
   });
 
-  const imageScale = useTransform(scrollYProgress, [0, 1], [1, 1]);
-  const videoHeight = useTransform(scrollYProgress, [0, 1], ['50%', '0%']);
+  const imageScale = useTransform(scrollYProgress, [0, 1], [1.2, 1]);
+  const videoHeight = useTransform(scrollYProgress, [0, 1], ['64%', '0%']);
 
   const cardScale = useTransform(progress, range, [1, targetScale]);
 
   return (
     <div ref={container} className={styles.container}>
       <motion.div
-        style={{ top: `calc(10vh + ${i * 25}px)` }}
+        style={{ top: `calc(6vh + ${i * 25}px)` }}
         className={styles.card}
       >
         <h2 className={ArgesBold.className} style={{ color }}>
@@ -39,6 +39,8 @@ function Card({
         </h2>
         <div className={styles.imageContainer}>
           <motion.div
+            whileHover={{ scale: 1.05 }}
+            transition={{ ease: [0.455, 0.03, 0.515, 0.955] }}
             style={{ scale: imageScale }}
             className={styles.innerView}
           >
