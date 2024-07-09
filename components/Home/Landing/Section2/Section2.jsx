@@ -1,34 +1,37 @@
 'use client';
 import styles from './section2.module.scss';
 import { useRef } from 'react';
-import { useTransform, motion, useScroll } from 'framer-motion';
 import ZoomParallax from '../../ZoomParallax/ZoomParallax';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import useHeaderContext from '@/hooks/useHeaderContext';
 
-function Section2({ parentYProgress }) {
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(useGSAP);
+
+function Section2({}) {
   const containerRef = useRef();
+  const { setHeaderStyle } = useHeaderContext();
 
-  // const scale = useTransform(parentYProgress, [0, 1], [0.8, 1]);
-  // const rotate = useTransform(parentYProgress, [0, 1], [5, 0]);
-
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start end', '100vh end'],
-  });
-
-  const backgroundColor = useTransform(
-    scrollYProgress,
-    [0, 0.99, 1],
-    ['#8EAEB6', '#8EAEB6', '#B6B6B6']
-  );
+  useGSAP(() => {
+    ScrollTrigger.create({
+      trigger: containerRef.current,
+      start: 'center-=50 top',
+      endTrigger: '#selectedWork',
+      end: 'top top',
+      onEnter: () => setHeaderStyle({ color: '#1C1D20' }),
+      onLeave: () => setHeaderStyle({ color: '#E8E7CB' }),
+      onEnterBack: () => setHeaderStyle({ color: '#1C1D20' }),
+      onLeaveBack: () => setHeaderStyle({ color: '#E8E7CB' }),
+      scrub: true,
+    });
+  }, []);
 
   return (
-    <motion.section
-      ref={containerRef}
-      // style={{ backgroundColor }}
-      className={styles.container}
-    >
+    <section ref={containerRef} className={styles.container}>
       <ZoomParallax />
-    </motion.section>
+    </section>
   );
 }
 

@@ -53,6 +53,7 @@ function SelectedWork() {
 
   return (
     <motion.section
+      id="selectedWork"
       ref={container}
       style={{ backgroundColor }}
       className={styles.container}

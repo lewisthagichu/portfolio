@@ -5,7 +5,7 @@ export const HeaderContext = createContext();
 
 export const HeaderContextProvider = ({ children }) => {
   const [headerStyle, setHeaderStyle] = useState({
-    background: '#8EAEB6',
+    // background: '#8EAEB6',
     color: '#E8E7CB',
   });
 
