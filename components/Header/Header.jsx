@@ -7,7 +7,6 @@ import { useState, useEffect } from 'react';
 import { opacity } from '@/utils/anim';
 import { useDateTime } from '@/utils/useDateTime';
 import { NeuehaasBody } from '@/public/fonts/fonts';
-import { css } from '@emotion/react';
 import useHeaderContext from '@/hooks/useHeaderContext';
 import Nav from './nav/Nav';
 
