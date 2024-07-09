@@ -29,46 +29,53 @@ function Header() {
   useEffect(() => {}, [background, color]);
 
   return (
-    <div
-      id="headd"
-      style={background ? { background, color } : {}}
-      className={`${styles.header} ${NeuehaasBody.className}`}
-    >
-      <div className={styles.bar}>
-        <Link onMouseDown={() => setIsActive(false)} href="/">
-          LEWIS THAGICHU
-        </Link>
+    <div className="headerBg">
+      <div
+        style={background ? { background, color } : {}}
+        className={`${styles.header} ${NeuehaasBody.className}`}
+      >
+        <div className={styles.bar}>
+          <Link onMouseDown={() => setIsActive(false)} href="/">
+            LEWIS THAGICHU
+          </Link>
 
-        <div onMouseDown={toggleNav} className={styles.el}>
-          <div
-            className={`${styles.burger} ${
-              isActive ? styles.burgerActive : ''
-            }`}
-          ></div>
-          <div className={styles.label}>
-            <motion.p variants={opacity} animate={isActive ? 'closed' : 'open'}>
-              MENU
-            </motion.p>
-            <motion.p
-              variants={opacity}
-              animate={!isActive ? 'closed' : 'open'}
-            >
-              CLOSE
-            </motion.p>
+          <div onMouseDown={toggleNav} className={styles.el}>
+            <div
+              className={`${styles.burger} ${
+                isActive ? styles.burgerActive : ''
+              }`}
+            ></div>
+            <div className={styles.label}>
+              <motion.p
+                variants={opacity}
+                animate={isActive ? 'closed' : 'open'}
+              >
+                MENU
+              </motion.p>
+              <motion.p
+                variants={opacity}
+                animate={!isActive ? 'closed' : 'open'}
+              >
+                CLOSE
+              </motion.p>
+            </div>
+          </div>
+
+          <div className={styles.region}>
+            <p className={styles.date}>{dateTime.date}</p>
+            <p className={styles.status}>
+              Available for projects{' '}
+              <span className={styles.blinkingDot}></span>
+            </p>
+            <p className={styles.time}>{dateTime.time}</p>
+            <p className={styles.location}>Nairobi, KE</p>
           </div>
         </div>
 
-        <div className={styles.region}>
-          <p className={styles.date}>{dateTime.date}</p>
-          <p className={styles.status}>
-            Available for projects <span className={styles.blinkingDot}></span>
-          </p>
-          <p className={styles.time}>{dateTime.time}</p>
-          <p className={styles.location}>Nairobi, KE</p>
-        </div>
+        <AnimatePresence mode="wait">
+          {isActive && <Nav background={background} />}
+        </AnimatePresence>
       </div>
-
-      <AnimatePresence mode="wait">{isActive && <Nav />}</AnimatePresence>
     </div>
   );
 }

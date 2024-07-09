@@ -24,7 +24,7 @@ const links = [
   },
 ];
 
-function Nav() {
+function Nav({ background, color }) {
   const [selectedLink, setSelectedLink] = useState({
     isActive: false,
     index: 0,
@@ -37,6 +37,7 @@ function Nav() {
       animate="enter"
       exit="exit"
       className={styles.nav}
+      style={{ background }}
     >
       <div className={styles.container}>
         <ContactDetails

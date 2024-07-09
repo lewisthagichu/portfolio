@@ -40,12 +40,12 @@ function Description() {
 
   const { scrollYProgress: scrollYProgress1 } = useScroll({
     target: containerRef,
-    offset: ['start 0.98', 'end 0.9'],
+    offset: ['start 0.98', 'end 0.92'],
   });
 
   const { scrollYProgress: scrollYProgress2 } = useScroll({
     target: containerRef,
-    offset: ['start 0.4', 'end 0.34'],
+    offset: ['start 0.5', 'end 0.4'],
   });
 
   const divOpacity = useSmoothOpacity(
