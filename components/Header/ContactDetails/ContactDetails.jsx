@@ -28,7 +28,7 @@ function ContactDetails({ selectedLink, setSelectedLink }) {
 
   return (
     <div className={styles.container}>
-      <h3>CONTACT</h3>
+      <h4>CONTACT</h4>
 
       {links.map((link) => {
         const { text, url, index } = link;
