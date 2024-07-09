@@ -2,9 +2,10 @@
 import styles from './footer.module.scss';
 import Link from 'next/link';
 import { DrukCond, NeuehaasBody } from '@/public/fonts/fonts';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 function Footer() {
   const container = useRef(null);
@@ -22,7 +23,7 @@ function Footer() {
   let xPercent = 0;
   let direction = -1;
 
-  useEffect(() => {
+  useGSAP(() => {
     requestAnimationFrame(animate);
   }, []);
 

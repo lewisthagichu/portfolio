@@ -1,7 +1,7 @@
 .container {
     position: relative;
     height: 100vh;
-    background: #8EAEB6;
+    background: var(--color-cadet);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -20,7 +20,7 @@
             p {
                 font-size: clamp(8rem, 22vw, 36vw);
                 font-weight: 500;
-                color: #fff;  
+                color: var(--color-white);  
                 text-transform: uppercase; 
                 letter-spacing: 4px;        
 
@@ -57,7 +57,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 0 2vw 4rem;
-        color: #fff;
+        color: var(--color-white);
         font-size: clamp(12px, 1.2vw, 19px);
 
         .links {
@@ -68,7 +68,7 @@
 
             a {
                 text-decoration: none;
-                color: #fff;
+                color: var(--color-white);
             }
         }
     }
