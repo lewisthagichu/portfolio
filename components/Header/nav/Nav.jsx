@@ -8,6 +8,11 @@ import ContactDetails from '../ContactDetails/ContactDetails';
 
 const links = [
   {
+    title: 'Home',
+    to: '/',
+    src: 'about.webp',
+  },
+  {
     title: 'About',
     to: '/about',
     src: 'about.webp',
