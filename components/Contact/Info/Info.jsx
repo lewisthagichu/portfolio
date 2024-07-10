@@ -12,10 +12,18 @@ function Info() {
 
       <div className={`${styles.social} ${styles.box}`}>
         <h4>Social:</h4>
-        <a href="https://github.com/lewisthagichu">Github</a>
-        <a href="https://dev.to/thagichucodes">DEV</a>
-        <a href="https://www.linkedin.com/in/lewis-thagichu/">Linkedln</a>
-        <a href="https://x.com/thagichucodes">X</a>
+        <a href="https://github.com/lewisthagichu" target="_blank">
+          Github
+        </a>
+        <a href="https://dev.to/thagichucodes" target="_blank">
+          DEV
+        </a>
+        <a href="https://www.linkedin.com/in/lewis-thagichu/" target="_blank">
+          Linkedln
+        </a>
+        <a href="https://x.com/thagichucodes" target="_blank">
+          X
+        </a>
       </div>
 
       <div className={`${styles.menu} ${styles.box}`}>

@@ -7,21 +7,28 @@ import { getChars } from '@/utils/getChars';
 function ContactDetails({ selectedLink, setSelectedLink }) {
   const links = [
     {
-      text: 'THAGICHUCODES@GMAIL.COM',
+      text: 'hello@lewisthagichu.com',
       url: 'mailto:thagichucodes@gmail.com',
       index: 4,
       src: null,
     },
     {
-      text: 'GITHUB',
+      text: 'Github',
       url: 'https://github.com/lewisthagichu',
       index: 5,
       src: null,
     },
+
     {
-      text: 'TWITTER',
-      url: 'https://x.com/thagichucodes',
+      text: 'DEV',
+      url: 'https://dev.to/thagichucodes',
       index: 6,
+      src: null,
+    },
+    {
+      text: 'Twitter',
+      url: 'https://x.com/thagichucodes',
+      index: 7,
       src: null,
     },
   ];

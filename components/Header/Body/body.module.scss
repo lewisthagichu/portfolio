@@ -2,11 +2,10 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     padding-left: 4vw;
+    // justify-content: center;
 
     .wrapper {
-        position: relative;           
         a{
             color: var(--color-beige);
             text-decoration: none;
@@ -14,6 +13,7 @@
             filter: brightness(1.25);  
 
             p{
+                position: relative;
                 display: flex;
                 overflow: hidden;
                 font-size: clamp(5rem, 11vw, 15rem);
@@ -28,10 +28,9 @@
 
 @media only screen and (max-width: 1024px) {   
     .body{
-        align-items: center;
         order: 1;
+        align-items: center;
         padding-left: 16vw;
-        top: -5rem;
     }
 }
 

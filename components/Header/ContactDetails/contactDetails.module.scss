@@ -3,19 +3,22 @@
     flex-direction: column;
     justify-content: flex-end;
     gap: 0.3rem;
-    padding-bottom: 8rem;
+    padding-bottom: 4rem;
 
     h4 {
-        font-size: clamp(0.8rem, 2.4vw, 1.6rem);
+        font-size: clamp(0.8rem, 2vw, 1.4rem);
         color: var(--color-beige);
         filter: brightness(1.1);
+        opacity: .5;
     }
     
     a {
-        font-size: clamp(1rem, 3vw, 2rem);
+        font-size: clamp(1rem, 2.4vw, 1.6rem);
         color: var(--color-beige);
-        padding-bottom: 0.6rem;
+        padding-bottom: 0.4rem;
         filter: brightness(1.25);
+        text-decoration: none;
+        text-transform: uppercase;
     }
     
 }
@@ -26,9 +29,5 @@
     }
 }
 
-@media only screen and (max-height: 601px) {
-    .container{
-        display: none;
-    }
-}
+
 
