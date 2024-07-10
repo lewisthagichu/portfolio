@@ -4,6 +4,13 @@
   --color-beige: #E8E7CB;
   --color-cadet: #8EAEB6;
   --color-light-blue: #c2e9fb;
+
+  --section-padding: clamp(4rem, 10vw, 16rem);
+
+  --regular-text-size: clamp(1rem, 3vw, 2rem);
+  --large-heading-size: clamp(4rem, 7vw, 8rem);
+
+  --light-border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 * {
@@ -28,7 +35,7 @@ html {
   padding: 18px 30px;
   border-radius: 99px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: var(--regular-text-size);
   text-transform: uppercase;
   vertical-align: baseline;
   color: var(--color-white);
@@ -53,12 +60,4 @@ html {
   transform: translateY(-50%);
   border-radius: 99px;
   transition: all .5s cubic-bezier(.77, 0, .175, 1);
-}
-
-@media only screen and (max-width: 596px) {
-    .btnClick {
-        a{
-            font-size: 10px;
-        }
-    } 
 }
