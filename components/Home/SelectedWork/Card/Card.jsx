@@ -39,7 +39,7 @@ function Card({
         </h2>
         <div className={styles.imageContainer}>
           <motion.div
-            whileHover={{ scale: 1.05 }}
+            // whileHover={{ scale: 1.05 }}
             transition={{ ease: [0.455, 0.03, 0.515, 0.955] }}
             style={{ scale: imageScale }}
             className={styles.innerView}

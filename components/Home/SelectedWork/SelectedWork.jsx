@@ -33,7 +33,7 @@ function SelectedWork() {
     target: container,
     offset: ['start start', 'end start'],
   });
-  const height = useTransform(containerProgress, [0, 1], [50, 0]);
+  const height = useTransform(containerProgress, [0, 1], [400, 0]);
 
   // Contaner's YProgress used by main container
   const { scrollYProgress: containerProgress2 } = useScroll({
@@ -87,9 +87,11 @@ function SelectedWork() {
           </Link>
         </Magnetic>
       </button>
-      <motion.div style={{ height }} className={styles.circleContainer}>
-        <div className={styles.circle}></div>
-      </motion.div>
+      <div className="curvedBorder">
+        <motion.div style={{ height }} className="circleContainer">
+          <div className="circle"></div>
+        </motion.div>
+      </div>
     </motion.section>
   );
 }

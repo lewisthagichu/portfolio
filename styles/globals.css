@@ -23,11 +23,6 @@ html {
   font-size: 62.5%;
 }
 
-.btnClick {       
-  border: none;
-  background-color: transparent;
-}
-
 /* Lenis css */
 html.lenis, html.lenis body {
   height: auto;
@@ -49,6 +44,14 @@ html.lenis, html.lenis body {
   pointer-events: none;
 }
 
+/* button styling */
+.btnClick {     
+  border: none;  
+  background-color: transparent;
+  width: fit-content;
+  margin: 0 auto;
+}
+
 .btnClick a {
   position: relative;
   display: inline-block;
@@ -60,7 +63,6 @@ html.lenis, html.lenis body {
   text-transform: uppercase;
   vertical-align: baseline;
   color: var(--color-white);
-  width: fit-content;
   will-change: transform;    
 }
 
@@ -82,4 +84,36 @@ html.lenis, html.lenis body {
   transform: translateY(-50%);
   border-radius: 99px;
   transition: all .5s cubic-bezier(.77, 0, .175, 1);
+}
+
+/* Curved border */
+
+.curvedBorder {
+  width: 100%;
+  height: 0;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+.circleContainer {
+  background-color: transparent;
+  position: relative;
+  width: 100%;
+  height: 10vh;
+  overflow: hidden;
+  will-change: height;
+}
+
+.circle {
+  width: 150%;
+  content: "";
+  display: block;
+  position: absolute;
+  background: var(--color-dark);
+  height: 750%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -86.666%);
+  z-index: 1;
 }
