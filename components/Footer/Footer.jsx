@@ -6,6 +6,7 @@ import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import Magnetic from '../common/Magnetic';
 
 function Footer() {
   const container = useRef(null);
@@ -137,13 +138,17 @@ function Footer() {
       </div>
 
       <button className={`btnClick ${styles.btnClickFooter}`}>
-        <Link href="/contact">
-          <span>Get in touch</span>
-        </Link>
+        <Magnetic>
+          <Link data-strength="60" href="/contact">
+            <span>Get in touch</span>
+          </Link>
+        </Magnetic>
       </button>
 
       <div className={styles.socials}>
-        <p>© Lewis Thagichu 2024 </p>
+        <Magnetic>
+          <p data-strength="20">© Lewis Thagichu 2024 </p>
+        </Magnetic>{' '}
         <div className={styles.links}>
           <a href="https://github.com/lewisthagichu" target="_blank">
             Github

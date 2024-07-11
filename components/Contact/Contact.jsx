@@ -6,6 +6,7 @@ import { NeuehaasBody } from '@/public/fonts/fonts';
 import { useEffect } from 'react';
 import useHeaderContext from '@/hooks/useHeaderContext';
 import Link from 'next/link';
+import Magnetic from '../common/Magnetic';
 
 function Contact() {
   const { setHeaderStyle } = useHeaderContext();
@@ -30,25 +31,32 @@ function Contact() {
       </div>
 
       <button className={`btnClick ${styles.btnClickContact}`}>
-        <Link href="/projects">
-          <span>Submit</span>
-        </Link>
+        <Magnetic>
+          <Link data-strength="60" href="/projects">
+            <span>Submit</span>
+          </Link>
+        </Magnetic>
       </button>
 
       <div className={styles.socials}>
-        <p>© Lewis Thagichu 2024 </p>
+        <Magnetic>
+          <p data-strength="20">© Lewis Thagichu 2024 </p>
+        </Magnetic>
         <div className={styles.links}>
           <a href="https://github.com/lewisthagichu" target="_blank">
-            Github
+            <span>Github</span>
           </a>
+
           <a href="https://dev.to/thagichucodes" target="_blank">
-            DEV
+            <span>DEV</span>
           </a>
+
           <a href="https://www.linkedin.com/in/lewis-thagichu/" target="_blank">
-            Linkedln
+            <span>Linkedln</span>
           </a>
+
           <a href="https://x.com/thagichucodes" target="_blank">
-            X
+            <span>Twitter</span>
           </a>
         </div>
       </div>

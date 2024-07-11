@@ -6,6 +6,7 @@ import styles from './selectedWork.module.scss';
 import { projects } from '@/data/projects';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { NeuehaasBody, DrukCond } from '@/public/fonts/fonts';
+import Magnetic from '@/components/common/Magnetic';
 
 function SelectedWork() {
   const container = useRef(null);
@@ -80,9 +81,11 @@ function SelectedWork() {
         })}
       </div>
       <button className={`btnClick ${styles.btnClickSelected}`}>
-        <Link href="/projects">
-          <span>View all projects</span>
-        </Link>
+        <Magnetic>
+          <Link data-strength="60" href="/work">
+            <span>View more projects</span>
+          </Link>
+        </Magnetic>
       </button>
       <motion.div style={{ height }} className={styles.circleContainer}>
         <div className={styles.circle}></div>

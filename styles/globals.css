@@ -60,7 +60,8 @@ html.lenis, html.lenis body {
   text-transform: uppercase;
   vertical-align: baseline;
   color: var(--color-white);
-  width:max-content;
+  width: fit-content;
+  will-change: transform;    
 }
 
 .btnClick a span{

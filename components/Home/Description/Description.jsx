@@ -6,6 +6,7 @@ import { expertises, paragraphs } from '@/data/descriptionData';
 import { NeuehaasBody } from '@/public/fonts/fonts';
 import useSmoothOpacity from '@/hooks/useSmoothOpacity';
 import Link from 'next/link';
+import Magnetic from '@/components/common/Magnetic';
 
 const Word = ({ children, progress, range }) => {
   const smoothOpacity = useSmoothOpacity(progress, range, [0, 1]);
@@ -83,9 +84,11 @@ function Description() {
         </motion.div>
       </div>
       <button className={`btnClick ${styles.btnClickDescription}`}>
-        <Link href="/projects">
-          <span>More About Me</span>
-        </Link>
+        <Magnetic>
+          <Link data-strength="60" href="/about">
+            <span>More About Me</span>
+          </Link>
+        </Magnetic>
       </button>
     </section>
   );
