@@ -33,7 +33,7 @@ function SelectedWork() {
     target: container,
     offset: ['start start', 'end start'],
   });
-  const height = useTransform(containerProgress, [0, 1], [400, 0]);
+  const height = useTransform(containerProgress, [0, 1], [300, 0]);
 
   // Contaner's YProgress used by main container
   const { scrollYProgress: containerProgress2 } = useScroll({
