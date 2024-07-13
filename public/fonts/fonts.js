@@ -19,4 +19,15 @@ const ArgesHeavy = localFont({
   src: './ArgesHeavy.woff2',
 });
 
-export { ArgesHeavy, DrukCond, ArchivoBlack, NeuehaasBody, coign47BoldPro };
+const PPMori = localFont({
+  src: './PPMori-Regular.otf',
+});
+
+export {
+  ArgesHeavy,
+  DrukCond,
+  ArchivoBlack,
+  NeuehaasBody,
+  PPMori,
+  coign47BoldPro,
+};
