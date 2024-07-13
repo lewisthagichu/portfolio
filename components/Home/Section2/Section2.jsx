@@ -1,7 +1,7 @@
 'use client';
 import styles from './section2.module.scss';
 import { useRef } from 'react';
-import ZoomParallax from '../../ZoomParallax/ZoomParallax';
+import ZoomParallax from '../ZoomParallax/ZoomParallax';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';

@@ -1,11 +1,10 @@
 import Header from '../Header/Header';
-
 function Layout({ children }) {
   return (
-    <main>
+    <div className="main-wrap rel">
       <Header />
       {children}
-    </main>
+    </div>
   );
 }
 

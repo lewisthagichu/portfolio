@@ -53,6 +53,29 @@ html.lenis, html.lenis body {
   pointer-events: none;
 }
 
+/* Global classes */
+.rel {
+  position: relative;
+}
+
+/* Background parallax */
+.imageContainer {
+  position: absolute;
+  width: 100vw;
+  height: 110%;
+  top: -10%;
+  will-change: transform;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 /* button styling */
 .btnClick {     
   border: none;  
@@ -72,7 +95,7 @@ html.lenis, html.lenis body {
   text-transform: uppercase;
   vertical-align: baseline;
   color: var(--color-white);
-  will-change: transform;    
+  /* will-change: transform;     */
 }
 
 .btnClick a span{
@@ -96,7 +119,6 @@ html.lenis, html.lenis body {
 }
 
 /* Curved border */
-
 .curvedBorder {
   width: 100%;
   height: 0;
@@ -111,7 +133,7 @@ html.lenis, html.lenis body {
   width: 100%;
   height: 10vh;
   overflow: hidden;
-  will-change: height;
+  /* will-change: height; */
 }
 
 .circle {

@@ -5,7 +5,9 @@ import Lenis from 'lenis';
 function SmoothScrolling({ children }) {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.4,
+      lerp: 0.05,
+      wheelMultiplier: 0.7,
+      touchMultiplier: 0.7,
     });
 
     function raf(time) {
@@ -15,7 +17,7 @@ function SmoothScrolling({ children }) {
 
     requestAnimationFrame(raf);
   }, []);
-  return <>{children}</>;
+  return <main className="rel">{children}</main>;
 }
 
 export default SmoothScrolling;

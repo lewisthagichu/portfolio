@@ -41,7 +41,7 @@ function Footer() {
   };
 
   return (
-    <motion.div
+    <motion.section
       ref={container}
       style={{ y }}
       className={`${styles.container} ${NeuehaasBody.className}`}
@@ -164,7 +164,7 @@ function Footer() {
           </a>
         </div>
       </div>
-    </motion.div>
+    </motion.section>
   );
 }
 
