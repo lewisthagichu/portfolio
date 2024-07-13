@@ -24,6 +24,8 @@
             z-index: 2;
             text-transform: uppercase;
             font-weight: 700;
+            line-height: 6.2vw;
+            padding-top: 1.6vh;
         }
 
         .imageContainer {
@@ -79,6 +81,10 @@
 @media screen and (max-width: 1024px) {
     .container {
         .card {
+            h2 {
+                font-size: 12vw;
+                line-height: 12vw;
+            }
             .imageContainer {
                 .video {
                     width: 512px;
@@ -105,6 +111,10 @@
 @media screen and (max-width: 600px) {
     .container {
         .card {
+            h2 {
+                font-size: 16vw;
+                line-height: 15vw;
+            }
             .imageContainer {
                 .video {
                     top: 36%;

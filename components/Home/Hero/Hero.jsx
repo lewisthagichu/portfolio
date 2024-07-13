@@ -15,7 +15,7 @@ function Hero() {
 
   const y = useTransform(scrollYProgress, [0, 1], [0, 500]);
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <motion.div style={{ y }} ref={imageContainer} className="imageContainer">
         <Image
           src={'/images/bg-img.jpg'}
@@ -34,7 +34,7 @@ function Hero() {
         <Text3d primary={'FULL-STACK'} secondary={'FULL-STACK'} />
         <Text3d primary={'DEVELOPER'} secondary={'DEVELOPER'} />
       </div>
-    </div>
+    </section>
   );
 }
 

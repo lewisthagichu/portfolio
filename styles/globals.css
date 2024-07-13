@@ -63,7 +63,7 @@ html.lenis, html.lenis body {
   position: absolute;
   width: 100vw;
   height: 110%;
-  top: -10%;
+  /* top: -10%; */
   will-change: transform;
 }
 
