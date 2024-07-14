@@ -3,6 +3,10 @@ import { Archivo_Black } from 'next/font/google';
 
 const ArchivoBlack = Archivo_Black({ subsets: ['latin'], weight: '400' });
 
+const BlackStone = localFont({
+  src: './Blackstone.woff',
+});
+
 const DrukCond = localFont({
   src: './DrukXCond-Super-Trial.otf',
 });
@@ -25,6 +29,7 @@ const PPMori = localFont({
 
 export {
   ArgesHeavy,
+  BlackStone,
   DrukCond,
   ArchivoBlack,
   NeuehaasBody,

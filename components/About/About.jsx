@@ -1,11 +1,13 @@
 `use client`;
 import styles from './about.module.scss';
-import { ArgesHeavy, PPMori } from '@/public/fonts/fonts';
+import { ArgesHeavy, BlackStone, PPMori } from '@/public/fonts/fonts';
 import { useEffect, useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import useHeaderContext from '@/hooks/useHeaderContext';
 import Image from 'next/image';
-import bg from '@/public/images/me.jpg';
+import bg from '@/public/images/me3.jpg';
+import Services from './Services/Services';
+import Summary from './Summary/Summary';
 
 function About() {
   const { setHeaderStyle } = useHeaderContext();
@@ -16,8 +18,8 @@ function About() {
     offset: ['start start', 'end start'],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [0, 500]);
-  const textY = useTransform(scrollYProgress, [0, 1], [0, 600]);
+  const y = useTransform(scrollYProgress, [0, 1], [0, 150]);
+  const textY = useTransform(scrollYProgress, [0, 1], [0, 75]);
 
   useEffect(() => {
     setHeaderStyle({ color: '#fff' });
@@ -37,7 +39,8 @@ function About() {
         <motion.div style={{ y: textY }} className={styles.textContainer}>
           <h2>
             <span>Turning ideas</span>
-            <span>into memorable</span> <span>digital experiences</span>
+            <span>into memorable</span>{' '}
+            <span className={BlackStone.className}>digital experiences</span>
           </h2>
           <h4>
             Bridging the gap between vision and execution with effective
@@ -52,7 +55,9 @@ function About() {
 
         <div className="overlay"></div>
       </div>
-      <div className={styles.services}></div>
+      <Summary />
+      <Services />
+      {/* <Services /> */}
     </section>
   );
 }
