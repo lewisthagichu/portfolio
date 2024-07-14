@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import useHeaderContext from '@/hooks/useHeaderContext';
 import Link from 'next/link';
 import Magnetic from '../common/Magnetic';
+import SocialsLinks from '../Footer/SocialLinks/SocialsLinks';
 
 function Contact() {
   const { setHeaderStyle } = useHeaderContext();
@@ -38,28 +39,7 @@ function Contact() {
         </Magnetic>
       </button>
 
-      <div className={styles.socials}>
-        <Magnetic>
-          <p data-strength="20">© Lewis Thagichu 2024 </p>
-        </Magnetic>
-        <div className={styles.links}>
-          <a href="https://github.com/lewisthagichu" target="_blank">
-            <span>Github</span>
-          </a>
-
-          <a href="https://dev.to/thagichucodes" target="_blank">
-            <span>DEV</span>
-          </a>
-
-          <a href="https://www.linkedin.com/in/lewis-thagichu/" target="_blank">
-            <span>Linkedln</span>
-          </a>
-
-          <a href="https://x.com/thagichucodes" target="_blank">
-            <span>Twitter</span>
-          </a>
-        </div>
-      </div>
+      <SocialsLinks divStyles={styles.socialsContact} />
     </section>
   );
 }

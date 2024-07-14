@@ -1,6 +1,5 @@
 'use client';
 import styles from './footer.module.scss';
-import Link from 'next/link';
 import { DrukCond, NeuehaasBody } from '@/public/fonts/fonts';
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
@@ -8,6 +7,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import Magnetic from '../common/Magnetic';
 import MagneticButton from '../common/MagneticButton';
+import SocialsLinks from './SocialLinks/SocialsLinks';
 
 function Footer() {
   const container = useRef(null);
@@ -145,25 +145,7 @@ function Footer() {
         text={'Get in touch'}
       />
 
-      <div className={styles.socials}>
-        <Magnetic>
-          <p data-strength="20">© Lewis Thagichu 2024 </p>
-        </Magnetic>{' '}
-        <div className={styles.links}>
-          <a href="https://github.com/lewisthagichu" target="_blank">
-            Github
-          </a>
-          <a href="https://dev.to/thagichucodes" target="_blank">
-            DEV
-          </a>
-          <a href="https://www.linkedin.com/in/lewis-thagichu/" target="_blank">
-            Linkedln
-          </a>
-          <a href="https://x.com/thagichucodes" target="_blank">
-            X
-          </a>
-        </div>
-      </div>
+      <SocialsLinks />
     </motion.section>
   );
 }

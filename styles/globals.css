@@ -156,3 +156,29 @@ html.lenis, html.lenis body {
   transform: translate(-50%, -86.666%);
   z-index: 1;
 }
+
+/* Footer */
+.socials {
+  padding: 0 2vw 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color-white);
+  font-size: clamp(1rem, 2.4vw, 1.6rem);
+}
+
+.socials .links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.2vw;
+}
+
+.socials .links a {
+  text-decoration: none;
+  color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}

@@ -50,30 +50,6 @@
         left: 50%;
         transform: translateX(-50%);        
     }
-    
-
-    .socials {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 2vw 4rem;
-        color: var(--color-white);
-        font-size: clamp(1rem, 2.4vw, 1.6rem);
-
-        .links {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            gap: 1.2vw;
-
-            a {
-                text-decoration: none;
-                color: var(--color-white);
-                width: fit-content;
-            }
-        }
-    }
-
 }
 
 @media only screen and (max-width: 596px) {
