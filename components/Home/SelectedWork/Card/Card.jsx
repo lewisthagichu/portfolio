@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArgesHeavy } from '@/public/fonts/fonts';
+import useEnableAnimation from '@/hooks/useEnableAnimations';
 
 function Card({
   i,
@@ -16,6 +17,7 @@ function Card({
   targetScale,
   progress,
 }) {
+  const enableAnimations = useEnableAnimation();
   const container = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -31,16 +33,18 @@ function Card({
   return (
     <div ref={container} className={styles.container}>
       <motion.div
-        style={{ top: `calc(6vh + ${i * 25}px)` }}
+        style={{
+          top: `calc(6vh + ${i * 25}px)`,
+          // scale: enableAnimations ? cardScale : 1,
+        }}
         className={styles.card}
       >
         <h2 className={ArgesHeavy.className} style={{ color }}>
           {title}
         </h2>
+
         <div className={styles.imageContainer}>
           <motion.div
-            // whileHover={{ scale: 1.05 }}
-            transition={{ ease: [0.455, 0.03, 0.515, 0.955] }}
             style={{ scale: imageScale }}
             className={styles.innerView}
           >
