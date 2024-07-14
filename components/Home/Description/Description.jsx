@@ -5,8 +5,7 @@ import { motion, useScroll } from 'framer-motion';
 import { expertises, paragraphs } from '@/data/descriptionData';
 import { NeuehaasBody } from '@/public/fonts/fonts';
 import useSmoothOpacity from '@/hooks/useSmoothOpacity';
-import Link from 'next/link';
-import Magnetic from '@/components/common/Magnetic';
+import MagneticButton from '@/components/common/MagneticButton';
 
 const Word = ({ children, progress, range }) => {
   const smoothOpacity = useSmoothOpacity(progress, range, [0, 1]);
@@ -83,13 +82,13 @@ function Description() {
           </div>
         </motion.div>
       </div>
-      <button className={`btnClick ${styles.btnClickDescription}`}>
-        <Magnetic>
-          <Link data-strength="60" href="/about">
-            <span>More About Me</span>
-          </Link>
-        </Magnetic>
-      </button>
+
+      <MagneticButton
+        styles={styles.btnClickDescription}
+        magneticStrength={'60'}
+        href={'/about'}
+        text={'More about me'}
+      />
     </section>
   );
 }

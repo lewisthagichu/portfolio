@@ -5,8 +5,8 @@ import Card from './Card/Card';
 import styles from './selectedWork.module.scss';
 import { projects } from '@/data/projects';
 import { useScroll, useTransform, motion } from 'framer-motion';
-import { NeuehaasBody, DrukCond } from '@/public/fonts/fonts';
-import Magnetic from '@/components/common/Magnetic';
+import { ArgesHeavy, DrukCond } from '@/public/fonts/fonts';
+import MagneticButton from '@/components/common/MagneticButton';
 
 function SelectedWork() {
   const container = useRef(null);
@@ -60,11 +60,12 @@ function SelectedWork() {
       className={styles.container}
     >
       <motion.div style={{ opacity, scale, y }} className={styles.title}>
-        <motion.h3 style={{ color }} className={DrukCond.className}>
+        <motion.h3 style={{ color }} className={ArgesHeavy.className}>
           <span className={styles.selected}>selected</span>
           <span className={styles.work}>work/</span>
         </motion.h3>
       </motion.div>
+
       <div ref={wrapper} className={styles.wrapper}>
         {projects.map((project, i) => {
           const targetScale = 1 - (projects.length - i) * 0.03;
@@ -80,13 +81,14 @@ function SelectedWork() {
           );
         })}
       </div>
-      <button className={`btnClick ${styles.btnClickSelected}`}>
-        <Magnetic>
-          <Link data-strength="60" href="/work">
-            <span>View more projects</span>
-          </Link>
-        </Magnetic>
-      </button>
+
+      <MagneticButton
+        styles={styles.btnClickSelected}
+        magneticStrength={'60'}
+        href={'/work'}
+        text={'View more Projects'}
+      />
+
       <div className="curvedBorder">
         <motion.div style={{ height }} className="circleContainer">
           <div className="circle"></div>
