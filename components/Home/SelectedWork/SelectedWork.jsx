@@ -35,19 +35,13 @@ function SelectedWork() {
   });
   const height = useTransform(containerProgress, [0, 1], [300, 0]);
 
-  // Contaner's YProgress used by main container
-  const { scrollYProgress: containerProgress2 } = useScroll({
-    target: container,
-    offset: ['start start', 'end start'],
-  });
-
   const backgroundColor = useTransform(
-    containerProgress2,
+    containerProgress,
     [0, 0.05, 1],
     ['#EAEAEA', '#1C1D20', '#1C1D20']
   );
   const color = useTransform(
-    containerProgress2,
+    containerProgress,
     [0, 0.05, 1],
     ['#1C1D20', '#fff', '#fff']
   );

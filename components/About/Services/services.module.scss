@@ -1,26 +1,17 @@
 .container {
     position: relative;
-    background-color: var(--color-dark);
     color: var(--color-white);
-    overflow: hidden;   
     z-index: 1;
- 
+    background-color: var(--color-dark);
+    
     .wrapper {
         position: relative;
         width: 100vw;
         display: flex;
         flex-direction: column;
+        overflow: hidden;
 
         .imageContainer {
-            // position: relative;
-            // display: block;
-            // overflow: hidden;
-            // background-color: inherit;  
-            // height: 140vh;  
-            // width: 100vw;
-            // height:  calc(109vh - (var(--section-padding) * 2)); 
-            // width: calc(100vw - (var(--section-padding) * 2));    
-
             .image {
                 position: absolute;
                 height:100%;
@@ -57,7 +48,6 @@
                 line-height: 6.2vw;
                 text-align: center;
                 padding: 0 calc(var(--section-padding) / 2);
-
 
                 span {
                     display: inline-block;
@@ -102,6 +92,10 @@
 
             }
         }
+    }
+
+    .pad {
+        margin-top: calc(clamp(5em, 21vw, 12em));
     }
 
 }
