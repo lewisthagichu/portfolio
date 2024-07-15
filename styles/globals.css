@@ -73,7 +73,6 @@ html.lenis, html.lenis body {
   position: absolute;
   width: 100vw;
   height: 110%;
-  will-change: transform;
 }
 
 .imageContainer img {

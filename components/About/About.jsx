@@ -19,15 +19,14 @@ function About() {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [0, 150]);
-  const textY = useTransform(scrollYProgress, [0, 1], [0, 75]);
 
   useEffect(() => {
     setHeaderStyle({ color: '#fff' });
   }, []);
 
   return (
-    <section className={styles.container}>
-      <div className={` ${styles.wrapper} ${ArgesHeavy.className}`}>
+    <div className={styles.container}>
+      <section className={` ${styles.wrapper} ${ArgesHeavy.className}`}>
         <motion.div
           style={{ y }}
           ref={imageContainer}
@@ -36,7 +35,7 @@ function About() {
           <Image src={bg} alt="image" />
         </motion.div>
 
-        <motion.div style={{ y: textY }} className={styles.textContainer}>
+        <div className={styles.textContainer}>
           <h2>
             <span>Turning ideas</span>
             <span>into memorable</span>{' '}
@@ -51,14 +50,14 @@ function About() {
             innovative software. I am committed to excellence in every line of
             code.
           </p>
-        </motion.div>
+        </div>
 
         <div className="overlay"></div>
-      </div>
+      </section>
       <Summary />
       <Services />
       {/* <Services /> */}
-    </section>
+    </div>
   );
 }
 
