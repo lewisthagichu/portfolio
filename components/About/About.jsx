@@ -8,6 +8,7 @@ import Image from 'next/image';
 import bg from '@/public/images/me3.jpg';
 import Services from './Services/Services';
 import Summary from './Summary/Summary';
+import Footer from '../Footer/Footer';
 
 function About() {
   const { setHeaderStyle } = useHeaderContext();
@@ -56,7 +57,12 @@ function About() {
       </section>
       <Summary />
       <Services />
-      {/* <Services /> */}
+      <Footer />
+      {/* <div className="curvedBorder">
+        <motion.div style={{ height }} className="circleContainer">
+          <div className="circle"></div>
+        </motion.div>
+      </div> */}
     </div>
   );
 }

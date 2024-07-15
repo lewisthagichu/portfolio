@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { offers } from '@/data/descriptionData';
-import { ArgesHeavy, BlackStone, PPMori } from '@/public/fonts/fonts';
+import { ArgesHeavy, BlackStone } from '@/public/fonts/fonts';
 
 function Services() {
   const container = useRef(null);
@@ -42,6 +42,7 @@ function Services() {
           </div>
         </div>
       </div>
+
       <div className="overlay"></div>
     </section>
   );
