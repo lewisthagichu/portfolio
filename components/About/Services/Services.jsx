@@ -15,7 +15,7 @@ function Services() {
     offset: ['start end', 'end start'],
   });
 
-  const height = useTransform(scrollYProgress, [0, 1], [200, 0]);
+  const height = useTransform(scrollYProgress, [0, 1], [150, 0]);
   const y = useTransform(scrollYProgress, [0, 0.5, 1], [-200, 0, 200]);
 
   return (
@@ -28,8 +28,9 @@ function Services() {
         </div>
         <div className={styles.textContainer}>
           <h2 className={ArgesHeavy.className}>
-            Interested in collaborating with forward-thinking clients to develop{' '}
-            <span className={BlackStone.className}>innovative software</span>
+            Interested in collaborating with forward-thinking clients determined
+            to scale and create{' '}
+            <span className={BlackStone.className}>sustained impact</span>
           </h2>
           <div className={styles.services}>
             <h3>Services:</h3>

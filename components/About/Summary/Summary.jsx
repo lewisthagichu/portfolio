@@ -1,10 +1,32 @@
+'use client';
 import styles from './summary.module.scss';
+import { useRef } from 'react';
 import { PPMori, NeuehaasBody } from '@/public/fonts/fonts';
+import { useScroll, useTransform, motion } from 'framer-motion';
+import Image from 'next/image';
+import bg from '@/public/images/me4.jpg';
 
 function Summary() {
+  const container = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ['start end', 'end start'],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 0.5, 1], [-200, 0, 200]);
   return (
-    <section className={`${NeuehaasBody.className} ${styles.container}`}>
-      <div></div>
+    <section
+      ref={container}
+      className={`${NeuehaasBody.className} ${styles.container}`}
+    >
+      <div className={styles.imageContainer}>
+        <motion.div style={{ y }} className={styles.image}>
+          <Image src={bg} alt="image" />
+        </motion.div>
+        {/* <div className="overlay"></div> */}
+      </div>
+
       <div className={styles.content}>
         <div className={styles.box}>
           <h4>About me</h4>
@@ -35,7 +57,7 @@ function Summary() {
             <span>React</span>
             <span>Express JS</span>
             <span>Flask</span>
-            <span>Mongo DB</span>
+            <span>MongoDB</span>
             <span>MySQL</span>
             <span>Sass</span>
             <span>Git</span>

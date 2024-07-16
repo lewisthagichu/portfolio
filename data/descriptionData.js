@@ -27,6 +27,6 @@ export const offers = [
   {
     title: '[03] Technical Consultancy',
     description:
-      'I offer guidance on software architecture, technology selection, and system integration. I help businesses optimize their tech stack. My goal is to align your technology strategy with your business objective',
+      'I offer guidance on software architecture and technology selection. I help businesses optimize their tech stack. My goal is to align your technology strategy with your business objective',
   },
 ];
