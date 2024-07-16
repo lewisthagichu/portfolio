@@ -47,9 +47,8 @@ function About() {
             software development.
           </h4>
           <p className={PPMori.className}>
-            Interested in collaborating with forward-thinking clients to develop
-            innovative software. I am committed to excellence in every line of
-            code.
+            Keen on partnering with ambitious brands to develop innovative
+            software. I am committed to excellence in every line of code.
           </p>
         </div>
 
@@ -58,11 +57,6 @@ function About() {
       <Summary />
       <Services />
       <Footer />
-      {/* <div className="curvedBorder">
-        <motion.div style={{ height }} className="circleContainer">
-          <div className="circle"></div>
-        </motion.div>
-      </div> */}
     </div>
   );
 }

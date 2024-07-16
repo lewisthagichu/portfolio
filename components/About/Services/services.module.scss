@@ -37,7 +37,7 @@
             padding-bottom: calc(clamp(5em, 21vw, 12em) * 1.25);
             display: flex;
             flex-direction: column;
-            gap: calc(clamp(5em, 21vw, 12em) * 4);
+            gap: calc(clamp(5em, 21vw, 12em) * 3.6);
 
 
             h2 {
@@ -61,12 +61,12 @@
                 display: flex;
                 flex-direction: column;
                 gap: calc(clamp(5em, 21vw, 12em) * 0.2);
-                padding: calc(var(--section-padding) / 4) calc(var(--section-padding) / 2) ;
+                padding: calc(var(--section-padding) / 3) calc(var(--section-padding) / 2) ;
                 background-color: var(--color-dark);
                 border-radius: 1rem;
 
                 h3 {
-                    font-size: calc(clamp(5em, 21vw, 12em) / 2);
+                    font-size: calc(clamp(5em, 21vw, 12em) / 2.4);
                 }
 
                 .offers {

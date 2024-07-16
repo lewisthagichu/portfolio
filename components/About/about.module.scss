@@ -113,7 +113,6 @@
         .wrapper {
             .textContainer {
                 padding-top: calc(clamp(5em, 21vw, 12em) * 2.4);
-                // padding-bottom: calc(clamp(5em, 21vw, 12em) * 1.2);
                 h2 {
                     font-size: 16vw;
                     line-height: 13vw;
@@ -129,14 +128,14 @@
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 440px) {
     .container {
         .wrapper {
             .textContainer {
-                gap: clamp(1.6em, 6vw, 3.2em);
+                gap: clamp(1.8em, 6vw, 3.2em);
 
                 h4 {
-                    line-height: 4.5vw;
+                    line-height: 4.8vw;
                 }
             }
         }

@@ -29,8 +29,8 @@ function Services() {
         <div className={styles.textContainer}>
           <h2 className={ArgesHeavy.className}>
             Interested in collaborating with forward-thinking clients determined
-            to scale and create{' '}
-            <span className={BlackStone.className}>sustained impact</span>
+            to scale and drive{' '}
+            <span className={BlackStone.className}>sustained growth</span>
           </h2>
           <div className={styles.services}>
             <h3>Services:</h3>
