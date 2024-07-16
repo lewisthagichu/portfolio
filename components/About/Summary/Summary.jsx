@@ -5,6 +5,7 @@ import { PPMori, NeuehaasBody } from '@/public/fonts/fonts';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import Image from 'next/image';
 import bg from '@/public/images/me4.jpg';
+import { aboutMe, stack } from '@/data/aboutData';
 
 function Summary() {
   const container = useRef(null);
@@ -27,41 +28,19 @@ function Summary() {
         {/* <div className="overlay"></div> */}
       </div>
 
-      <div className={styles.content}>
+      <div className={styles.textContent}>
         <div className={styles.box}>
           <h4>About me</h4>
-          <p>
-            I'm Lewis Thagichu, a software engineer based in Nairobi, Kenya.
-          </p>
-          <p>
-            I believe that the best products come from a blend of creativity,
-            technical expertise, and strong teamwork. Therefore my strategy to
-            building focuses on combining creative thinking with an analytical
-            approach to solve problems at the intersection of business and
-            technology.
-          </p>
-          <p>
-            As someone dedicated to personal growth, I view each project as an
-            opportunity for self-improvement. I can handle projects
-            independently or seamlessly integrate into existing developer teams.
-          </p>
-          <p>
-            I am a music and sports enthusiast, and I also consider myself to be
-            quite the photographer.
-          </p>
+          {aboutMe.map((par, i) => (
+            <p key={`par_${i}`}>{par}</p>
+          ))}
         </div>
         <div className={styles.box}>
           <h4>Technologies</h4>
           <div className={styles.tech}>
-            <span>Next.JS</span>
-            <span>React</span>
-            <span>Express JS</span>
-            <span>Flask</span>
-            <span>MongoDB</span>
-            <span>MySQL</span>
-            <span>Sass</span>
-            <span>Git</span>
-            <span>Vercel</span>
+            {stack.map((tech, i) => (
+              <span key={`t_${i}`}>{tech}</span>
+            ))}
           </div>
         </div>
       </div>

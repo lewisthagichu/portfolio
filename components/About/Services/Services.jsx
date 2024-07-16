@@ -4,7 +4,7 @@ import bg from '@/public/images/me.jpg';
 import Image from 'next/image';
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
-import { offers } from '@/data/descriptionData';
+import { offers } from '@/data/aboutData';
 import { ArgesHeavy, BlackStone } from '@/public/fonts/fonts';
 
 function Services() {

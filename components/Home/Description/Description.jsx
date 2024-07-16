@@ -2,7 +2,7 @@
 import styles from './description.module.scss';
 import { useRef } from 'react';
 import { motion, useScroll } from 'framer-motion';
-import { expertises, paragraphs } from '@/data/descriptionData';
+import { expertises, paragraphs } from '@/data/aboutData';
 import { NeuehaasBody } from '@/public/fonts/fonts';
 import useSmoothOpacity from '@/hooks/useSmoothOpacity';
 import MagneticButton from '@/components/common/MagneticButton';

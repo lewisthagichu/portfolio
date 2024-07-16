@@ -23,7 +23,7 @@
         }
     }
 
-    .content {
+    .textContent {
         display: flex;
         flex-direction: column;
         gap: 3rem;
@@ -65,12 +65,16 @@
 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .container {
         gap: 0;
         
         .imageContainer {
             display: none;
+        }
+
+        .textContent {
+            justify-self: end;
         }
     }
 
