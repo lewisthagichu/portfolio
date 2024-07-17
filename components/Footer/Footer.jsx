@@ -145,7 +145,7 @@ function Footer() {
         text={'Get in touch'}
       />
 
-      <SocialsLinks />
+      <SocialsLinks divStyles={styles.socialsFooter} />
     </motion.section>
   );
 }

@@ -21,8 +21,8 @@ function Contact() {
       <div className={styles.cta}>
         <h2>Get in Touch!</h2>
         <p>
-          Have a question, proposal, or just want to say hello? Drop me an
-          email.
+          Have a question, proposal, or just want to say hello? Send me an
+          email/text.
         </p>
       </div>
 

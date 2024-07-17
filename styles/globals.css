@@ -103,7 +103,6 @@ html.lenis, html.lenis body {
   text-transform: uppercase;
   vertical-align: baseline;
   color: var(--color-white);
-  /* will-change: transform;     */
 }
 
 .btnClick a span{
@@ -153,7 +152,7 @@ html.lenis, html.lenis body {
 
 /* Footer */
 .socials {
-  padding: 0 2vw 3rem;
+  padding-bottom: 3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;

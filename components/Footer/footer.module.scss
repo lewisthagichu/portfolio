@@ -50,6 +50,11 @@
         left: 50%;
         transform: translateX(-50%);        
     }
+
+    .socialsFooter {
+        padding-left: var(--section-padding);
+        padding-right: var(--section-padding);
+    }
 }
 
 @media only screen and (max-width: 596px) {
