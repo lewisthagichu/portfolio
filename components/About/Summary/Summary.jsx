@@ -15,7 +15,7 @@ function Summary() {
     offset: ['start end', 'end start'],
   });
 
-  const y = useTransform(scrollYProgress, [0, 0.5, 1], [-200, 0, 200]);
+  const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
   return (
     <section
       ref={container}

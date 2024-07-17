@@ -33,7 +33,7 @@ function Contact() {
 
       <button className={`btnClick ${styles.btnClickContact}`}>
         <Magnetic>
-          <Link data-strength="60" href="/projects">
+          <Link data-strength="60" href="/work">
             <span>Submit</span>
           </Link>
         </Magnetic>

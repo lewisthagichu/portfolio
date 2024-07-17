@@ -10,22 +10,18 @@ const links = [
   {
     title: 'Home',
     to: '/',
-    src: 'about.webp',
   },
   {
     title: 'About',
     to: '/about',
-    src: 'about.webp',
   },
   {
     title: 'Work',
-    to: '/projects',
-    src: 'projects.webp',
+    to: '/work',
   },
   {
     title: 'Contact',
     to: '/contact',
-    src: 'contact.jpg',
   },
 ];
 

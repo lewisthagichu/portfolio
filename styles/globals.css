@@ -130,6 +130,7 @@ html.lenis, html.lenis body {
   position: relative;
   width: 100%;
   height: 0;
+  border: none;
 }
 
 .circleContainer {

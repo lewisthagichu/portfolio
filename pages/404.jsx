@@ -1,9 +1,7 @@
 import styles from '@/styles/404.module.scss';
-import { NeuehaasBody, ArgesHeavy } from '@/public/fonts/fonts';
+import { NeuehaasBody } from '@/public/fonts/fonts';
 import SocialsLinks from '@/components/Footer/SocialLinks/SocialsLinks';
 import MagneticButton from '@/components/common/MagneticButton';
-import Image from 'next/image';
-import gif from '@/public/media/knock.webp';
 
 function Custom404Page() {
   return (
@@ -18,10 +16,8 @@ function Custom404Page() {
           text={'Go back to home '}
         />
       </div>
-      <div className={styles.imageContainer}>
-        <Image src={gif} />
-      </div>
-      <SocialsLinks />
+
+      <SocialsLinks divStyles={styles.footer404} />
     </section>
   );
 }

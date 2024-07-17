@@ -26,7 +26,7 @@ function Card({
   });
 
   const imageScale = useTransform(scrollYProgress, [0, 1], [1.2, 1]);
-  const videoHeight = useTransform(scrollYProgress, [0, 1], ['64%', '0%']);
+  const videoY = useTransform(scrollYProgress, [0, 1], ['64%', '0%']);
 
   const cardScale = useTransform(progress, range, [1, targetScale]);
 
@@ -60,7 +60,7 @@ function Card({
           <div className={styles.video}>
             <div className={styles.videoContainer}>
               <motion.div
-                style={{ y: videoHeight, background: color }}
+                style={{ y: videoY, background: color }}
                 className={styles.inner}
               >
                 {/* <Image

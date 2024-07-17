@@ -1,8 +1,8 @@
 .container {
     position: relative;
-    min-height: 100vh;
     background-color: var(--color-dark);
     color: var(--color-white);
+    min-height: 100vh;
     padding: calc(clamp(5em, 21vw, 12em)* 2) var(--section-padding) 0;
     display: flex;
     flex-direction: column;
@@ -11,22 +11,41 @@
     .textContainer {
         display: flex;
         flex-direction: column;
+        z-index: 2;
         h2 {
             line-height: 1.3;
-            font-size: var(--large-heading-size);
+            font-size: calc(var(--large-heading-size) * 1.5);
             opacity: .5;
         }
 
         p {
-            font-size: calc(var(--large-heading-size) * 0.7);
+            font-size: calc(var(--large-heading-size) * 0.75);
         }
 
         .btnClick404 {
-            padding: calc(clamp(5em, 21vw, 12em) * .7) 0;
+            padding: calc(clamp(5em, 21vw, 12em) * .5) 0 calc(clamp(5em, 21vw, 12em) * .25);
             justify-self: center;
             a{
                 border: var(--light-border);
             }
         }
+    }
+
+    .imageContainer {
+        position: absolute;
+        inset: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    .footer404 {
+        z-index: 2;
     }
 }

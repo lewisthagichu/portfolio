@@ -9,8 +9,9 @@
 
     .imageContainer {        
         position: relative;
-        height: 80%;
+        height: 100%;
         align-self: center;
+        justify-self: center;
         overflow: hidden;
         
         .image {
@@ -18,7 +19,8 @@
 
             img {
                 height: 100%;
-                width: 100%;
+                width: 75%;
+                object-fit: cover;
             }
         }
     }

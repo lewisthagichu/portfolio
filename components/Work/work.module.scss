@@ -1,0 +1,21 @@
+.container {
+   position: relative;
+   background-color: var(--color-dark); 
+   color: var(--color-white);
+   display: flex;
+   flex-direction: column;
+
+   .title {
+      position: sticky;
+      top: 0;
+      margin: 0 auto;
+      padding-top: calc(clamp(5em, 21vw, 12em) * 1.66);
+      // padding-bottom: calc(clamp(5em, 21vw, 12em) * .83);
+
+      h2 {
+         font-size: 45vw;
+         line-height: 40vw;
+      }
+   }
+
+}
