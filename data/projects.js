@@ -2,7 +2,7 @@ export const projects = [
   {
     title: 'HomeFinder',
     description:
-      'HomeFinder is a platform designed to streamline the process of finding rental properties and homes for sale.’).',
+      'A platform designed to streamline the process of finding rental properties and homes for sale..',
     src: 'homeFinder.jpg',
     link: 'https://www.ignant.com/2022/09/30/clement-chapillon-questions-geographical-and-mental-isolation-with-les-rochers-fauves/',
     color: '#fff',
@@ -31,7 +31,7 @@ export const projects = [
   {
     title: 'TicTacPlay',
     description:
-      'TicTacPlay is a fun and interactive site where users can enjoy playing the classic game of Tic-Tac-Toe.',
+      'A fun and interactive site where users can enjoy playing the classic game of Tic-Tac-Toe.',
     src: 'xo.jpg',
     link: 'https://lewisthagichu.github.io/tik-tac-toe/',
     color: '#3F93E2',
@@ -42,7 +42,7 @@ export const projects = [
   {
     title: 'SketchPad',
     description:
-      'Sketch Pad brings the classic Etch A Sketch experience to the digital world. You can draw images and shapes with ease using intuitive control',
+      'A site that brings the classic Etch A Sketch experience to the digital world.',
     src: 'etch.jpg',
     link: 'https://lewisthagichu.github.io/etch-a-sketch/',
     color: '#62A9A8',

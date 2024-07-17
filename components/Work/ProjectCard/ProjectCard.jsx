@@ -1,21 +1,30 @@
+'use client';
 import styles from './projectCard.module.scss';
+import { useScroll, useTransform, motion } from 'framer-motion';
+import { NeuehaasBody } from '@/public/fonts/fonts';
+import Image from 'next/image';
+import Link from 'next/link';
 
-function ProjectCard() {
+function ProjectCard({ src, color, title, description }) {
   return (
-    <section className={styles.container}>
+    <section className={`${styles.container} ${NeuehaasBody.className}`}>
       <div className={styles.imageContainer}>
-        <motion.div style={{ y }} className={styles.image}>
-          <Image src={bg} alt="image" />
-        </motion.div>
+        <div className={styles.image}>
+          <Image
+            src={`/images/${src}`}
+            width={0}
+            height={0}
+            sizes="100vw"
+            placeholder="blur"
+            blurDataURL={`/images/${src}`}
+            alt="image"
+          />
+        </div>
         {/* <div className="overlay"></div> */}
 
-        <div className={styles.video}>
-          <div className={styles.videoContainer}>
-            <motion.div
-              style={{ y: videoHeight, background: color }}
-              className={styles.inner}
-            >
-              {/* <Image
+        <div className={styles.videoContainer}>
+          <div style={{ background: color }} className={styles.video}>
+            {/* <Image
                   src={`/images/${src}`}
                   fill
                   sizes="90vw"
@@ -23,9 +32,13 @@ function ProjectCard() {
                   placeholder="blur"
                   blurDataURL={`/images/${src}`}
                 /> */}
-            </motion.div>
           </div>
         </div>
+      </div>
+
+      <div className={styles.title}>
+        <h4>{title}</h4>
+        <p>{description}</p>
       </div>
     </section>
   );

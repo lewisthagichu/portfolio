@@ -44,10 +44,7 @@ function Card({
         </h2>
 
         <div className={styles.imageContainer}>
-          <motion.div
-            style={{ scale: imageScale }}
-            className={styles.innerView}
-          >
+          <motion.div style={{ scale: imageScale }} className={styles.image}>
             <Image
               src={`/images/${src}`}
               fill
