@@ -1,12 +1,12 @@
 'use client';
-import styles from './projectCard.module.scss';
+import styles from './project.module.scss';
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { NeuehaasBody } from '@/public/fonts/fonts';
 import Image from 'next/image';
 import Link from 'next/link';
 
-function ProjectCard({ src, background, title, description }) {
+function Project({ src, background, title, description }) {
   const container = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -55,4 +55,4 @@ function ProjectCard({ src, background, title, description }) {
   );
 }
 
-export default ProjectCard;
+export default Project;

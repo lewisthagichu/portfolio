@@ -33,7 +33,7 @@ function About() {
           ref={imageContainer}
           className="imageContainer"
         >
-          <Image src={bg} alt="image" />
+          <Image src={bg} alt="image" placeholder="blur" priority />
         </motion.div>
 
         <div className={styles.textContainer}>

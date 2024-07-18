@@ -1,6 +1,6 @@
 import styles from './work.module.scss';
 import { ArgesHeavy } from '@/public/fonts/fonts';
-import Projects from './ProjectsWrapper/ProjectsWrapper';
+import ProjectsWrapper from './ProjectsWrapper/ProjectsWrapper';
 import Footer from '../Footer/Footer';
 
 function Work() {
@@ -10,7 +10,7 @@ function Work() {
         <h2 className={ArgesHeavy.className}>WORK</h2>
       </section>
 
-      <Projects />
+      <ProjectsWrapper />
       <Footer></Footer>
     </div>
   );

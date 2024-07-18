@@ -3,10 +3,10 @@ import styles from './projectsWrapper.module.scss';
 import { useRef } from 'react';
 import { projects } from '@/data/projectsData';
 import { useScroll, useTransform } from 'framer-motion';
-import ProjectCard from '../ProjectCard/ProjectCard';
+import Project from '../Project/Project';
 import CurvedBorder from '@/components/common/CurvedBorder';
 
-function Projects() {
+function ProjectsWrapper() {
   const container = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -17,7 +17,7 @@ function Projects() {
   return (
     <div ref={container} className={styles.wrapper}>
       {projects.map((project, i) => (
-        <ProjectCard key={`p_${i}`} {...project} />
+        <Project key={`p_${i}`} {...project} />
       ))}
 
       <CurvedBorder height={height} />
@@ -25,4 +25,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default ProjectsWrapper;
