@@ -1,11 +1,10 @@
 'use client';
 import { useRef } from 'react';
-import Link from 'next/link';
 import Card from './Card/Card';
 import styles from './selectedWork.module.scss';
-import { projects } from '@/data/projects';
+import { projects } from '@/data/projectsData';
 import { useScroll, useTransform, motion } from 'framer-motion';
-import { ArgesHeavy, DrukCond } from '@/public/fonts/fonts';
+import { ArgesHeavy } from '@/public/fonts/fonts';
 import MagneticButton from '@/components/common/MagneticButton';
 
 function SelectedWork() {

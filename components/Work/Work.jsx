@@ -1,7 +1,7 @@
 import styles from './work.module.scss';
 import { ArgesHeavy } from '@/public/fonts/fonts';
-import ProjectCard from './ProjectCard/ProjectCard';
-import { projects } from '@/data/projects';
+import Projects from './ProjectsWrapper/ProjectsWrapper';
+import Footer from '../Footer/Footer';
 
 function Work() {
   return (
@@ -10,9 +10,8 @@ function Work() {
         <h2 className={ArgesHeavy.className}>WORK</h2>
       </section>
 
-      {projects.map((project, i) => (
-        <ProjectCard key={`p_${i}`} {...project} />
-      ))}
+      <Projects />
+      <Footer></Footer>
     </div>
   );
 }

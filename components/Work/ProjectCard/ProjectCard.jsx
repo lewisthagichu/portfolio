@@ -1,30 +1,40 @@
 'use client';
 import styles from './projectCard.module.scss';
+import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { NeuehaasBody } from '@/public/fonts/fonts';
 import Image from 'next/image';
 import Link from 'next/link';
 
-function ProjectCard({ src, color, title, description }) {
+function ProjectCard({ src, background, title, description }) {
+  const container = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ['start end', 'end start'],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [-200, 100]);
   return (
     <section className={`${styles.container} ${NeuehaasBody.className}`}>
-      <div className={styles.imageContainer}>
-        <div className={styles.image}>
-          <Image
-            src={`/images/${src}`}
-            width={0}
-            height={0}
-            sizes="100vw"
-            placeholder="blur"
-            blurDataURL={`/images/${src}`}
-            alt="image"
-          />
-        </div>
-        {/* <div className="overlay"></div> */}
+      <Link href="/home">
+        <div ref={container} className={styles.imageContainer}>
+          <motion.div style={{ y }} className={styles.image}>
+            <Image
+              src={`/images/${src}`}
+              width={0}
+              height={0}
+              sizes="100vw"
+              placeholder="blur"
+              blurDataURL={`/images/${src}`}
+              alt="image"
+            />
+          </motion.div>
+          {/* <div className="overlay"></div> */}
 
-        <div className={styles.videoContainer}>
-          <div style={{ background: color }} className={styles.video}>
-            {/* <Image
+          <div className={styles.videoContainer}>
+            <div style={{ background }} className={styles.video}>
+              {/* <Image
                   src={`/images/${src}`}
                   fill
                   sizes="90vw"
@@ -32,9 +42,10 @@ function ProjectCard({ src, color, title, description }) {
                   placeholder="blur"
                   blurDataURL={`/images/${src}`}
                 /> */}
+            </div>
           </div>
         </div>
-      </div>
+      </Link>
 
       <div className={styles.title}>
         <h4>{title}</h4>
