@@ -6,6 +6,7 @@ import { projects } from '@/data/projectsData';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { ArgesHeavy } from '@/public/fonts/fonts';
 import MagneticButton from '@/components/common/MagneticButton';
+import CurvedBorder from '@/components/common/CurvedBorder';
 
 function SelectedWork() {
   const container = useRef(null);
@@ -82,11 +83,7 @@ function SelectedWork() {
         text={'View more Projects'}
       />
 
-      <div className="curvedBorder">
-        <motion.div style={{ height }} className="circleContainer">
-          <div className="circle"></div>
-        </motion.div>
-      </div>
+      <CurvedBorder height={height} />
     </motion.section>
   );
 }

@@ -2,8 +2,9 @@
 import styles from './projectsWrapper.module.scss';
 import { useRef } from 'react';
 import { projects } from '@/data/projectsData';
-import { useScroll, useTransform, motion } from 'framer-motion';
+import { useScroll, useTransform } from 'framer-motion';
 import ProjectCard from '../ProjectCard/ProjectCard';
+import CurvedBorder from '@/components/common/CurvedBorder';
 
 function Projects() {
   const container = useRef(null);
@@ -19,11 +20,7 @@ function Projects() {
         <ProjectCard key={`p_${i}`} {...project} />
       ))}
 
-      <div className="curvedBorder">
-        <motion.div style={{ height }} className="circleContainer">
-          <div className="circle"></div>
-        </motion.div>
-      </div>
+      <CurvedBorder height={height} />
     </div>
   );
 }

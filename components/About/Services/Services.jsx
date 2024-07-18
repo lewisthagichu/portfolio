@@ -6,6 +6,7 @@ import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { offers } from '@/data/aboutData';
 import { ArgesHeavy, BlackStone } from '@/public/fonts/fonts';
+import CurvedBorder from '@/components/common/CurvedBorder';
 
 function Services() {
   const container = useRef(null);
@@ -48,12 +49,7 @@ function Services() {
         <div className="overlay"></div>
       </div>
 
-      <div className={styles.pad}></div>
-      <div className="curvedBorder">
-        <motion.div style={{ height }} className="circleContainer">
-          <div className="circle"></div>
-        </motion.div>
-      </div>
+      <CurvedBorder height={height} />
     </section>
   );
 }
