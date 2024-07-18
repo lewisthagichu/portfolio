@@ -17,20 +17,11 @@ function Project({ src, background, title, description }) {
   const y = useTransform(scrollYProgress, [0, 1], [-200, 100]);
   return (
     <section className={`${styles.container} ${NeuehaasBody.className}`}>
-      <Link href="/home">
+      <Link href="/work">
         <div ref={container} className={styles.imageContainer}>
           <motion.div style={{ y }} className={styles.image}>
-            <Image
-              src={`/images/${src}`}
-              width={0}
-              height={0}
-              sizes="100vw"
-              placeholder="blur"
-              blurDataURL={`/images/${src}`}
-              alt="image"
-            />
+            <Image src={`/images/${src}`} fill objectFit="cover" alt="image" />
           </motion.div>
-          {/* <div className="overlay"></div> */}
 
           <div className={styles.videoContainer}>
             <div style={{ background }} className={styles.video}>

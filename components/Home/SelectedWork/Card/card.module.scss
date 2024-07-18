@@ -5,102 +5,83 @@
     display: flex;
     justify-content: center;   
     align-items: center; 
+    padding-top: clamp(4rem, 8vh, 12rem);
     
     .card {
         position: relative;
-        height: 100%;
+        height: 90%;
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         transform-origin: top;
-        // will-change: transform;
 
         h2 {
             position: absolute;
-            top: clamp(1rem, 1vh, 2rem);
-            text-align: center;
-            font-size: clamp(6rem, 7vw, 12rem);
-            z-index: 2;
+            font-size: clamp(3em, 6vw, 8em);
             text-transform: uppercase;
-            font-weight: 700;
-            line-height: 6.2vw;
-            padding-top: 1.6vh;
+            padding-top: min(.4rem, 1vh);
+            z-index: 1;
         }
 
         .imageContainer {
             position: relative;
             width: 100%;
-            height: 100%;
+            aspect-ratio: 1.618 / 1;
+            border-radius: 1rem;
             overflow: hidden;
-            border-radius: 8px;
+            background-color: lightgray;
 
             .image {
-                position: relative;
-                height: 90%;
-                width: 100%;
-
+                height: 100%; 
+                
                 img {
-                    object-fit: cover;                    
+                    object-fit: cover;
                 }
             }
 
-
-            .video {
+            .videoContainer {
                 position: absolute;
-                left: 50%;
-                top: 44%;
+                inset: 50% 0 0 50%;
                 transform: translate(-50%, -50%);
-                width: 768px;
-                height: 432px;
+                width: 64%;
+                aspect-ratio: 16 / 9;
+                z-index: 2;
                 
-                .videoContainer {
+                .video {
                     position: relative;
                     width: 100%;
                     height: 100%;
+                    border-radius: .5rem;
                     
-                    .inner {
-                        position: relative;
-                        width: 100%;
-                        height: 100%;
-                        img {
-                            object-fit: cover;
-                        }
-
-                    }
-
+                    img {
+                        object-fit: cover;
+                    }                
+    
                 }
-            }
+            }        
 
 
         }    
     }
 }
 
-@media screen and (max-width: 1024px) {
+
+
+@media screen and (max-width: 991px) {
     .container {
         .card {
             h2 {
-                font-size: 12vw;
+                font-size: 10vw;
                 line-height: 12vw;
             }
-            .imageContainer {
-                .video {
-                    width: 512px;
-                    height: 288px;
-                }
-            }
-        }
-    }
-}
 
-@media screen and (max-width: 768px) {
-    .container {
-        .card {
             .imageContainer {
-                .video {
-                    width: 512px;
-                    height: 288px;
+                width: 100%;
+                height: 90%;
+
+                .videoContainer {
+                    width: 96%;                    
                 }
             }
         }
@@ -110,15 +91,15 @@
 @media screen and (max-width: 600px) {
     .container {
         .card {
+            height: 100%;
+
             h2 {
-                font-size: 16vw;
+                font-size: clamp(6em, 6vw, 8em);
                 line-height: 15vw;
             }
             .imageContainer {
-                .video {
-                    top: 36%;
-                    width: 384px;
-                    height: 216px;
+                .videoContainer {
+                    top: 45%;
                 }
             }
         }

@@ -3,7 +3,6 @@
     background-color: var(--color-dark);
     padding: 0 var(--section-padding);
     padding-bottom: min(12vw, 160px);
-    // height: 100vh;
 
     .imageContainer {        
         position: relative;
@@ -11,16 +10,10 @@
         aspect-ratio: 1.618 / 1;
         border-radius: 1rem;
         overflow: hidden;
+        // background-color: lightgray;
         
         .image {
             height: 110%;
-            // transform: translate3d(0, 100px, 0);
-            
-            img {
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-            }
         }
 
         .videoContainer {
@@ -29,7 +22,7 @@
             top: 50%;
             transform: translate(-50%, -50%);
             width: 70%;
-            aspect-ratio: 1.77777777778 / 1;
+            aspect-ratio: 16 / 9;
             z-index: 2;
             
             .video {

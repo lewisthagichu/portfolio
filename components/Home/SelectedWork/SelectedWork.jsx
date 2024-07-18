@@ -1,50 +1,39 @@
 'use client';
-import { useRef } from 'react';
-import Card from './Card/Card';
 import styles from './selectedWork.module.scss';
-import { projects } from '@/data/projectsData';
+import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { ArgesHeavy } from '@/public/fonts/fonts';
 import MagneticButton from '@/components/common/MagneticButton';
 import CurvedBorder from '@/components/common/CurvedBorder';
+import CardWrapper from './CardWrapper/CardWrapper';
 
 function SelectedWork() {
   const container = useRef(null);
-  const wrapper = useRef(null);
-
-  // Wrapper's YProgress used by card component
-  const { scrollYProgress: wrapperProgress } = useScroll({
-    target: wrapper,
-    offset: ['start start', 'end end'],
-  });
+  const title = useRef(null);
 
   // Wrapper's YProgress used by title div
-  const { scrollYProgress: titleProgress } = useScroll({
-    target: wrapper,
-    offset: ['start end', '100vh end'],
-  });
+  // const { scrollYProgress: titleProgress } = useScroll({
+  //   target: wrapper,
+  //   offset: ['start end', '100vh end'],
+  // });
 
-  const opacity = useTransform(titleProgress, [0, 1], [1, 0]);
-  const scale = useTransform(titleProgress, [0, 1], [1, 0.5]);
-  const y = useTransform(titleProgress, [0, 0.9], [0, 70]);
+  // const opacity = useTransform(titleProgress, [0, 1], [1, 0]);
+  // const scale = useTransform(titleProgress, [0, 1], [1, 0.5]);
+  // const y = useTransform(titleProgress, [0, 0.9], [0, 70]);
 
   // Container's YProgress used by circle container
-  const { scrollYProgress: containerProgress } = useScroll({
+  const { scrollYProgress } = useScroll({
     target: container,
-    offset: ['start start', 'end start'],
+    offset: ['start start', '1px start'],
   });
-  const height = useTransform(containerProgress, [0, 1], [300, 0]);
+  const height = useTransform(scrollYProgress, [0, 1], [300, 0]);
 
   const backgroundColor = useTransform(
-    containerProgress,
-    [0, 0.05, 1],
-    ['#EAEAEA', '#1C1D20', '#1C1D20']
+    scrollYProgress,
+    [0, 1],
+    ['#EAEAEA', '#1C1D20']
   );
-  const color = useTransform(
-    containerProgress,
-    [0, 0.05, 1],
-    ['#1C1D20', '#fff', '#fff']
-  );
+  const color = useTransform(scrollYProgress, [0, 1], ['#1C1D20', '#fff']);
 
   return (
     <motion.section
@@ -53,28 +42,14 @@ function SelectedWork() {
       style={{ backgroundColor }}
       className={styles.container}
     >
-      <motion.div style={{ opacity, scale, y }} className={styles.title}>
+      <div className={styles.title}>
         <motion.h3 style={{ color }} className={ArgesHeavy.className}>
           <span className={styles.selected}>selected</span>
           <span className={styles.work}>work/</span>
         </motion.h3>
-      </motion.div>
-
-      <div ref={wrapper} className={styles.wrapper}>
-        {projects.map((project, i) => {
-          const targetScale = 1 - (projects.length - i) * 0.03;
-          return (
-            <Card
-              key={`c_${i}`}
-              i={i}
-              {...project}
-              progress={wrapperProgress}
-              range={[i * 0.25, 1]}
-              targetScale={targetScale}
-            />
-          );
-        })}
       </div>
+
+      <CardWrapper />
 
       <MagneticButton
         styles={styles.btnClickSelected}

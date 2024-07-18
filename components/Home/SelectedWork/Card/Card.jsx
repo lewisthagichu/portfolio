@@ -6,17 +6,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArgesHeavy } from '@/public/fonts/fonts';
 import useEnableAnimation from '@/hooks/useEnableAnimations';
 
-function Card({
-  i,
-  title,
-  description,
-  src,
-  color,
-  tech,
-  range,
-  targetScale,
-  progress,
-}) {
+function Card({ i, title, src, background, range, targetScale, progress }) {
   const enableAnimations = useEnableAnimation();
   const container = useRef(null);
 
@@ -34,42 +24,25 @@ function Card({
     <div ref={container} className={styles.container}>
       <motion.div
         style={{
-          top: `calc(6vh + ${i * 25}px)`,
+          top: `calc(${i * 25}px)`,
           // scale: enableAnimations ? cardScale : 1,
         }}
         className={styles.card}
       >
-        <h2 className={ArgesHeavy.className} style={{ color }}>
+        <h2 className={ArgesHeavy.className} style={{ color: background }}>
           {title}
         </h2>
 
         <div className={styles.imageContainer}>
           <motion.div style={{ scale: imageScale }} className={styles.image}>
-            <Image
-              src={`/images/${src}`}
-              fill
-              sizes="100vw"
-              alt="image"
-              priority={true}
-            />
+            <Image src={`/images/${src}`} fill sizes="100vw" alt="image" />
           </motion.div>
 
-          <div className={styles.video}>
-            <div className={styles.videoContainer}>
-              <motion.div
-                style={{ y: videoY, background: color }}
-                className={styles.inner}
-              >
-                {/* <Image
-                  src={`/images/${src}`}
-                  fill
-                  sizes="90vw"
-                  alt="image"
-                  placeholder="blur"
-                  blurDataURL={`/images/${src}`}
-                /> */}
-              </motion.div>
-            </div>
+          <div className={styles.videoContainer}>
+            <motion.div
+              style={{ y: videoY, background }}
+              className={styles.video}
+            ></motion.div>
           </div>
         </div>
       </motion.div>
