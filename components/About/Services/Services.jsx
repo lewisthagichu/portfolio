@@ -24,7 +24,7 @@ function Services() {
       <div className={styles.wrapper}>
         <div className={`imageContainer ${styles.imageContainer}`}>
           <motion.div style={{ y }} className={styles.image}>
-            <Image src={bg} alt="image" />
+            <Image src={bg} alt="image" placeholder="blur" />
           </motion.div>
         </div>
         <div className={styles.textContainer}>
@@ -49,6 +49,7 @@ function Services() {
         <div className="overlay"></div>
       </div>
 
+      <div className={styles.pad}></div>
       <CurvedBorder height={height} />
     </section>
   );

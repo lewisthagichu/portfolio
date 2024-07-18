@@ -4,6 +4,7 @@ import Text3d from './Text3d/Text3d';
 import Image from 'next/image';
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
+import bgImage from '@/public/images/bg-img.jpg';
 
 function Hero() {
   const imageContainer = useRef(null);
@@ -17,13 +18,7 @@ function Hero() {
   return (
     <section className={styles.container}>
       <motion.div style={{ y }} ref={imageContainer} className="imageContainer">
-        <Image
-          src={'/images/bg-img.jpg'}
-          sizes="100vw"
-          width={0}
-          height={0}
-          alt="image"
-        />
+        <Image src={bgImage} alt="image" placeholder="blur" priority />
       </motion.div>
 
       <div className={styles.topLeft}>

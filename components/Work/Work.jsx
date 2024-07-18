@@ -11,7 +11,7 @@ function Work() {
       </section>
 
       <ProjectsWrapper />
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 }

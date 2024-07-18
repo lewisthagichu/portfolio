@@ -23,7 +23,7 @@ function Summary() {
     >
       <div className={styles.imageContainer}>
         <motion.div style={{ y }} className={styles.image}>
-          <Image src={bg} alt="image" />
+          <Image src={bg} alt="image" placeholder="blur" />
         </motion.div>
         {/* <div className="overlay"></div> */}
       </div>
