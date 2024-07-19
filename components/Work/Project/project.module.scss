@@ -14,6 +14,10 @@
         
         .image {
             height: 110%;
+
+            img {
+                object-fit: cover;
+            }
         }
 
         .videoContainer {

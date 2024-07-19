@@ -138,7 +138,7 @@ html.lenis, html.lenis body {
   position: relative;
   background-color: transparent;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .circle {

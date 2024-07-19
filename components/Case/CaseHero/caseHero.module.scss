@@ -1,0 +1,52 @@
+.container {
+    position: relative;  
+    display: flex;
+    flex-direction: column;
+
+    .title {
+        height: min(60dvh, 100em);
+        position: sticky;
+        top: 0;
+        margin: 0  auto;
+        display: flex;
+        align-items: center;
+        padding-top: calc(clamp(5em, 21vw, 12em) * 1.66);
+        padding-bottom: calc(clamp(5em, 21vw, 12em) * .83);
+  
+        h2 {
+           font-size: 28vw;
+           line-height: 40vw;
+           
+        }
+    }
+
+    .imageContainer {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+
+        img {
+            position: absolute;
+           object-fit: cover; 
+           width: 100%;
+           height: 120%;
+           top: -10%;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .container {
+       .title {
+          height: auto;
+          display: block;
+ 
+          h2 {
+          font-size: 40vw;
+          }
+       }
+       
+    }
+ 
+ }

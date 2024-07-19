@@ -52,7 +52,7 @@ function SelectedWork() {
           <span className={styles.work}>work/</span>
         </h3>
         <p className={PPMori.className}>
-          Showcase of some of my recent projects
+          A showcase of some of my recent projects
         </p>
       </motion.div>
 

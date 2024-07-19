@@ -20,7 +20,7 @@ function Project({ src, background, title, description }) {
       <Link href="/work">
         <div ref={container} className={styles.imageContainer}>
           <motion.div style={{ y }} className={styles.image}>
-            <Image src={`/images/${src}`} fill objectFit="cover" alt="image" />
+            <Image src={`/images/${src}`} fill alt="image" />
           </motion.div>
 
           <div className={styles.videoContainer}>

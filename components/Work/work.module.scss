@@ -4,17 +4,36 @@
    color: var(--color-white);
    display: flex;
    flex-direction: column;
-
+   
    .title {
+      height: min(60dvh, 100em);
       position: sticky;
       top: 0;
-      margin: 0 auto;
+      margin: 0  auto;
+      display: flex;
+      align-items: center;
       padding-top: calc(clamp(5em, 21vw, 12em) * 1.66);
-      // padding-bottom: calc(clamp(5em, 21vw, 12em) * .83);
+      padding-bottom: calc(clamp(5em, 21vw, 12em) * .83);
 
       h2 {
-         font-size: 45vw;
+         font-size: 28vw;
          line-height: 40vw;
+         
       }
    }
+}
+
+@media screen and (max-width: 991px) {
+   .container {
+      .title {
+         height: auto;
+         display: block;
+
+         h2 {
+         font-size: 40vw;
+         }
+      }
+      
+   }
+
 }

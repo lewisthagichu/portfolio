@@ -1,5 +1,11 @@
 .wrapper {
     position: relative;
-    padding: 0 clamp(1rem, 4vw, 6rem);
+    padding: var(--section-padding);
 }
 
+@media screen and (max-width: 600px) {
+    .wrapper {
+        padding: 0 clamp(1rem, 4vw, 6rem);
+    }
+    
+}
