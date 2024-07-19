@@ -28,7 +28,7 @@ function Summary() {
         {/* <div className="overlay"></div> */}
       </div>
 
-      <div className={styles.textContent}>
+      <div className={styles.textContainer}>
         <div className={styles.box}>
           <h4>About me</h4>
           {aboutMe.map((par, i) => (

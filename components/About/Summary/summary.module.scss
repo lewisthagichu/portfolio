@@ -5,7 +5,7 @@
     color: var(--color-white);
     display: grid;
     grid-template-columns: auto auto; 
-    gap: calc(clamp(5em, 21vw, 12em) * 0.4);
+    // gap: calc(clamp(5em, 21vw, 12em) * 0.4);
 
     .imageContainer {        
         position: relative;
@@ -25,7 +25,7 @@
         }
     }
 
-    .textContent {
+    .textContainer {
         display: flex;
         flex-direction: column;
         gap: 3rem;
@@ -58,7 +58,6 @@
                 span {
                     font-size: clamp(1.1rem, 2.4vw, 2rem);
                 }
-
             }
         }
         
@@ -74,7 +73,7 @@
             display: none;
         }
 
-        .textContent {
+        .textContainer {
             justify-self: end;
         }
     }
