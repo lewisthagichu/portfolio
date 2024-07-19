@@ -14,13 +14,19 @@ function Project({ src, background, title, description }) {
     offset: ['start end', 'end start'],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [-200, 100]);
+  const y = useTransform(scrollYProgress, [0, 1], [-200, 200]);
   return (
     <section className={`${styles.container} ${NeuehaasBody.className}`}>
       <Link href="/work">
         <div ref={container} className={styles.imageContainer}>
           <motion.div style={{ y }} className={styles.image}>
-            <Image src={`/images/${src}`} fill alt="image" />
+            <Image
+              src={`/images/${src}`}
+              width={0}
+              height={0}
+              sizes="100vw"
+              alt="image"
+            />
           </motion.div>
 
           <div className={styles.videoContainer}>
