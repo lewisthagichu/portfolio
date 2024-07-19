@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Hero />
-      <Section2 />
+      {/* <Section2 /> */}
       <Description />
       <SelectedWork />
       <Footer />

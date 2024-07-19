@@ -29,6 +29,7 @@ function Hero() {
         <Text3d primary={'FULL-STACK'} secondary={'FULL-STACK'} />
         <Text3d primary={'DEVELOPER'} secondary={'DEVELOPER'} />
       </div>
+      {/* <div className="overlay"></div> */}
     </section>
   );
 }

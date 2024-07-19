@@ -45,7 +45,7 @@ function Description() {
 
   const { scrollYProgress: scrollYProgress2 } = useScroll({
     target: containerRef,
-    offset: ['start 0.5', 'end 0.4'],
+    offset: ['start 0.48', 'end 0.4'],
   });
 
   const divOpacity = useSmoothOpacity(
@@ -72,7 +72,7 @@ function Description() {
           style={{ opacity: divOpacity }}
           className={styles.expertise}
         >
-          <h5>SKILLS</h5>
+          <h4>SKILLS</h4>
           <div>
             {expertises.map((expertise, index) => (
               <p key={`exp_${index}`}>
