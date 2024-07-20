@@ -1,7 +1,7 @@
 'use client';
 import styles from './summary.module.scss';
 import { useRef } from 'react';
-import { PPMori, NeuehaasBody } from '@/public/fonts/fonts';
+import { NeuehaasBody } from '@/public/fonts/fonts';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import Image from 'next/image';
 import bg from '@/public/images/me4.jpg';

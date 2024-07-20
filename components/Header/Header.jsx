@@ -7,13 +7,10 @@ import { useState, useEffect } from 'react';
 import { opacity } from '@/utils/anim';
 import { useDateTime } from '@/utils/useDateTime';
 import { NeuehaasBody } from '@/public/fonts/fonts';
-import useHeaderContext from '@/hooks/useHeaderContext';
 import Nav from './nav/Nav';
 
 function Header() {
   const [isActive, setIsActive] = useState(false);
-  const { headerStyle } = useHeaderContext();
-  const { color } = headerStyle;
 
   const pathname = usePathname();
   const dateTime = useDateTime();
@@ -26,14 +23,8 @@ function Header() {
     setIsActive(false);
   }, [pathname]);
 
-  useEffect(() => {}, [color]);
-
   return (
-    <div
-      id="header"
-      style={{ color }}
-      className={`${styles.header} ${NeuehaasBody.className}`}
-    >
+    <div className={`${styles.header} ${NeuehaasBody.className}`}>
       <div className={styles.bar}>
         <Link onMouseDown={() => setIsActive(false)} href="/">
           LEWIS THAGICHU

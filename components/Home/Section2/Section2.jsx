@@ -5,14 +5,14 @@ import ZoomParallax from '../ZoomParallax/ZoomParallax';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import useHeaderContext from '@/hooks/useHeaderContext';
+// import useHeaderContext from '@/hooks/useHeaderContext';
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
 
 function Section2({}) {
   const containerRef = useRef();
-  const { setHeaderStyle } = useHeaderContext();
+  // const { setHeaderStyle } = useHeaderContext();
 
   // useGSAP(() => {
   //   ScrollTrigger.create({

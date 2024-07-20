@@ -1,14 +1,12 @@
 'use client';
 import styles from './aboutHero.module.scss';
 import { ArgesHeavy, BlackStone, PPMori } from '@/public/fonts/fonts';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
-import useHeaderContext from '@/hooks/useHeaderContext';
 import Image from 'next/image';
 import bg from '@/public/images/me3.jpg';
 
 function AboutHero() {
-  const { setHeaderStyle } = useHeaderContext();
   const imageContainer = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -17,10 +15,6 @@ function AboutHero() {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [0, 150]);
-
-  useEffect(() => {
-    setHeaderStyle({ color: '#fff' });
-  }, []);
 
   return (
     <section className={` ${styles.wrapper} ${ArgesHeavy.className}`}>

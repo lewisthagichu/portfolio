@@ -1,5 +1,4 @@
 import styles from './case.module.scss';
-
 import CaseHero from './CaseHero/CaseHero';
 
 function Case() {
