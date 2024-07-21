@@ -6,7 +6,9 @@
         aspect-ratio: 16 / 9;
         margin-bottom: calc(var(--section-padding) * 2);
         
+        
         .videoElement {
+            // background: lightgray;
             position: absolute;
             top: 0;
             left: 0;
@@ -20,11 +22,13 @@
         width: 100%;
         height: 110vh;
         overflow: hidden;
+        background: lightgray;
         
         .imageContainer {  
             position: relative;
             width: 100%;
             height: 100%;
+
 
             img {
                 position: absolute;
@@ -37,7 +41,7 @@
     }
 
     .mobileImages {
-        padding: calc(var(--section-padding) * 2) 0;
+        padding: calc(var(--section-padding) * 2) var(--section-padding);
         width: 100%;
         .row {
             flex-wrap: wrap;
@@ -48,15 +52,17 @@
                 width: 33.33%;
                 display: flex;
                 justify-content: center;
-                border-radius: .5rem;
-
+                
+                
                 .singleImage {
                     position: relative;
                     width: 68%;
-                    aspect-ratio: 9 / 16;
+                    aspect-ratio: 9 / 18;
+                    background: lightgray;
 
                     img {
                         object-fit: cover;
+                        border-radius: .3rem;
                     }
                 }
 
@@ -73,6 +79,7 @@
             aspect-ratio: 1 / 1;
         }
         .mobileImages {
+            padding: calc(var(--section-padding) * 2) 0;
             .row {
                 .column {
                     .singleImage {
