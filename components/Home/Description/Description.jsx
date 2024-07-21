@@ -1,4 +1,3 @@
-'use client';
 import styles from './description.module.scss';
 import { useRef } from 'react';
 import { motion, useScroll } from 'framer-motion';

@@ -1,4 +1,3 @@
-'use client';
 import styles from './home.module.scss';
 import { useEffect } from 'react';
 import Section2 from './Section2/Section2';

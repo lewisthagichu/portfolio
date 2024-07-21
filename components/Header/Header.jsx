@@ -1,4 +1,3 @@
-'use client';
 import styles from './header.module.scss';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';

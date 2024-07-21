@@ -1,4 +1,3 @@
-'use client';
 import styles from './footer.module.scss';
 import { DrukCond, NeuehaasBody } from '@/public/fonts/fonts';
 import { useRef } from 'react';

@@ -1,4 +1,3 @@
-'use client';
 import styles from './hoverImage.module.scss';
 import { motion } from 'framer-motion';
 import { opacity } from '@/utils/anim';

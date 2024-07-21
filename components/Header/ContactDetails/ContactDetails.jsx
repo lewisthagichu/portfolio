@@ -1,4 +1,3 @@
-'use client';
 import styles from './contactDetails.module.scss';
 import { motion } from 'framer-motion';
 import { fade } from '@/utils/anim';

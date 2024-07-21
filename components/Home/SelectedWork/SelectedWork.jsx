@@ -1,4 +1,3 @@
-'use client';
 import styles from './selectedWork.module.scss';
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
@@ -25,7 +24,7 @@ function SelectedWork() {
     target: container,
     offset: ['start start', 'end start'],
   });
-  const height = useTransform(scrollYProgress2, [0, 1], [300, 0]);
+  const height = useTransform(scrollYProgress2, [0, 1], [200, 0]);
 
   const { scrollYProgress } = useScroll({
     target: container,

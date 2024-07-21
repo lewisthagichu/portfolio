@@ -1,4 +1,3 @@
-'use client';
 import styles from './services.module.scss';
 import bg from '@/public/images/me.jpg';
 import Image from 'next/image';
@@ -16,7 +15,7 @@ function Services() {
     offset: ['start end', 'end start'],
   });
 
-  const height = useTransform(scrollYProgress, [0, 1], [150, 0]);
+  const height = useTransform(scrollYProgress, [0, 1], [200, 0]);
   const y = useTransform(scrollYProgress, [0, 0.5, 1], [-200, 0, 200]);
 
   return (

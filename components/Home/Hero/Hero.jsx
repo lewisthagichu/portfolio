@@ -1,4 +1,3 @@
-'use client';
 import styles from './hero.module.scss';
 import Text3d from './Text3d/Text3d';
 import Image from 'next/image';

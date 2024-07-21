@@ -1,5 +1,4 @@
 import Footer from '../Footer/Footer';
-import CurvedBorder from '../common/CurvedBorder';
 import CaseBody from './CaseBody/CaseBody';
 import styles from './case.module.scss';
 import { ArgesHeavy } from '@/public/fonts/fonts';
@@ -20,7 +19,6 @@ function Case({ project }) {
       </div>
 
       <CaseBody project={project} />
-      <CurvedBorder />
       <Footer />
     </div>
   );

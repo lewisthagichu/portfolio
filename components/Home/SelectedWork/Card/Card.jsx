@@ -1,4 +1,3 @@
-'use client';
 import styles from './card.module.scss';
 import Image from 'next/image';
 import { useRef } from 'react';

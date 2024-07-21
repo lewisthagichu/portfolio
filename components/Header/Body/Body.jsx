@@ -1,4 +1,3 @@
-'use client';
 import styles from './body.module.scss';
 import Link from 'next/link';
 import { motion } from 'framer-motion';

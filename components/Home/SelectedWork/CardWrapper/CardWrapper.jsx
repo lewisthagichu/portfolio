@@ -1,4 +1,3 @@
-'use client';
 import styles from './cardWrapper.module.scss';
 import { useRef } from 'react';
 import { projects } from '@/data/projectsData';

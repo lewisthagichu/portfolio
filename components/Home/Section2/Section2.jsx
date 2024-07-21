@@ -1,4 +1,3 @@
-'use client';
 import styles from './section2.module.scss';
 import { useRef } from 'react';
 import ZoomParallax from '../ZoomParallax/ZoomParallax';

@@ -1,4 +1,3 @@
-'use client';
 import styles from './aboutHero.module.scss';
 import { ArgesHeavy, BlackStone, PPMori } from '@/public/fonts/fonts';
 import { useRef } from 'react';

@@ -1,4 +1,3 @@
-'use client';
 import styles from './summary.module.scss';
 import { useRef } from 'react';
 import { NeuehaasBody } from '@/public/fonts/fonts';

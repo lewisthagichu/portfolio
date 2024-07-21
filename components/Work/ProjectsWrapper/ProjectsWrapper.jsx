@@ -13,7 +13,7 @@ function ProjectsWrapper() {
     target: container,
     offset: ['start start', 'end start'],
   });
-  const height = useTransform(scrollYProgress, [0, 1], [300, 0]);
+  const height = useTransform(scrollYProgress, [0, 1], [200, 0]);
   return (
     <div ref={container} className={styles.wrapper}>
       {projects.map((project, i) => (
