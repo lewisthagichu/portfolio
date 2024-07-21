@@ -1,12 +1,23 @@
-import BodyContent from './BodyContent/BodyContent';
+import CaseBody from './CaseBody/CaseBody';
 import styles from './case.module.scss';
-import CaseHero from './CaseHero/CaseHero';
+import { ArgesHeavy } from '@/public/fonts/fonts';
+import Image from 'next/image';
 
 function Case({ project }) {
+  const { title, src } = project;
   return (
     <div className={styles.container}>
-      <CaseHero project={project} />
-      <BodyContent project={project} />
+      <div className={styles.title}>
+        <h2 className={ArgesHeavy.className}>{title}</h2>
+      </div>
+
+      <div className={styles.imageContainer}>
+        <div className={styles.imageElement}>
+          <Image src={`${src}/web1.jpg`} priority fill alt="image" />
+        </div>
+      </div>
+
+      <CaseBody project={project} />
     </div>
   );
 }

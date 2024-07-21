@@ -1,0 +1,17 @@
+.container {
+    padding: var(--section-padding);
+
+    .videoContainer {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        
+        .videoElement {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }                                     
+    }        
+}
