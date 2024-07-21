@@ -1,0 +1,11 @@
+{
+  "title": "HomeFinder",
+  "description": "A platform designed to streamline the process of finding rental properties and homes for sale.",
+  "technologies": ["NextJS", "Redux", "MongoDB", "Sass", "Cloudinary"],
+  "year": 2024,
+  "client": "Personal",
+  "role": "Design & Development",
+  "live": "https://github.com/lewisthagichu",
+  "github": "https://github.com/lewisthagichu"  
+}
+  

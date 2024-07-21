@@ -1,43 +1,46 @@
 import styles from './caseHero.module.scss';
 import Image from 'next/image';
-import heroImage from '@/public/images/homeFinder.jpg';
 import { ArgesHeavy } from '@/public/fonts/fonts';
 
-function CaseHero() {
+function CaseHero({ project }) {
+  const { title, client, year, technologies, role, src, live, github } =
+    project;
   return (
     <section className={styles.container}>
       <div className={styles.title}>
-        <h2 className={ArgesHeavy.className}>HOMEFINDER</h2>
+        <h2 className={ArgesHeavy.className}>{title}</h2>
       </div>
 
       <div className={styles.imageContainer}>
-        <Image src={heroImage} fill alt="image" placeholder="blur" />
+        <div className={styles.imageElement}>
+          <Image src={`${src}/web1.jpg`} priority fill alt="image" />
+        </div>
       </div>
 
       <div className={styles.textContainer}>
         <div className={styles.details}>
           <div className={styles.box}>
             <h4>Client</h4>
-            <p>Personal</p>
+            <p>{client}</p>
           </div>
           <div className={styles.box}>
             <h4>Role / Services</h4>
-            <p>Design & Development</p>
+            <p>{role}</p>
           </div>
           <div className={styles.box}>
             <h4>Year</h4>
-            <p>2024</p>
+            <p>{year}</p>
           </div>
           <div className={styles.box}>
             <h4>Technologies</h4>
-            <p>Next.JS</p>
-            <p>MongoDB</p>
-            <p>Cloudinary</p>
-            <p>Sass</p>
+            {technologies.map((tech, i) => (
+              <p key={`te_${i}`}>{tech}</p>
+            ))}
           </div>
+
           <div className={styles.box}>
-            <a href="#">Live Site</a>
-            <a href="#">Source Code</a>
+            <a href={live}>Live Site</a>
+            <a href={github}>Source Code</a>
           </div>
         </div>
         <div className={styles.description}>

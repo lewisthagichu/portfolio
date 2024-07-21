@@ -42,7 +42,20 @@ function Card({ i, title, src, background, range, targetScale, progress }) {
             <motion.div
               style={{ y: videoY, background }}
               className={styles.video}
-            ></motion.div>
+            >
+              {/* <video
+                className={styles.videoElement}
+                autoPlay
+                muted
+                playsInline
+                loop
+                aria-label="Video player"
+                preload="none"
+              >
+                <source src={src} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video> */}
+            </motion.div>
           </div>
         </div>
       </motion.div>

@@ -30,16 +30,7 @@ function Project({ src, background, title, description }) {
           </motion.div>
 
           <div className={styles.videoContainer}>
-            <div style={{ background }} className={styles.video}>
-              {/* <Image
-                  src={`/images/${src}`}
-                  fill
-                  sizes="90vw"
-                  alt="image"
-                  placeholder="blur"
-                  blurDataURL={`/images/${src}`}
-                /> */}
-            </div>
+            <div style={{ background }} className={styles.video}></div>
           </div>
         </div>
       </Link>

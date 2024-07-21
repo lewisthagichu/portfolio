@@ -1,10 +1,12 @@
+import BodyContent from './BodyContent/BodyContent';
 import styles from './case.module.scss';
 import CaseHero from './CaseHero/CaseHero';
 
-function Case() {
+function Case({ project }) {
   return (
     <div className={styles.container}>
-      <CaseHero />
+      <CaseHero project={project} />
+      <BodyContent project={project} />
     </div>
   );
 }
