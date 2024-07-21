@@ -1,5 +1,6 @@
 .textContainer {
-    padding: calc(var(--section-padding));
+    padding: var(--section-padding);
+    padding-bottom: calc(var(--section-padding) * 2);
     display: grid;
     grid-template-columns: auto 1fr;
     z-index: 1;
@@ -63,7 +64,7 @@
 @media screen and (max-width: 768px) {
     .textContainer {
         grid-template-columns: 1fr;
-        gap: var(--section-padding);
+        gap: calc(var(--section-padding) * .5);
 
         .description {
             padding-left: 0;
@@ -75,4 +76,6 @@
         }
     }
 }
+
+
     

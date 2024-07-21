@@ -1,7 +1,8 @@
 .container {
     position: relative; 
     background: var(--color-dark);
-    color: var(--color-white);    
+    color: var(--color-white);   
+    z-index: 1; 
 }
 
 

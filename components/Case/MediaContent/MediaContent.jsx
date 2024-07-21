@@ -1,4 +1,6 @@
 import styles from './mediaContent.module.scss';
+import LargeImage from './LargeImage';
+import MobileImages from './MobileImages';
 
 function MediaContent({ src }) {
   return (
@@ -17,6 +19,9 @@ function MediaContent({ src }) {
           Your browser does not support the video tag.
         </video>
       </div>
+
+      <LargeImage src={src} />
+      <MobileImages src={src} />
     </div>
   );
 }

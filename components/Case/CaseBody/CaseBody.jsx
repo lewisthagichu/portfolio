@@ -1,3 +1,4 @@
+import CurvedBorder from '@/components/common/CurvedBorder';
 import Bio from '../Bio/Bio';
 import MediaContent from '../MediaContent/MediaContent';
 import styles from './caseBody.module.scss';

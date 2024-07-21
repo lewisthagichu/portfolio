@@ -3,7 +3,6 @@ import path from 'path';
 import Case from '@/components/Case/Case';
 
 function ProjectPage({ projectData }) {
-  console.log(projectData);
   return <Case project={projectData} />;
 }
 
@@ -31,8 +30,6 @@ export async function getStaticProps({ params }) {
   const filePath = path.join(dataDirectory, `${params.id}.json`);
   const fileContents = fs.readFileSync(filePath, 'utf8');
   const projectData = JSON.parse(fileContents);
-
-  console.log(projectData);
 
   return {
     props: {
