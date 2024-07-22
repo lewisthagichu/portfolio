@@ -3,7 +3,7 @@ import Text3d from './Text3d/Text3d';
 import Image from 'next/image';
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
-import bgImage from '@/public/images/bg-img.jpg';
+import bgImage from '@/public/media/work/portfolio/web1.jpg';
 
 function Hero() {
   const imageContainer = useRef(null);

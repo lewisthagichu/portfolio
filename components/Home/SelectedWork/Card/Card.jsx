@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArgesHeavy } from '@/public/fonts/fonts';
 import useEnableAnimation from '@/hooks/useEnableAnimations';
 
-function Card({ i, title, src, background, range, targetScale, progress }) {
+function Card({ i, title, link, background, range, targetScale, progress }) {
   const enableAnimations = useEnableAnimation();
   const container = useRef(null);
 
@@ -32,17 +32,19 @@ function Card({ i, title, src, background, range, targetScale, progress }) {
           {title}
         </h2>
 
-        <div className={styles.imageContainer}>
+        <div style={{ background }} className={styles.imageContainer}>
           <motion.div style={{ scale: imageScale }} className={styles.image}>
-            <Image src={`/images/${src}`} fill sizes="100vw" alt="image" />
+            <Image
+              src={`/media${link}/web1.jpg`}
+              fill
+              sizes="100vw"
+              alt="image"
+            />
           </motion.div>
 
           <div className={styles.videoContainer}>
-            <motion.div
-              style={{ y: videoY, background }}
-              className={styles.video}
-            >
-              {/* <video
+            <motion.div style={{ y: videoY }} className={styles.video}>
+              <video
                 className={styles.videoElement}
                 autoPlay
                 muted
@@ -51,11 +53,12 @@ function Card({ i, title, src, background, range, targetScale, progress }) {
                 aria-label="Video player"
                 preload="none"
               >
-                <source src={src} type="video/mp4" />
+                <source src={`/media${link}/homeVideo.mp4`} type="video/mp4" />
                 Your browser does not support the video tag.
-              </video> */}
+              </video>
             </motion.div>
           </div>
+          {/* <div className="overlay"></div> */}
         </div>
       </motion.div>
     </div>

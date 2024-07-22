@@ -2,9 +2,8 @@ export const projects = [
   {
     title: 'HomeFinder',
     description:
-      'A platform designed to streamline the process of finding rental properties and homes for sale..',
-    src: 'homeFinder.jpg',
-    link: 'https://www.ignant.com/2022/09/30/clement-chapillon-questions-geographical-and-mental-isolation-with-les-rochers-fauves/',
+      'A platform designed to streamline the process of finding rental properties and homes for sale.',
+    link: '/work/homefinder',
     background: '#fff',
     tech: ['NextJS', 'Redux', 'MongoDB', 'Sass', 'Cloudinary'],
     year: 2024,
@@ -12,9 +11,8 @@ export const projects = [
   {
     title: 'NexTalk',
     description:
-      'A real-time chat application designed to facilitate seamless and instant communication. Built with a focus on user experience and reliability.',
-    src: 'chat.jpg',
-    link: 'https://www.ignant.com/2023/03/25/ad2186-matthias-leidingers-photographic-exploration-of-awe-and-wonder/',
+      'A real-time chat application designed to facilitate seamless and instant communication.',
+    link: '/work/nextalk',
     background: '#79B6ED',
     tech: ['React', 'Socket.IO', 'Redux', 'MongoDB'],
     year: 2024,
@@ -22,8 +20,8 @@ export const projects = [
   {
     title: 'Portfolio',
     description: 'A website to showcase my skills and projects.',
-    src: 'bg-img.jpg',
-    link: 'https://www.ignant.com/2023/10/28/capturing-balis-many-faces-zissou-documents-the-sacred-and-the-mundane-of-a-fragile-island/',
+    link: '/work/portfolio',
+    image: 'bg-img.jpg',
     background: '#8EAEB6',
     tech: ['NextJS', 'Sass', 'Gsap', 'Framer-motion'],
     year: 2024,
@@ -32,8 +30,7 @@ export const projects = [
     title: 'TicTacPlay',
     description:
       'A fun and interactive site where users can enjoy playing Tic-Tac-Toe.',
-    src: 'xo.jpg',
-    link: 'https://lewisthagichu.github.io/tik-tac-toe/',
+    link: '/work/tictacplay',
     background: '#3F93E2',
     tech: ['HTML', 'CSS', 'Javascript', 'Gsap'],
     year: 2023,
@@ -43,8 +40,7 @@ export const projects = [
     title: 'SketchPad',
     description:
       'A site that brings the classic Etch A Sketch experience to the digital world.',
-    src: 'etch.jpg',
-    link: 'https://lewisthagichu.github.io/etch-a-sketch/',
+    link: '/work/sketchpad',
     background: '#62A9A8',
     tech: ['HTML', 'CSS', 'Javascript'],
     year: 2023,

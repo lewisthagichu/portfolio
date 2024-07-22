@@ -65,7 +65,7 @@
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .container {
         gap: 0;
         
@@ -75,7 +75,18 @@
 
         .textContainer {
             justify-self: end;
+            .box {
+                p {
+                    max-width: 800px;
+                }
+            }
         }
     }
 
+}
+
+@media screen and (max-width: 512px) {
+    .container {
+        padding: var(--section-padding) var(--mobile-padding);
+    }
 }

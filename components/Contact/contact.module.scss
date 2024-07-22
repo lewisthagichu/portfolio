@@ -53,3 +53,10 @@
         }
     }
 }
+
+@media only screen and (max-width: 512px) {
+    .container {
+        // padding: 0 var(--mobile-padding);
+       
+    }
+}

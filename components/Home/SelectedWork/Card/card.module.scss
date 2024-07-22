@@ -18,23 +18,23 @@
 
         h2 {
             position: absolute;
-            font-size: clamp(3em, 6vw, 10em);
+            font-size: var(--small-heading);
             text-transform: uppercase;
             padding-top: min(1rem, 1vh);
-            z-index: 1;
+            z-index: 2;
         }
 
         .imageContainer {
             position: relative;
             width: 100%;
-            aspect-ratio: 1.618 / 1;
+            height: 100%;
             border-radius: 1rem;
             overflow: hidden;
-            background-color: lightgray;
 
             .image {
                 position: relative;
                 height: 100%; 
+                width: 100%;
                 
                 img {
                     object-fit: cover;
@@ -45,20 +45,20 @@
                 position: absolute;
                 inset: 50% 0 0 50%;
                 transform: translate(-50%, -50%);
-                width: 60%;
+                width: 64%;
                 aspect-ratio: 16 / 9;
                 z-index: 2;
+                border-radius: 1rem;
+                overflow: hidden;
                 
                 .video {
                     position: relative;
                     width: 100%;
                     height: 100%;
-                    border-radius: .5rem;
                     
                     .videoElement {
                         position: absolute;
-                        top: 0;
-                        left: 0;
+                        inset: 0;
                         width: 100%;
                         height: 100%;
                     }                                     
@@ -95,10 +95,6 @@
         .card {
             height: 100%;
 
-            h2 {
-                font-size: clamp(6em, 6vw, 8em);
-                line-height: 15vw;
-            }
             .imageContainer {
                 .videoContainer {
                     top: 45%;
