@@ -1,6 +1,5 @@
 .container {   
     position: relative;
-    padding: 0 var(--section-padding);
     .videoContainer {
         position: relative;
         width: 100%;
@@ -74,6 +73,7 @@
 
 @media screen and (max-width: 600px) {
     .container{
+        
         .largeImage {
             height: auto;
             aspect-ratio: 1 / 1;

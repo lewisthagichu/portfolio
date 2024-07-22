@@ -2,7 +2,7 @@
   --color-dark: #1C1D20;
   --color-white: #fff;
   --color-beige: #E8E7CB;
-  --color-cadet: #8EAEB6;
+  --color-cadet: #6D7688;
   --color-light-blue: #c2e9fb;
 
   --section-padding: clamp(4rem, 10vw, 16rem);
@@ -60,6 +60,17 @@ html.lenis, html.lenis body {
   position: relative;
 }
 
+a {
+  all: unset;
+  color: inherit;
+  text-decoration: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+  font: inherit;
+}
+
 .overlay {
   position: absolute;
   background-color: rgb(28, 29, 32, 0.85);
@@ -67,6 +78,7 @@ html.lenis, html.lenis body {
   height: 100%;
   z-index: 1;
   opacity: 0.8;
+  pointer-events: none;
 }
 
 /* Background parallax */
@@ -154,7 +166,7 @@ html.lenis, html.lenis body {
 
 /* Footer */
 .socials {
-  padding-bottom: 3rem;
+  padding-bottom: 2.4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;

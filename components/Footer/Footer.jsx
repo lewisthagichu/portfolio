@@ -4,7 +4,6 @@ import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import Magnetic from '../common/Magnetic';
 import MagneticButton from '../common/MagneticButton';
 import SocialsLinks from './SocialLinks/SocialsLinks';
 

@@ -1,9 +1,9 @@
-import Footer from '../Footer/Footer';
-import CaseBody from './CaseBody/CaseBody';
 import styles from './case.module.scss';
 import { ArgesHeavy } from '@/public/fonts/fonts';
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
+import CaseBody from './CaseBody/CaseBody';
+import NextCase from './NextCase/NextCase';
 
 function Case({ project }) {
   const { title } = project;
@@ -24,7 +24,7 @@ function Case({ project }) {
       </motion.div>
 
       <CaseBody project={project} />
-      <Footer />
+      <NextCase project={project} />
     </div>
   );
 }
