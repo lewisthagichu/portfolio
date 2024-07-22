@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import { NeuehaasBody } from '@/public/fonts/fonts';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import Image from 'next/image';
-import bg from '@/public/images/me4.jpg';
+import bg from '@/public/media/about/me2.jpg';
 import { aboutMe, stack } from '@/data/aboutData';
 
 function Summary() {

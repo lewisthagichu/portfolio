@@ -1,5 +1,5 @@
 import styles from './services.module.scss';
-import bg from '@/public/images/me.jpg';
+import bg from '@/public/media/about/me4.jpg';
 import Image from 'next/image';
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';

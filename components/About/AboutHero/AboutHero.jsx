@@ -3,7 +3,7 @@ import { ArgesHeavy, BlackStone, PPMori } from '@/public/fonts/fonts';
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import Image from 'next/image';
-import bg from '@/public/images/me3.jpg';
+import bg from '@/public/media/about/me1.jpg';
 
 function AboutHero() {
   const imageContainer = useRef(null);
