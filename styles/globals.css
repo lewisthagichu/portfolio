@@ -6,11 +6,16 @@
   --color-light-blue: #c2e9fb;
 
   --section-padding: clamp(4rem, 10vw, 16rem);
-  --container-padding: clamp(4rem, 8vw, 16rem);
+  --container-padding: calc(clamp(5em, 21vw, 12em) * 1.5);
   --gap-padding: clamp(1.5em, 4vw, 2.5em);
+  --mobile-padding: calc(var(--section-padding) / 2);
 
-  --regular-text-size: clamp(1rem, 3vw, 2rem);
-  --large-heading-size: clamp(4rem, 7vw, 8rem);
+  --regular-text-size: clamp(1.5rem, 3vw, 2.8rem);
+  --small-text-size: clamp(1.2rem, 2vw, 1.6rem);
+
+  --small-heading: clamp(4rem, 7vw, 8rem);
+  --regular-heading: 18vw;
+  --large-heading: 28vw;
 
   --light-border: 1px solid rgba(255, 255, 255, 0.25);
 }
@@ -112,7 +117,7 @@ a {
   padding: 18px 30px;
   border-radius: 99px;
   text-decoration: none;
-  font-size: var(--regular-text-size);
+  font-size: var(--small-text-size);
   text-transform: uppercase;
   vertical-align: baseline;
   color: var(--color-white);
@@ -166,12 +171,12 @@ a {
 
 /* Footer */
 .socials {
-  padding-bottom: 2.4rem;
+  padding-bottom: var(--gap-padding);
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: var(--color-white);
-  font-size: clamp(1rem, 2.4vw, 1.6rem);
+  font-size: var(--small-text-size)
 }
 
 .socials .links {

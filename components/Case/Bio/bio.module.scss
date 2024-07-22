@@ -15,18 +15,17 @@
             flex-direction: column;
 
             h4 {
-                font-size: clamp(1rem, 2vw, 1.4rem);
+                font-size: var(--small-text-size);
                 opacity: .5;
-                text-transform: uppercase;
                 line-height: 1.6;
             }
             
             p {
-                font-size: clamp(1.1rem, 2.4vw, 2rem);
+                font-size: var(--regular-text-size)
             }
 
             a{
-                font-size: calc(clamp(1.1rem, 2.4vw, 2rem) * 1.2);
+                font-size: var(--regular-text-size);
                 text-decoration: none;
                 color: white;
                 opacity: .5;
@@ -39,10 +38,10 @@
         padding-left: calc(var(--section-padding) * 2);
         p {
             display: block;
-            line-height: 1.6;
-            font-size: 3.6rem;
             word-break: break-word;
             max-width: calc(clamp(1.5rem, 1.8vw, 2.8rem) * 30);        
+            line-height: 1.6;
+            font-size: var(--regular-text-size);
         }
 
     }
@@ -52,9 +51,7 @@
     .textContainer {       
         .description {
             padding-left: calc(var(--section-padding));
-            p {
-                font-size: 2.8rem;              
-            }
+          
         }
     }
 }
@@ -70,7 +67,6 @@
             padding-left: 0;
 
             p {
-                font-size: clamp(1.5rem, 1.8vw, 2.8rem);
                 max-width: 100%;  
             }
         }

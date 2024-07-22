@@ -11,7 +11,7 @@ function Bio({ project }) {
           <p>{client}</p>
         </div>
         <div className={styles.box}>
-          <h4>Role / Services</h4>
+          <h4>Services</h4>
           <p>{role}</p>
         </div>
         <div className={styles.box}>
@@ -32,12 +32,16 @@ function Bio({ project }) {
       </div>
       <div className={styles.description}>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo labore
-          cupiditate provident omnis eveniet beatae placeat sint nisi quasi
-          dolore, officia exercitationem eius suscipit pariatur. Atque voluptate
-          dolorum rem, mollitia soluta ratione ex temporibus dolores omnis iste
-          distinctio iure debitis qui nemo harum excepturi minima ducimus,
-          magnam laboriosam sint suscipit.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel amet
+          aperiam officia beatae non voluptate veritatis magnam dignissimos quam
+          illum tenetur voluptatum deserunt quaerat rerum animi neque debitis,
+          placeat sequi dolorem nihil. Esse adipisci quos ratione eos dolor
+          illum optio et labore maiores facere dignissimos eligendi, accusantium
+          consequuntur doloremque! Qui doloribus fugit sunt neque vel voluptates
+          omnis veritatis. Quasi dolor et ipsam repellendus cupiditate,
+          recusandae animi veritatis! Commodi eligendi, sapiente dolorem quod
+          assumenda, soluta omnis rerum praesentium vitae perspiciatis
+          doloribus.
         </p>
       </div>
     </div>

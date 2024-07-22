@@ -12,14 +12,15 @@
         display: flex;
         flex-direction: column;
         z-index: 2;
+        
         h2 {
+            font-size: calc(var(--small-heading) * 1.5);
             line-height: 1.3;
-            font-size: calc(var(--large-heading-size) * 1.5);
             opacity: .5;
         }
 
         p {
-            font-size: calc(var(--large-heading-size) * 0.75);
+            font-size: calc(var(--small-heading) * 0.75);
         }
 
         .btnClick404 {

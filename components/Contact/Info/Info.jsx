@@ -5,18 +5,20 @@ import Link from 'next/link';
 function Info() {
   return (
     <div className={styles.infoContainer}>
-      <div className={`${styles.business} ${styles.box}`}>
+      <div className={styles.box}>
         <h4>Business:</h4>
-        <Magnetic>
-          <a data-strength="20" href="mailto:hello@lewisthagichu.com">
-            hello@lewisthagichu.com
-          </a>
-        </Magnetic>
-        <Magnetic>
-          <a data-strength="20" href="tel:+254722797855">
-            +254 722 797 858
-          </a>
-        </Magnetic>
+        <div className={styles.business}>
+          <Magnetic>
+            <a data-strength="20" href="mailto:hello@lewisthagichu.com">
+              hello@lewisthagichu.com
+            </a>
+          </Magnetic>
+          <Magnetic>
+            <a data-strength="20" href="tel:+254722797855">
+              +254 722 797 858
+            </a>
+          </Magnetic>
+        </div>
       </div>
 
       <div className={`${styles.social} ${styles.box}`}>

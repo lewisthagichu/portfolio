@@ -10,15 +10,20 @@
         flex-direction: column;
         gap: 1rem;
 
+        .business {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
         h4 {
-            font-size: clamp(0.8rem, 2vw, 1.4rem);
+            font-size: var(--small-text-size);
             opacity: .5;
         }
 
         a {
             color: var(--color-white);
-            font-size: clamp(1rem, 2.4vw, 1.6rem);
-            text-decoration: none;
+            font-size: var(--small-text-size);
             width: fit-content;
         }
     }

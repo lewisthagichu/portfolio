@@ -8,29 +8,27 @@
     .title {
         position: sticky;
         top: 0;
-        height: min(100dvh, 800px);
+        height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: calc(var(--gap-padding) * 2);
-        padding-top: calc(clamp(5em, 21vw, 12em) * 1.66);
 
         h3 {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-transform: uppercase;
-            font-size: 20vw;
-            line-height: 18vw;
+            font-size: var(--regular-heading);
+            line-height: 16vw;
             
             span {
                 display: inline-block;            
             }
 
             .selected {
-                padding-right: clamp(4rem, 10vw, 12rem);
-            }
+                padding-right: var(--section-padding);            }
 
             .work {
                 width: 100%;
@@ -41,13 +39,13 @@
         p {
             text-align: center;
             text-transform: uppercase;
-            font-size: 1.06vw;
+            font-size: var(--regular-text-size);
             line-height: 1.1vw;
         }
     }
     
     .btnClickSelected {       
-        padding: min(6vw, 60px) 0 min(12vw, 120px);
+        padding-bottom: (var(--section-padding)) ;
         border-bottom: 1px solid var(--color-dark);
         
         a {
@@ -56,22 +54,25 @@
     }    
 }
 
-@media screen and (max-width: 1024px) {
-    .container {
-        .title {
-            padding: 0;
-        }
-    }
-    
-}
+
 
 @media screen and (max-width: 768px) {
     .container {
         .title {
             gap: calc(var(--gap-padding) * 4);
-            p{
-                font-size: 12px;
-                line-height: 12px;
+            height: min(60dvh, 800px);
+
+            h3 {
+                font-size: var(--large-heading);
+                line-height: 24vw;
+
+                .selected {
+                    padding-right: calc(var(--section-padding) * 1.5);
+                }
+            }
+
+            p {
+                font-size: var(--small-text-size);
             }
         }
     }
