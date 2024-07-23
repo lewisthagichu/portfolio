@@ -1,0 +1,12 @@
+{
+    "index": 3,
+    "title": "TicTacPlay",
+    "description": "A fun and interactive site where users can enjoy playing Tic-Tac-Toe.",
+    "technologies": ["HTML", "CSS", "Javascript", "GSAP"],
+    "year": 2023,
+    "client": "Personal",
+    "role": "Design & Development",
+    "live": "https://github.com/lewisthagichu",
+    "github": "https://github.com/lewisthagichu"  
+  }
+    

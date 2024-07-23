@@ -1,4 +1,5 @@
 {
+  "index": 0,
   "title": "HomeFinder",
   "description": "A platform designed to streamline the process of finding rental properties and homes for sale.",
   "technologies": ["NextJS", "Redux", "MongoDB", "Sass", "Cloudinary"],

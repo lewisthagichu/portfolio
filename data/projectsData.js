@@ -1,5 +1,6 @@
-export const projects = [
+export const cases = [
   {
+    index: 0,
     title: 'HomeFinder',
     description:
       'A platform designed to streamline the process of finding rental properties and homes for sale.',
@@ -9,6 +10,7 @@ export const projects = [
     year: 2024,
   },
   {
+    index: 1,
     title: 'NexTalk',
     description:
       'A real-time chat application designed to facilitate seamless and instant communication.',
@@ -18,15 +20,16 @@ export const projects = [
     year: 2024,
   },
   {
+    index: 2,
     title: 'Portfolio',
     description: 'A website to showcase my skills and projects.',
     link: '/work/portfolio',
-    image: 'bg-img.jpg',
     background: '#6D7688',
-    tech: ['NextJS', 'Sass', 'Gsap', 'Framer-motion'],
+    tech: ['NextJS', 'Sass', 'Framer-motion'],
     year: 2024,
   },
   {
+    index: 3,
     title: 'TicTacPlay',
     description:
       'A fun and interactive site where users can enjoy playing Tic-Tac-Toe.',
@@ -37,6 +40,7 @@ export const projects = [
   },
 
   {
+    index: 4,
     title: 'SketchPad',
     description:
       'A site that brings the classic Etch A Sketch experience to the digital world.',

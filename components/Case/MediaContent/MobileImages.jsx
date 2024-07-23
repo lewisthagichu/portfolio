@@ -31,7 +31,7 @@ const SingleImage = ({ image, y = 0 }) => {
   return (
     <motion.div style={{ y }} className={styles.column}>
       <div className={styles.singleImage}>
-        <Image fill src={image} alt="image" />
+        <Image fill sizes="33vw" src={image} alt="image" />
       </div>
     </motion.div>
   );

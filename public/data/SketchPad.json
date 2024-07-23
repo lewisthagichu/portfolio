@@ -1,0 +1,12 @@
+{
+    "index": 4,
+    "title": "SketchPad",
+    "description": "A site that brings the classic Etch A Sketch experience to the digital world.",
+    "technologies": ["HTML", "CSS", "Javascript"],
+    "year": 2023,
+    "client": "Personal",
+    "role": "Design & Development",
+    "live": "https://github.com/lewisthagichu",
+    "github": "https://github.com/lewisthagichu"  
+  }
+    

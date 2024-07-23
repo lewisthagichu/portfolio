@@ -6,7 +6,7 @@ import CaseBody from './CaseBody/CaseBody';
 import NextCase from './NextCase/NextCase';
 
 function Case({ project }) {
-  const { title } = project;
+  const { title, index } = project;
   const container = useRef(null);
 
   const { scrollYProgress: titleProgress } = useScroll({
@@ -24,7 +24,7 @@ function Case({ project }) {
       </motion.div>
 
       <CaseBody project={project} />
-      <NextCase project={project} />
+      <NextCase index={index} />
     </div>
   );
 }

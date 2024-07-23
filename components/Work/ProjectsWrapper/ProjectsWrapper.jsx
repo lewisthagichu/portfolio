@@ -1,7 +1,7 @@
 'use client';
 import styles from './projectsWrapper.module.scss';
 import { useRef } from 'react';
-import { projects } from '@/data/projectsData';
+import { cases } from '@/data/projectsData';
 import { useScroll, useTransform } from 'framer-motion';
 import Project from '../Project/Project';
 import CurvedBorder from '@/components/common/CurvedBorder';
@@ -16,7 +16,7 @@ function ProjectsWrapper() {
   const height = useTransform(scrollYProgress, [0, 1], [200, 0]);
   return (
     <div ref={container} className={styles.wrapper}>
-      {projects.map((project, i) => (
+      {cases.map((project, i) => (
         <Project key={`p_${i}`} {...project} />
       ))}
 

@@ -5,11 +5,14 @@ import { ArgesHeavy, NeuehaasBody } from '@/public/fonts/fonts';
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import Link from 'next/link';
+import { cases } from '@/data/projectsData';
 
-function NextCase({ project }) {
-  const { src } = project;
+function NextCase({ index }) {
+  const currentIndex = cases.findIndex((c) => c.index === index);
+  const nextIndex = (currentIndex + 1) % cases.length;
+  const nextCase = cases[nextIndex];
+
   const container = useRef(null);
-
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ['start end', 'end end'],
@@ -23,16 +26,20 @@ function NextCase({ project }) {
       className={`${NeuehaasBody.className} ${styles.container}`}
     >
       <div className={styles.imageContainer}>
-        <Link href="#">
-          <Image src={`${src}/web2.jpg`} fill alt="Next project" />
+        <Image
+          src={`/media${nextCase.link}/web1.jpg`}
+          fill
+          alt="Next project"
+        />
 
-          <div className={styles.textContainer}>
-            <h4>[Next Project]</h4>
-            <h2 className={ArgesHeavy.className}>NEXTALK</h2>
-          </div>
+        {/* <Link href={nextCase?.link}> */}
+        <div className={styles.textContainer}>
+          <h4>[Next Project]</h4>
+          <h2 className={ArgesHeavy.className}>{nextCase?.title}</h2>
+        </div>
+        {/* </Link> */}
 
-          <div className="overlay"></div>
-        </Link>
+        <div className="overlay"></div>
       </div>
 
       <SocialsLinks />

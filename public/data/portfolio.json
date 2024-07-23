@@ -1,0 +1,12 @@
+{
+    "index": 2,
+    "title": "Porfolio",
+    "description": "A website to showcase my skills and projects.",
+    "technologies": ["NextJS", "Sass", "Framer-motion"],
+    "year": 2024,
+    "client": "Personal",
+    "role": "Design & Development",
+    "live": "https://github.com/lewisthagichu",
+    "github": "https://github.com/lewisthagichu"  
+  }
+    

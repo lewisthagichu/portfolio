@@ -1,12 +1,13 @@
 {
-    "title": "Nextalk",
-    "description":
-      "A real-time chat application designed to facilitate seamless and instant communication. Built with a focus on user experience and reliability.",
-    "technologies": ["React", "Socket.IO", "Redux", "MongoDB"],
-    "year": 2024,
-    "client": "Personal",
-    "role": "Design & Development",
-    "live": "https://github.com/lewisthagichu",
-    "github": "https://github.com/lewisthagichu"
+  "index": 1,
+  "title": "Nextalk",
+  "description":
+    "A real-time chat application designed to facilitate seamless and instant communication. Built with a focus on user experience and reliability.",
+  "technologies": ["React", "Socket.IO", "Redux", "MongoDB"],
+  "year": 2024,
+  "client": "Personal",
+  "role": "Design & Development",
+  "live": "https://github.com/lewisthagichu",
+  "github": "https://github.com/lewisthagichu"
   }
   
