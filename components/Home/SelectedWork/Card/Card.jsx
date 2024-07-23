@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArgesHeavy } from '@/public/fonts/fonts';
 import useEnableAnimation from '@/hooks/useEnableAnimations';
+import Link from 'next/link';
 
 function Card({ i, title, link, background, range, targetScale, progress }) {
   const enableAnimations = useEnableAnimation();
@@ -31,31 +32,36 @@ function Card({ i, title, link, background, range, targetScale, progress }) {
         </h2>
 
         <div style={{ background }} className={styles.imageContainer}>
-          <motion.div style={{ scale: imageScale }} className={styles.image}>
-            <Image
-              src={`/media${link}/web1.jpg`}
-              fill
-              sizes="100vw"
-              alt="image"
-            />
-          </motion.div>
+          <Link href={link}>
+            <motion.div style={{ scale: imageScale }} className={styles.image}>
+              <Image
+                src={`/media${link}/web1.jpg`}
+                fill
+                sizes="100vw"
+                alt="image"
+              />
+            </motion.div>
 
-          <div className={styles.videoContainer}>
-            <div style={{ background }} className={styles.video}>
-              <video
-                className={styles.videoElement}
-                autoPlay
-                muted
-                playsInline
-                loop
-                aria-label="Video player"
-                preload="none"
-              >
-                <source src={`/media${link}/homeVideo.mp4`} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+            <div className={styles.videoContainer}>
+              <div style={{ background }} className={styles.video}>
+                <video
+                  className={styles.videoElement}
+                  autoPlay
+                  muted
+                  playsInline
+                  loop
+                  aria-label="Video player"
+                  preload="none"
+                >
+                  <source
+                    src={`/media${link}/homeVideo.mp4`}
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
       </motion.div>
     </div>
