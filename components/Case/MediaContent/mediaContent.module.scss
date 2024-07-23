@@ -48,10 +48,10 @@
             width: 100%;
 
             .column {
+                position: relative;
                 width: 33.33%;
                 display: flex;
-                justify-content: center;
-                
+                justify-content: center;                
                 
                 .singleImage {
                     position: relative;
@@ -61,7 +61,7 @@
                     img {
                         background: lightgray;
                         object-fit: cover;
-                        border-radius: .5rem;
+                        border-radius: 1rem;
                     }
                 }
 
