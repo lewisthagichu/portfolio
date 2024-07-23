@@ -14,13 +14,13 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        transform-origin: top;
+        // transform-origin: top;
 
         h2 {
             position: absolute;
             font-size: var(--small-heading);
+            line-height: 1.3;
             text-transform: uppercase;
-            padding-top: min(1rem, 1vh);
             z-index: 2;
         }
 
@@ -32,7 +32,6 @@
             overflow: hidden;
 
             .image {
-                position: relative;
                 height: 100%; 
                 width: 100%;
                 
@@ -45,7 +44,7 @@
                 position: absolute;
                 inset: 50% 0 0 50%;
                 transform: translate(-50%, -50%);
-                width: 64%;
+                width: 60%;
                 aspect-ratio: 16 / 9;
                 z-index: 2;
                 border-radius: 1rem;
@@ -74,12 +73,10 @@
     .container {
         .card {
             h2 {
-                font-size: 10vw;
-                line-height: 12vw;
+                font-size: calc(var(--small-heading) * 1.4);
             }
 
             .imageContainer {
-                width: 100%;
                 height: 90%;
 
                 .videoContainer {

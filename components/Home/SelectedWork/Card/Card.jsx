@@ -14,9 +14,7 @@ function Card({ i, title, link, background, range, targetScale, progress }) {
     offset: ['start end', 'start start'],
   });
 
-  const imageScale = useTransform(scrollYProgress, [0, 1], [1.2, 1]);
-  const videoY = useTransform(scrollYProgress, [0, 1], ['64%', '0%']);
-
+  const imageScale = useTransform(scrollYProgress, [0, 1], [1.6, 1]);
   const cardScale = useTransform(progress, range, [1, targetScale]);
 
   return (
@@ -24,7 +22,7 @@ function Card({ i, title, link, background, range, targetScale, progress }) {
       <motion.div
         style={{
           top: `calc(${i * 25}px)`,
-          // scale: enableAnimations ? cardScale : 1,
+          scale: enableAnimations ? cardScale : 1,
         }}
         className={styles.card}
       >
@@ -43,7 +41,7 @@ function Card({ i, title, link, background, range, targetScale, progress }) {
           </motion.div>
 
           <div className={styles.videoContainer}>
-            <motion.div style={{ y: videoY }} className={styles.video}>
+            <div style={{ background }} className={styles.video}>
               <video
                 className={styles.videoElement}
                 autoPlay
@@ -56,9 +54,8 @@ function Card({ i, title, link, background, range, targetScale, progress }) {
                 <source src={`/media${link}/homeVideo.mp4`} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-            </motion.div>
+            </div>
           </div>
-          {/* <div className="overlay"></div> */}
         </div>
       </motion.div>
     </div>

@@ -22,7 +22,7 @@ export const projects = [
     description: 'A website to showcase my skills and projects.',
     link: '/work/portfolio',
     image: 'bg-img.jpg',
-    background: '#8EAEB6',
+    background: '#6D7688',
     tech: ['NextJS', 'Sass', 'Gsap', 'Framer-motion'],
     year: 2024,
   },
