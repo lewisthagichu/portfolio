@@ -8,16 +8,15 @@ import CardWrapper from './CardWrapper/CardWrapper';
 
 function SelectedWork() {
   const container = useRef(null);
-  const title = useRef(null);
 
-  const { scrollYProgress: titleProgress } = useScroll({
+  const { scrollYProgress } = useScroll({
     target: container,
     offset: ['start start', '800px start'],
   });
 
-  const opacity = useTransform(titleProgress, [0, 1], [1, 0]);
-  const scale = useTransform(titleProgress, [0, 1], [1, 0.5]);
-  const y = useTransform(titleProgress, [0, 0.9], [0, 70]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.5]);
+  const y = useTransform(scrollYProgress, [0, 0.9], [0, 70]);
 
   // Container's YProgress used by circle container
   const { scrollYProgress: scrollYProgress2 } = useScroll({
@@ -26,23 +25,10 @@ function SelectedWork() {
   });
   const height = useTransform(scrollYProgress2, [0, 1], [200, 0]);
 
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ['start start', '1px start'],
-  });
-
-  const backgroundColor = useTransform(
-    scrollYProgress,
-    [0, 1],
-    ['#1C1D20', '#1C1D20']
-  );
-  const color = useTransform(scrollYProgress, [0, 1], ['#fff', '#fff']);
-
   return (
     <motion.section
       id="selectedWork"
       ref={container}
-      style={{ backgroundColor }}
       className={styles.container}
     >
       <motion.div style={{ opacity, scale, y }} className={styles.title}>

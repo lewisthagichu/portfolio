@@ -8,17 +8,18 @@
    .title {
       position: sticky;
       top: 0;
-      height: min(60dvh, 100em);
-      margin: 0  auto;
+      height: min(60dvh, 800px);
       display: flex;
+      flex-direction: column;
       align-items: center;
+      justify-content: center;
       padding-top: calc(clamp(5em, 21vw, 12em) * 1.66);
       padding-bottom: calc(clamp(5em, 21vw, 12em) * .83);
+      text-transform: uppercase;
 
       h2 {
          font-size: 28vw;
          line-height: 40vw;
-         
       }
    }
 }
@@ -27,13 +28,11 @@
    .container {
       .title {
          height: auto;
-         display: block;
+         padding-bottom: 0;
 
          h2 {
          font-size: 40vw;
          }
-      }
-      
+      }      
    }
-
 }

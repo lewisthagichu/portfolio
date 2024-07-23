@@ -4,15 +4,16 @@
     flex-direction: column;
     background-color: var(--color-dark);
     color: var(--color-white);
+    overflow-x: hidden;
     
-
+    
     .title {
         position: sticky;
         top: 0;
         height: min(60dvh, 800px);
-        margin: 0  auto;
         display: flex;
         align-items: center;
+        justify-content: center;
         padding-top: calc(clamp(5em, 21vw, 12em) * 1.66);
         padding-bottom: calc(clamp(5em, 21vw, 12em) * .83);
         text-transform: uppercase;
@@ -24,3 +25,16 @@
         }
     }    
 }
+
+@media screen and (max-width: 991px) {
+    .container {
+       .title {
+          height: auto;
+          padding-bottom: 0;
+ 
+          h2 {
+          font-size: 32vw;
+          }
+       }      
+    }
+ }

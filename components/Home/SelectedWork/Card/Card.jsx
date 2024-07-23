@@ -22,7 +22,7 @@ function Card({ i, title, link, background, range, targetScale, progress }) {
       <motion.div
         style={{
           top: `calc(${i * 25}px)`,
-          scale: enableAnimations ? cardScale : 1,
+          // scale: enableAnimations ? cardScale : 1,
         }}
         className={styles.card}
       >

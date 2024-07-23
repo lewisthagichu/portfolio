@@ -16,7 +16,7 @@ function Case({ project }) {
 
   const opacity = useTransform(titleProgress, [0, 1], [1, 0]);
   const scale = useTransform(titleProgress, [0, 1], [1, 0.3]);
-  const y = useTransform(titleProgress, [0, 0.9], [0, 70]);
+  const y = useTransform(titleProgress, [0, 0.9], [0, 800]);
   return (
     <div ref={container} className={styles.container}>
       <motion.div style={{ opacity, scale, y }} className={styles.title}>
