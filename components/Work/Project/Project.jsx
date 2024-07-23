@@ -6,9 +6,8 @@ import { NeuehaasBody } from '@/public/fonts/fonts';
 import Image from 'next/image';
 import Link from 'next/link';
 
-function Project({ title, description, link, background }) {
+function Project({ title, description, link }) {
   const container = useRef(null);
-  console.log(title);
 
   const { scrollYProgress } = useScroll({
     target: container,
@@ -18,7 +17,7 @@ function Project({ title, description, link, background }) {
   const y = useTransform(scrollYProgress, [0, 1], [-200, 200]);
   return (
     <section className={`${styles.container} ${NeuehaasBody.className}`}>
-      <Link href="/work">
+      <Link href={link}>
         <div ref={container} className={styles.imageContainer}>
           <motion.div style={{ y }} className={styles.image}>
             <Image
