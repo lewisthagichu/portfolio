@@ -21,9 +21,9 @@
             }
             
             p {
-                font-size: var(--regular-text-size)
+                font-size: calc(var(--regular-text-size) * .8);
             }
-
+            
             a{
                 font-size: var(--regular-text-size);
                 text-decoration: none;
