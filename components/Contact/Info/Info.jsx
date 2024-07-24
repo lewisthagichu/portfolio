@@ -9,13 +9,21 @@ function Info() {
         <h4>Business:</h4>
         <div className={styles.business}>
           <Magnetic>
-            <a data-strength="20" href="mailto:hello@lewisthagichu.com">
-              hello@lewisthagichu.com
+            <a
+              data-strength="20"
+              data-text-strength="0"
+              href="mailto:hello@lewisthagichu.com"
+            >
+              <span className="btn-text">hello@lewisthagichu.com</span>
             </a>
           </Magnetic>
           <Magnetic>
-            <a data-strength="20" href="tel:+254722797855">
-              +254 722 797 858
+            <a
+              data-strength="20"
+              data-text-strength="0"
+              href="tel:+254722797855"
+            >
+              <span className="btn-text">+254 722 797 858</span>
             </a>
           </Magnetic>
         </div>
@@ -26,37 +34,41 @@ function Info() {
         <Magnetic>
           <a
             data-strength="20"
+            data-text-strength="0"
             href="https://github.com/lewisthagichu"
             target="_blank"
           >
-            Github
+            <span className="btn-text">Github</span>
           </a>
         </Magnetic>
         <Magnetic>
           <a
             data-strength="20"
+            data-text-strength="0"
             href="https://dev.to/thagichucodes"
             target="_blank"
           >
-            DEV
+            <span className="btn-text">DEV</span>
           </a>
         </Magnetic>
         <Magnetic>
           <a
             data-strength="20"
+            data-text-strength="0"
             href="https://www.linkedin.com/in/lewis-thagichu/"
             target="_blank"
           >
-            Linkedln
+            <span className="btn-text">Linkedln</span>
           </a>
         </Magnetic>
         <Magnetic>
           <a
             data-strength="20"
+            data-text-strength="0"
             href="https://x.com/thagichucodes"
             target="_blank"
           >
-            X
+            <span className="btn-text">X</span>
           </a>
         </Magnetic>
       </div>
@@ -64,18 +76,18 @@ function Info() {
       <div className={`${styles.menu} ${styles.box}`}>
         <h4>Menu:</h4>
         <Magnetic>
-          <Link data-strength="20" href="/">
-            Home
+          <Link data-strength="20" data-text-strength="0" href="/">
+            <span className="btn-text">Home</span>
           </Link>
         </Magnetic>
         <Magnetic>
-          <Link data-strength="20" href="/about">
-            About
+          <Link data-strength="20" data-text-strength="0" href="/about">
+            <span className="btn-text">About</span>
           </Link>
         </Magnetic>
         <Magnetic>
-          <Link data-strength="20" href="/work">
-            Work
+          <Link data-strength="20" data-text-strength="0" href="/work">
+            <span className="btn-text">Work</span>
           </Link>
         </Magnetic>
       </div>

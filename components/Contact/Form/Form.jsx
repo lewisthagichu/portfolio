@@ -2,7 +2,6 @@ import styles from './form.module.scss';
 import { useState } from 'react';
 import { NeuehaasBody } from '@/public/fonts/fonts';
 import Magnetic from '@/components/common/Magnetic';
-import RoundButton from '@/components/common/RoundButton';
 
 function Form() {
   const [usernameError, setUsernameError] = useState('');

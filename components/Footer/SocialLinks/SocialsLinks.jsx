@@ -4,20 +4,22 @@ function SocialsLinks({ divStyles = '' }) {
   return (
     <div className={`socials ${divStyles}`}>
       <Magnetic>
-        <p data-strength="20">© Lewis Thagichu 2024 </p>
+        <p data-strength="20" data-text-strength="0">
+          <span className="btn-text">© Lewis Thagichu 2024</span>
+        </p>
       </Magnetic>{' '}
       <div className="links">
         <a href="https://github.com/lewisthagichu" target="_blank">
-          Github
+          <span>Github</span>
         </a>
         <a href="https://dev.to/thagichucodes" target="_blank">
-          DEV
+          <span>DEV</span>
         </a>
         <a href="https://www.linkedin.com/in/lewis-thagichu/" target="_blank">
-          Linkedin
+          <span>Linkedin</span>
         </a>
         <a href="https://x.com/thagichucodes" target="_blank">
-          X
+          <span>X</span>
         </a>
       </div>
     </div>
