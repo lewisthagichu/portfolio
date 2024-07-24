@@ -25,20 +25,20 @@ function Project({ title, description, link }) {
 
   useGSAP(() => {
     //Move cursor
-    let xMoveCursor = gsap.quickTo(cursor.current, 'left', {
+    let xMoveCursor = gsap.quickTo(cursor?.current, 'left', {
       duration: 0.5,
       ease: 'power3',
     });
-    let yMoveCursor = gsap.quickTo(cursor.current, 'top', {
+    let yMoveCursor = gsap.quickTo(cursor?.current, 'top', {
       duration: 0.5,
       ease: 'power3',
     });
     //Move cursor label
-    let xMoveCursorLabel = gsap.quickTo(cursorLabel.current, 'left', {
+    let xMoveCursorLabel = gsap.quickTo(cursorLabel?.current, 'left', {
       duration: 0.45,
       ease: 'power3',
     });
-    let yMoveCursorLabel = gsap.quickTo(cursorLabel.current, 'top', {
+    let yMoveCursorLabel = gsap.quickTo(cursorLabel?.current, 'top', {
       duration: 0.45,
       ease: 'power3',
     });

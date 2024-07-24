@@ -1,10 +1,21 @@
 import styles from './bio.module.scss';
+import RoundButton from '@/components/common/RoundButton';
+import { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 function Bio({ project }) {
   const { client, year, technologies, role, src, live, github } = project;
+  const container = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ['center end', 'end start'],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [300, -200]);
 
   return (
-    <div className={styles.textContainer}>
+    <div ref={container} className={styles.textContainer}>
       <div className={styles.details}>
         <div className={styles.box}>
           <h4>Client</h4>
@@ -44,6 +55,16 @@ function Bio({ project }) {
           doloribus.
         </p>
       </div>
+
+      {live ? (
+        <motion.div style={{ y }} className={styles.liveBtn}>
+          <RoundButton href={live} text={'View Live'} />
+        </motion.div>
+      ) : (
+        <motion.div style={{ y }} className={styles.liveBtn}>
+          <RoundButton href={github} text={'View Code'} />
+        </motion.div>
+      )}
     </div>
   );
 }
