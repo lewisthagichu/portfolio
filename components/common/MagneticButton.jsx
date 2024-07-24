@@ -5,7 +5,7 @@ import { NeuehaasBody } from '@/public/fonts/fonts';
 function MagneticButton({
   styles = '',
   textStrength = 15,
-  magneticStrength = 60,
+  magneticStrength = 80,
   href,
   text,
 }) {

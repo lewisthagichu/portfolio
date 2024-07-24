@@ -108,44 +108,60 @@ a {
 
 /* button styling */
 .btnClick {     
-  border: none;  
   background-color: transparent;
-  width: fit-content;
   margin: 0 auto;
 }
 
 .btnClick a {
-  cursor: pointer;
   position: relative;
   display: inline-block;
   background-color: var(--color-dark);
+  color: var(--color-white);
+  font-size: var(--small-text-size);
   padding: 18px 30px;
   border-radius: 99px;
-  text-decoration: none;
-  font-size: var(--small-text-size);
   text-transform: uppercase;
   vertical-align: baseline;
-  color: var(--color-white);
+  cursor: pointer;
+  transition: color .1s cubic-bezier(.76, 0, .24, 1);
 }
 
 .btnClick a span{
   position: relative;
-  padding-left: 40px;
+  padding-left: 4rem;
   display: inline-block;
+  transform: translateX(-10px);
+  transition: all .5s cubic-bezier(.76, 0, .24, 1);
 }
 
 .btnClick a::before {
   content: '';
   background-color: var(--color-light-blue);
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 2rem;
+  height: 2rem;
   display: block;
   position: absolute;
   left: 22px;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 99px;
-  transition: all .5s cubic-bezier(.77, 0, .175, 1);
+  transition: all .5s cubic-bezier(.76, 0, .24, 1);
+}
+
+.btnClick:hover a {
+  color: var(--color-dark);
+  font-size: calc(var(--small-text-size));
+}
+
+.btnClick:hover a span {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.btnClick:hover a::before {
+  width: 100%;
+  height: 100%;
+  left: 0;  
 }
 
 .roundBtn {
