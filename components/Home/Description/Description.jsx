@@ -84,6 +84,7 @@ function Description() {
 
       <MagneticButton
         styles={styles.btnClickDescription}
+        textStrength={'15'}
         magneticStrength={'60'}
         href={'/about'}
         text={'More about me'}

@@ -4,6 +4,7 @@
   --color-beige: #E8E7CB;
   --color-cadet: #6D7688;
   --color-light-blue: #c2e9fb;
+  --alert-error: #ff4444;
 
   --section-padding: clamp(4rem, 10vw, 16rem);
   --container-padding: calc(clamp(5em, 21vw, 12em) * 1.5);

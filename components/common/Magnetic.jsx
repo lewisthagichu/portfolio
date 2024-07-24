@@ -6,12 +6,16 @@ function Magnetic({ children }) {
   const magnetic = useRef();
 
   useGSAP(() => {
+    const textElement = magnetic.current.querySelector('.btn-text');
+
     const handleMouseMove = (e) => {
       const { clientX, clientY } = e;
       const { left, top } = magnetic.current.getBoundingClientRect();
       const newX = (clientX - left) / magnetic.current.offsetWidth - 0.5;
       const newY = (clientY - top) / magnetic.current.offsetHeight - 0.5;
       const magneticStrength = magnetic.current.getAttribute('data-strength');
+      const textMagneticStrength =
+        magnetic.current.getAttribute('data-text-strength');
 
       gsap.to(magnetic.current, {
         duration: 1,
@@ -19,10 +23,24 @@ function Magnetic({ children }) {
         y: newY * magneticStrength,
         ease: 'Power4.easeOut',
       });
+
+      gsap.to(textElement, {
+        duration: 1,
+        x: newX * textMagneticStrength,
+        y: newY * textMagneticStrength,
+        ease: 'Power4.easeOut',
+      });
     };
 
     const handleMouseLeave = (e) => {
       gsap.to(magnetic.current, {
+        duration: 1,
+        x: 0,
+        y: 0,
+        ease: 'Elastic.easeOut',
+      });
+
+      gsap.to(textElement, {
         duration: 1,
         x: 0,
         y: 0,

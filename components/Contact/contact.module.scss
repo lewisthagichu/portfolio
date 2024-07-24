@@ -5,6 +5,7 @@
     flex-direction: column;
     padding: 0 var(--section-padding);
     color: var(--color-white);
+    overflow: hidden;
 
     .cta {
         display: flex;
@@ -33,20 +34,12 @@
         grid-template-columns: 7fr 3fr;
     }
 
-    .btnClickContact {   
-        margin: 8vh 0;      
-
-        a {
-            border: var(--light-border); 
-        }
-    }
-
     .socialsContact {   
         padding-top: 8vh;
     }
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
     .container {
         .wrapper {
             grid-template-columns: 1fr;
@@ -56,7 +49,7 @@
 
 @media only screen and (max-width: 512px) {
     .container {
-        // padding: 0 var(--mobile-padding);
+        padding: 0 var(--mobile-padding);
        
     }
 }

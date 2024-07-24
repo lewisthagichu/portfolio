@@ -138,6 +138,7 @@ function Footer() {
 
       <MagneticButton
         styles={styles.btnClickFooter}
+        textStrength={'15'}
         magneticStrength={'60'}
         href={'/contact'}
         text={'Get in touch'}

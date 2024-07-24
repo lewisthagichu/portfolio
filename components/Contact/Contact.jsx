@@ -1,11 +1,10 @@
 import styles from './contact.module.scss';
-import Form from './Form/Form';
-import Info from './Info/Info';
 import { NeuehaasBody } from '@/public/fonts/fonts';
 import Link from 'next/link';
+import Form from './Form/Form';
+import Info from './Info/Info';
 import Magnetic from '../common/Magnetic';
 import SocialsLinks from '../Footer/SocialLinks/SocialsLinks';
-import Header from '../Header/Header';
 
 function Contact() {
   return (
@@ -22,14 +21,6 @@ function Contact() {
         <Form />
         <Info />
       </div>
-
-      <button className={`btnClick ${styles.btnClickContact}`}>
-        <Magnetic>
-          <Link data-strength="60" href="/work">
-            <span>Submit</span>
-          </Link>
-        </Magnetic>
-      </button>
 
       <SocialsLinks divStyles={styles.socialsContact} />
     </section>

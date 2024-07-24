@@ -24,10 +24,24 @@
             display: flex;
             flex-direction: column;
             border-bottom: var(--light-border);
+
+            .alert {
+                font-size: 1rem;
+                transform: translateY(-1.5em);
+                position: relative;
+                line-height: 1.1em;
+                padding-bottom: 0.75em;
+
+                span {
+                    color: red;
+                    font-size: var(--small-text-size);
+                    line-height: 1rem;
+                }
+            }
     
             label {
                 padding-top: 4rem;
-                font-size: var(--small-text-size)
+                font-size: var(--small-text-size);
             }
 
             textarea {
@@ -55,9 +69,28 @@
         }
     }
 
+    .btnClickForm {   
+        margin: 8vh auto;   
+
+        span {
+            cursor: pointer;
+            position: relative;
+            display: inline-block;
+            background-color: var(--color-dark);
+            padding: 18px 30px;
+            border-radius: 99px;
+            text-decoration: none;
+            font-size: var(--small-text-size);
+            text-transform: uppercase;
+            vertical-align: baseline;
+            color: var(--color-white);
+            border: var(--light-border); 
+        }
+    }
+
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
     .form {
         order: 2;
 

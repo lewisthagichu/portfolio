@@ -11,6 +11,7 @@ function Custom404Page() {
         <p>Oh oh, are we lost? </p>
         <MagneticButton
           styles={styles.btnClick404}
+          textStrength={'15'}
           magneticStrength={'60'}
           href={'/gome'}
           text={'Go back to home '}
