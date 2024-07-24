@@ -45,7 +45,16 @@
             &:hover {
                 transform: scale3d(1.1, 1.1, 1)                
             }
-        }        
+        }   
+        
+        
+    }
+
+    .nextBtn {
+        position: absolute;
+        top: 20%;
+        right: 20%;
+        z-index: 2;
     }
 
     

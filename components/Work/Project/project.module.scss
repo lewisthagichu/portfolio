@@ -60,28 +60,28 @@
         border-bottom: var(--light-border);
         
         h4 {
-            font-size: 2em;
+            font-size: 2.4em;
         }
 
         p {
-            font-size: var(--small-text-size);
+            font-size: calc(var(--small-text-size) * 1.2);
         }
     }
 
     .cursor,
     .cursorLabel {
         position: absolute;
-        width: clamp(8em, 12vw, 11em);
-        height: clamp(8em, 12vw, 11em);
-        background-color: var(--color-cadet);
+        width: clamp(8em, 10vw, 10em);
+        height: clamp(8em, 10vw, 10em);
+        background-color: var(--color-btn);
         pointer-events: none;
         border-radius: 50%;
-        color: #fff;
+        color: var(--color-white);
         display: flex;
         justify-content: center;
         align-items: center;
         z-index: 2;
-        font-size: var(--small-text-size);
+        font-size: calc(var(--small-text-size) * 1.2);
     }
 
     .cursorLabel {

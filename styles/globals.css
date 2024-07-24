@@ -4,6 +4,7 @@
   --color-beige: #E8E7CB;
   --color-cadet: #6D7688;
   --color-light-blue: #c2e9fb;
+  --color-btn: #7E8B8B;
   --alert-error: #ff4444;
 
   --section-padding: clamp(4rem, 10vw, 16rem);
@@ -152,17 +153,16 @@ a {
   height: clamp(9em, 12vw, 11em);
   border-radius: 50%;
   border: none;
-  background-color: #525B76;
+  background-color: var(--color-btn);
   color: var(--color-white);
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: calc(var(--small-text-size) * 1.2);
 }
 
-.roundBtn span {
-  font-size: var(--small-text-size);
-}
+
 
 /* Curved border */
 .curvedBorder {

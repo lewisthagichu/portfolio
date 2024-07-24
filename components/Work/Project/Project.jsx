@@ -77,6 +77,7 @@ function Project({ title, description, link }) {
       }
     };
   }, []);
+
   return (
     <section className={`${styles.container} ${NeuehaasBody.className}`}>
       <Link href={link}>

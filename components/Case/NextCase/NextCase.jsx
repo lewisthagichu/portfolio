@@ -6,6 +6,7 @@ import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import Link from 'next/link';
 import { cases } from '@/data/projectsData';
+import RoundButton from '@/components/common/RoundButton';
 
 function NextCase({ index }) {
   const currentIndex = cases.findIndex((c) => c.index === index);
@@ -19,6 +20,7 @@ function NextCase({ index }) {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [-500, 0]);
+  const btnY = useTransform(scrollYProgress, [0, 1], [200, 0]);
   return (
     <motion.div
       ref={container}
@@ -32,15 +34,16 @@ function NextCase({ index }) {
           alt="Next project"
         />
 
-        {/* <Link href={nextCase?.link}> */}
         <div className={styles.textContainer}>
           <h4>[Next Project]</h4>
           <h2 className={ArgesHeavy.className}>{nextCase?.title}</h2>
         </div>
-        {/* </Link> */}
 
         <div className="overlay"></div>
       </div>
+      <motion.div style={{ y: btnY }} className={styles.nextBtn}>
+        <RoundButton href={nextCase?.link} text={'View Project'} />
+      </motion.div>
 
       <SocialsLinks />
     </motion.div>
