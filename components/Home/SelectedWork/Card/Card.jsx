@@ -5,6 +5,9 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArgesHeavy } from '@/public/fonts/fonts';
 import useEnableAnimation from '@/hooks/useEnableAnimations';
 import Link from 'next/link';
+import { scaleAnimation } from '@/utils/anim';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 function Card({ i, title, link, background, range, targetScale, progress }) {
   const enableAnimations = useEnableAnimation();

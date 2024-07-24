@@ -66,8 +66,26 @@
         p {
             font-size: var(--small-text-size);
         }
+    }
 
-        
+    .cursor,
+    .cursorLabel {
+        position: absolute;
+        width: clamp(8em, 12vw, 11em);
+        height: clamp(8em, 12vw, 11em);
+        background-color: var(--color-cadet);
+        pointer-events: none;
+        border-radius: 50%;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        font-size: var(--small-text-size);
+    }
+
+    .cursorLabel {
+    background-color: transparent; 
     }
 }
 
