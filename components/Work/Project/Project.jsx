@@ -113,6 +113,23 @@ function Project({ title, description, link }) {
               </video>
             </div>
           </div>
+
+          <motion.div
+            ref={cursor}
+            className={styles.cursor}
+            variants={scaleAnimation}
+            initial="initial"
+            animate={active ? 'enter' : 'closed'}
+          ></motion.div>
+          <motion.div
+            ref={cursorLabel}
+            className={styles.cursorLabel}
+            variants={scaleAnimation}
+            initial="initial"
+            animate={active ? 'enter' : 'closed'}
+          >
+            View
+          </motion.div>
         </div>
       </Link>
 
@@ -120,23 +137,6 @@ function Project({ title, description, link }) {
         <h4>{title}</h4>
         <p>{description}</p>
       </div>
-
-      <motion.div
-        ref={cursor}
-        className={styles.cursor}
-        variants={scaleAnimation}
-        initial="initial"
-        animate={active ? 'enter' : 'closed'}
-      ></motion.div>
-      <motion.div
-        ref={cursorLabel}
-        className={styles.cursorLabel}
-        variants={scaleAnimation}
-        initial="initial"
-        animate={active ? 'enter' : 'closed'}
-      >
-        View
-      </motion.div>
     </section>
   );
 }
