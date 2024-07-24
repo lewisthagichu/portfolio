@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { NeuehaasBody } from '@/public/fonts/fonts';
 
 function MagneticButton({
-  styles,
-  textStrength,
-  magneticStrength,
+  styles = '',
+  textStrength = 15,
+  magneticStrength = 60,
   href,
   text,
 }) {

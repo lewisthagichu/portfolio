@@ -45,8 +45,6 @@ function SelectedWork() {
 
       <MagneticButton
         styles={styles.btnClickSelected}
-        textStrength={'15'}
-        magneticStrength={'60'}
         href={'/work'}
         text={'View more Projects'}
       />

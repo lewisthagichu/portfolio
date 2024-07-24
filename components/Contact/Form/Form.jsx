@@ -1,8 +1,8 @@
 import styles from './form.module.scss';
 import { useState } from 'react';
-import MagneticButton from '@/components/common/MagneticButton';
+import { NeuehaasBody } from '@/public/fonts/fonts';
 import Magnetic from '@/components/common/Magnetic';
-import Link from 'next/link';
+import RoundButton from '@/components/common/RoundButton';
 
 function Form() {
   const [usernameError, setUsernameError] = useState('');
@@ -71,6 +71,7 @@ function Form() {
             value={username}
             onChange={handleChange}
             placeholder="Enter your name"
+            autoComplete="on"
             // required
           />
           {usernameError && (
@@ -91,6 +92,7 @@ function Form() {
             value={email}
             onChange={handleChange}
             placeholder="jane@doe.com"
+            autoComplete="on"
             // required
           />
           {emailError && (
@@ -128,11 +130,12 @@ function Form() {
 
       <Magnetic>
         <button
-          data-strength="60"
-          className={`${styles.btnClickForm}`}
+          data-strength="100"
+          data-text-strength="50"
+          className={`roundBtn ${styles.btnClickForm}`}
           type="submit"
         >
-          <span>Submit</span>
+          <span className={`btn-text ${NeuehaasBody.className}`}>Submit</span>
         </button>
       </Magnetic>
     </form>

@@ -18,14 +18,14 @@ function Magnetic({ children }) {
         magnetic.current.getAttribute('data-text-strength');
 
       gsap.to(magnetic.current, {
-        duration: 1,
+        duration: 1.5,
         x: newX * magneticStrength,
         y: newY * magneticStrength,
         ease: 'Power4.easeOut',
       });
 
       gsap.to(textElement, {
-        duration: 1,
+        duration: 1.5,
         x: newX * textMagneticStrength,
         y: newY * textMagneticStrength,
         ease: 'Power4.easeOut',
@@ -34,14 +34,14 @@ function Magnetic({ children }) {
 
     const handleMouseLeave = (e) => {
       gsap.to(magnetic.current, {
-        duration: 1,
+        duration: 1.5,
         x: 0,
         y: 0,
         ease: 'Elastic.easeOut',
       });
 
       gsap.to(textElement, {
-        duration: 1,
+        duration: 1.5,
         x: 0,
         y: 0,
         ease: 'Elastic.easeOut',

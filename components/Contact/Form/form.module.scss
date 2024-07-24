@@ -70,22 +70,8 @@
     }
 
     .btnClickForm {   
-        margin: 8vh auto;   
+        margin: 8vh auto;  
 
-        span {
-            cursor: pointer;
-            position: relative;
-            display: inline-block;
-            background-color: var(--color-dark);
-            padding: 18px 30px;
-            border-radius: 99px;
-            text-decoration: none;
-            font-size: var(--small-text-size);
-            text-transform: uppercase;
-            vertical-align: baseline;
-            color: var(--color-white);
-            border: var(--light-border); 
-        }
     }
 
 }
