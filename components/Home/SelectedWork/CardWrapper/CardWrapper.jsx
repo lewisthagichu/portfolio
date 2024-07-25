@@ -22,7 +22,7 @@ function CardWrapper() {
           <Card
             key={`c_${i}`}
             i={i}
-            {...project}
+            project={project}
             progress={scrollYProgress}
             range={[i * 0.25, 1]}
             targetScale={targetScale}

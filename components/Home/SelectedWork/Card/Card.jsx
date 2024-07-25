@@ -1,17 +1,15 @@
 import styles from './card.module.scss';
-import Image from 'next/image';
-import Link from 'next/link';
 import { useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ArgesHeavy } from '@/public/fonts/fonts';
 import useEnableAnimation from '@/hooks/useEnableAnimations';
-import VideoComponent from '@/components/common/VideoComponent';
-
 import Cursor from '@/components/common/Cursor';
+import CardMedia from './CardMedia';
+import CardTitle from './CardTitle';
 
-function Card({ i, title, link, background, range, targetScale, progress }) {
-  const enableAnimations = useEnableAnimation();
+function Card({ i, project, range, targetScale, progress }) {
+  const { background, title } = project;
   const [active, setActive] = useState(false);
+  const enableAnimations = useEnableAnimation();
 
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -19,46 +17,23 @@ function Card({ i, title, link, background, range, targetScale, progress }) {
     offset: ['start end', 'start start'],
   });
 
-  const imageScale = useTransform(scrollYProgress, [0, 1], [1.6, 1]);
   const cardScale = useTransform(progress, range, [1, targetScale]);
 
   return (
     <div ref={container} className={styles.container}>
       <motion.div
+        className={styles.card}
         style={{
           top: `calc(${i * 25}px)`,
           // scale: enableAnimations ? cardScale : 1,
         }}
-        className={styles.card}
       >
-        <h2 className={ArgesHeavy.className} style={{ color: background }}>
-          {title}
-        </h2>
-
-        <div
-          onMouseEnter={() => setActive(true)}
-          onMouseLeave={() => setActive(false)}
-          style={{ background }}
-          className={styles.imageContainer}
-        >
-          <Link href={link}>
-            <motion.div style={{ scale: imageScale }} className={styles.image}>
-              <Image
-                src={`/media${link}/web1.jpg`}
-                fill
-                sizes="100vw"
-                alt="image"
-              />
-            </motion.div>
-
-            <VideoComponent
-              videoContainer={styles.videoContainer}
-              video={styles.video}
-              videoElement={styles.videoElement}
-              link={link}
-            />
-          </Link>
-        </div>
+        <CardTitle background={background} title={title} />
+        <CardMedia
+          project={project}
+          scrollYProgess={scrollYProgress}
+          setActive={setActive}
+        />
       </motion.div>
 
       <Cursor active={active} />
