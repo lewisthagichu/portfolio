@@ -69,25 +69,7 @@
         }
     }
 
-    .cursor,
-    .cursorLabel {
-        position: absolute;
-        width: clamp(8em, 10vw, 10em);
-        height: clamp(8em, 10vw, 10em);
-        background-color: var(--color-btn);
-        pointer-events: none;
-        border-radius: 50%;
-        color: var(--color-white);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 2;
-        font-size: calc(var(--small-text-size) * 1.2);
-    }
-
-    .cursorLabel {
-    background-color: transparent; 
-    }
+    
 }
 
 @media screen and (max-width: 786px) {

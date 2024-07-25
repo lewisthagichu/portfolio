@@ -1,18 +1,18 @@
 import styles from './card.module.scss';
 import Image from 'next/image';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArgesHeavy } from '@/public/fonts/fonts';
 import useEnableAnimation from '@/hooks/useEnableAnimations';
 import Link from 'next/link';
-import { scaleAnimation } from '@/utils/anim';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
+
+import Cursor from '@/components/common/Cursor';
 
 function Card({ i, title, link, background, range, targetScale, progress }) {
   const enableAnimations = useEnableAnimation();
-  const container = useRef(null);
+  const [active, setActive] = useState(false);
 
+  const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ['start end', 'start start'],
@@ -34,7 +34,12 @@ function Card({ i, title, link, background, range, targetScale, progress }) {
           {title}
         </h2>
 
-        <div style={{ background }} className={styles.imageContainer}>
+        <div
+          onMouseEnter={() => setActive(true)}
+          onMouseLeave={() => setActive(false)}
+          style={{ background }}
+          className={styles.imageContainer}
+        >
           <Link href={link}>
             <motion.div style={{ scale: imageScale }} className={styles.image}>
               <Image
@@ -67,6 +72,8 @@ function Card({ i, title, link, background, range, targetScale, progress }) {
           </Link>
         </div>
       </motion.div>
+
+      <Cursor active={active} />
     </div>
   );
 }
