@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ProjectTitle from './ProjectTitle';
 import Cursor from '@/components/common/Cursor';
+import VideoComponent from '@/components/common/VideoComponent';
 
 function Project({ title, description, link }) {
   const [active, setActive] = useState(false);
@@ -37,22 +38,12 @@ function Project({ title, description, link }) {
             />
           </motion.div>
 
-          <div className={styles.videoContainer}>
-            <div className={styles.video}>
-              <video
-                className={styles.videoElement}
-                autoPlay
-                muted
-                playsInline
-                loop
-                aria-label="Video player"
-                preload="none"
-              >
-                <source src={`/media${link}/homeVideo.mp4`} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
+          <VideoComponent
+            videoContainer={styles.videoContainer}
+            video={styles.video}
+            videoElement={styles.videoElement}
+            link={link}
+          />
         </div>
       </Link>
 

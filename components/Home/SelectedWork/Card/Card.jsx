@@ -1,10 +1,11 @@
 import styles from './card.module.scss';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArgesHeavy } from '@/public/fonts/fonts';
 import useEnableAnimation from '@/hooks/useEnableAnimations';
-import Link from 'next/link';
+import VideoComponent from '@/components/common/VideoComponent';
 
 import Cursor from '@/components/common/Cursor';
 
@@ -50,25 +51,12 @@ function Card({ i, title, link, background, range, targetScale, progress }) {
               />
             </motion.div>
 
-            <div className={styles.videoContainer}>
-              <div style={{ background }} className={styles.video}>
-                <video
-                  className={styles.videoElement}
-                  autoPlay
-                  muted
-                  playsInline
-                  loop
-                  aria-label="Video player"
-                  preload="none"
-                >
-                  <source
-                    src={`/media${link}/homeVideo.mp4`}
-                    type="video/mp4"
-                  />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-            </div>
+            <VideoComponent
+              videoContainer={styles.videoContainer}
+              video={styles.video}
+              videoElement={styles.videoElement}
+              link={link}
+            />
           </Link>
         </div>
       </motion.div>
