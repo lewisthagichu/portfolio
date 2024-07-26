@@ -13,13 +13,6 @@ function Body({ links, selectedLink, setSelectedLink }) {
           const { to, title } = link;
           return (
             <div className={styles.wrapper} key={`wrapper_${index}`}>
-              {/* {selectedLink.isActive && selectedLink.index === index && (
-                <HoverImage
-                  key={`hover_${index}`}
-                  src={links[selectedLink.index]?.src}
-                  isActive={selectedLink.isActive}
-                />
-              )} */}
               <Link
                 href={to}
                 key={`link_${index}`}

@@ -31,7 +31,7 @@ export const expand = {
   }),
 };
 
-const opacity = {
+export const opacity = {
   initial: {
     opacity: 0.5,
   },

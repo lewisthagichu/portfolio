@@ -1,5 +1,5 @@
-import Transition from '@/components/Transition/Transition';
 import Work from '@/components/Work/Work';
+import PageTransition from '@/components/PageTransition/PageTransition';
 import Lenis from 'lenis';
 import { useEffect } from 'react';
 
@@ -19,9 +19,9 @@ function WorkPage() {
     requestAnimationFrame(raf);
   }, []);
   return (
-    <Transition>
+    <PageTransition>
       <Work />;
-    </Transition>
+    </PageTransition>
   );
 }
 

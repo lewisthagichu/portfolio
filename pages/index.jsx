@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Home from '@/components/Home/Home';
-import Transition from '@/components/Transition/Transition';
+import PageTransition from '@/components/PageTransition/PageTransition';
 import Lenis from 'lenis';
 import { useEffect } from 'react';
 
@@ -27,9 +27,9 @@ export default function HomePage() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Transition>
+      <PageTransition>
         <Home />
-      </Transition>
+      </PageTransition>
     </>
   );
 }

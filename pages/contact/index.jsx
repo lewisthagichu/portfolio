@@ -1,5 +1,5 @@
 import Contact from '@/components/Contact/Contact';
-import Transition from '@/components/Transition/Transition';
+import PageTransition from '@/components/PageTransition/PageTransition';
 import Lenis from 'lenis';
 import { useEffect } from 'react';
 
@@ -19,9 +19,9 @@ function ContactPage() {
     requestAnimationFrame(raf);
   }, []);
   return (
-    <Transition>
+    <PageTransition>
       <Contact />;
-    </Transition>
+    </PageTransition>
   );
 }
 

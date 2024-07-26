@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import Case from '@/components/Case/Case';
-import Transition from '@/components/Transition/Transition';
+import PageTransition from '@/components/PageTransition/PageTransition';
 import Lenis from 'lenis';
 import { useEffect } from 'react';
 
@@ -21,9 +21,9 @@ function ProjectPage({ projectData }) {
     requestAnimationFrame(raf);
   }, []);
   return (
-    <Transition>
+    <PageTransition>
       <Case project={projectData} />;
-    </Transition>
+    </PageTransition>
   );
 }
 

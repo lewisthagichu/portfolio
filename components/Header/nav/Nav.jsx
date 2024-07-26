@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { height } from '@/utils/anim';
 import Body from '../Body/Body';
-import ContactDetails from '../ContactDetails/ContactDetails';
+import MenuBg from '../MenuBg/MenuBg';
 
 const links = [
   {
@@ -31,7 +31,7 @@ function Nav() {
   });
 
   return (
-    <motion.div
+    <div
       id="nav"
       variants={height}
       initial="initial"
@@ -39,18 +39,13 @@ function Nav() {
       exit="exit"
       className={styles.nav}
     >
-      <div className={styles.container}>
-        <ContactDetails
-          selectedLink={selectedLink}
-          setSelectedLink={setSelectedLink}
-        />
-        <Body
-          links={links}
-          selectedLink={selectedLink}
-          setSelectedLink={setSelectedLink}
-        />
-      </div>
-    </motion.div>
+      <MenuBg />
+      <Body
+        links={links}
+        selectedLink={selectedLink}
+        setSelectedLink={setSelectedLink}
+      />
+    </div>
   );
 }
 

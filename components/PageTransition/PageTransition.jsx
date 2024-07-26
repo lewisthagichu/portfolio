@@ -1,12 +1,16 @@
-import { animm, opacity, expand } from '@/utils/pageTransition';
+import { animm, opacity, expand } from '@/utils/transition';
 import { motion } from 'framer-motion';
-import styles from './transition.module.scss';
+import styles from './pageTransition.module.scss';
 
-function Transition({ children }) {
+function PageTransition({ children }) {
   const numOfColumns = 5;
 
   return (
     <div className={styles.stairs}>
+      <motion.div
+        {...animm(opacity)}
+        className={styles.transitionBackground}
+      ></motion.div>
       <div className={styles.transitionContainer}>
         {[...Array(numOfColumns)].map((_, i) => (
           <motion.div
@@ -21,4 +25,4 @@ function Transition({ children }) {
   );
 }
 
-export default Transition;
+export default PageTransition;

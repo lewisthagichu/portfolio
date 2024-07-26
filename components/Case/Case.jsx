@@ -10,7 +10,7 @@ function Case({ project }) {
   const { title, index } = project;
   const container = useRef(null);
   const router = useRouter();
-  console.log(router);
+  // console.log(router);
 
   const { scrollYProgress: titleProgress } = useScroll({
     target: container,

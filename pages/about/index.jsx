@@ -1,11 +1,11 @@
 import About from '@/components/About/About';
-import Transition from '@/components/Transition/Transition';
+import PageTransition from '@/components/PageTransition/PageTransition';
 
 function AboutPage() {
   return (
-    <Transition>
+    <PageTransition>
       <About />;
-    </Transition>
+    </PageTransition>
   );
 }
 
