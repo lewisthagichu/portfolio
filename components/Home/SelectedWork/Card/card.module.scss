@@ -5,7 +5,7 @@
     display: flex;
     justify-content: center;   
     align-items: center; 
-    padding-top: clamp(4rem, 8vh, 12rem);
+    padding-top: calc(clamp(4rem, 8vh, 12rem) / 4);
     
     .card {
         position: relative;
@@ -98,6 +98,8 @@
 
 @media screen and (max-width: 600px) {
     .container {
+        padding-top: calc(clamp(4rem, 8vh, 12rem) );
+
         .card {
             height: 100%;
 

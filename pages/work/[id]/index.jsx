@@ -22,7 +22,7 @@ function ProjectPage({ projectData }) {
   }, []);
   return (
     <PageTransition>
-      <Case project={projectData} />;
+      <Case project={projectData} />
     </PageTransition>
   );
 }
