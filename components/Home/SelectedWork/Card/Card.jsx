@@ -25,7 +25,7 @@ function Card({ i, project, range, targetScale, progress }) {
         className={styles.card}
         style={{
           top: `calc(${i * 25}px)`,
-          // scale: enableAnimations ? cardScale : 1,
+          scale: enableAnimations ? cardScale : 1,
         }}
       >
         <CardTitle background={background} title={title} />

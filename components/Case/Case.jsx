@@ -4,10 +4,13 @@ import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import CaseBody from './CaseBody/CaseBody';
 import NextCase from './NextCase/NextCase';
+import { useRouter } from 'next/router';
 
 function Case({ project }) {
   const { title, index } = project;
   const container = useRef(null);
+  const router = useRouter();
+  console.log(router);
 
   const { scrollYProgress: titleProgress } = useScroll({
     target: container,
@@ -17,6 +20,7 @@ function Case({ project }) {
   const opacity = useTransform(titleProgress, [0, 1], [1, 0]);
   const scale = useTransform(titleProgress, [0, 1], [1, 0.3]);
   const y = useTransform(titleProgress, [0, 0.9], [0, 800]);
+
   return (
     <div ref={container} className={styles.container}>
       <motion.div style={{ opacity, scale, y }} className={styles.title}>

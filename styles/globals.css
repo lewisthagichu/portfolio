@@ -175,22 +175,24 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: calc(var(--small-text-size) * 1.3);
+  font-size: calc(var(--small-text-size) );
+  background-color: var(--color-cadet);
 }
 
 /* Hover cursor */
 .cursor,
 .cursorLabel {
+    width: clamp(5em, 7vw, 7em);
+    height: clamp(5em, 7vw, 7em);
     position: fixed;
     pointer-events: none;   
     z-index: 2;
+    /* text-transform: uppercase; */
 }
 
 .cursorLabel {
     background-color: transparent; 
 }
-
-
 
 /* Curved border */
 .curvedBorder {
@@ -260,3 +262,5 @@ a {
   width: 100%;
   height: 100%;
 }
+
+

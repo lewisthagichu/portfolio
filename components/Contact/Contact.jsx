@@ -1,9 +1,7 @@
 import styles from './contact.module.scss';
 import { NeuehaasBody } from '@/public/fonts/fonts';
-import Link from 'next/link';
 import Form from './Form/Form';
 import Info from './Info/Info';
-import Magnetic from '../common/Magnetic';
 import SocialsLinks from '../Footer/SocialLinks/SocialsLinks';
 
 function Contact() {

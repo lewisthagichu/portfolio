@@ -1,9 +1,30 @@
 import fs from 'fs';
 import path from 'path';
 import Case from '@/components/Case/Case';
+import Transition from '@/components/Transition/Transition';
+import Lenis from 'lenis';
+import { useEffect } from 'react';
 
 function ProjectPage({ projectData }) {
-  return <Case project={projectData} />;
+  useEffect(() => {
+    const lenis = new Lenis({
+      lerp: 0.05,
+      wheelMultiplier: 0.7,
+      touchMultiplier: 0.7,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
+  return (
+    <Transition>
+      <Case project={projectData} />;
+    </Transition>
+  );
 }
 
 export default ProjectPage;

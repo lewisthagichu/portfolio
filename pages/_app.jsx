@@ -1,10 +1,14 @@
 import '@/styles/globals.css';
-import Layout from '@/components/Layout/Layout';
+import { AnimatePresence } from 'framer-motion';
+import Header from '@/components/Header/Header';
 
-export default function App({ Component, pageProps }) {
+export default function App({ Component, pageProps, router }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <div>
+      <Header />
+      <AnimatePresence mode="wait">
+        <Component key={router.route} {...pageProps} />
+      </AnimatePresence>
+    </div>
   );
 }

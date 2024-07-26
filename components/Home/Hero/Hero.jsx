@@ -16,8 +16,18 @@ function Hero() {
   const y = useTransform(scrollYProgress, [0, 1], [0, 500]);
   return (
     <section className={styles.container}>
-      <motion.div style={{ y }} ref={imageContainer} className="imageContainer">
-        <Image src={bgImage} alt="image" placeholder="blur" priority />
+      <motion.div
+        style={{ y }}
+        ref={imageContainer}
+        className={styles.imageContainer}
+      >
+        <Image
+          src={bgImage}
+          fill={true}
+          alt="image"
+          placeholder="blur"
+          priority
+        />
       </motion.div>
 
       <div className={styles.topLeft}>

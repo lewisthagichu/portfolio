@@ -12,7 +12,7 @@ function CardWrapper() {
     offset: ['start start', 'end end'],
   });
 
-  const recentProjects = cases.slice(0, 3);
+  const recentProjects = cases.slice(0, 4);
 
   return (
     <div ref={wrapper} className={styles.wrapper}>

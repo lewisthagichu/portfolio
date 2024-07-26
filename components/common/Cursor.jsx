@@ -48,14 +48,14 @@ function Cursor({ active }) {
     <>
       <motion.div
         ref={cursor}
-        className="cursor roundBtn"
+        className="roundBtn cursor"
         variants={scaleAnimation}
         initial="initial"
         animate={active ? 'enter' : 'closed'}
       ></motion.div>
       <motion.div
         ref={cursorLabel}
-        className="cursorLabel roundBtn"
+        className="roundBtn cursorLabel"
         variants={scaleAnimation}
         initial="initial"
         animate={active ? 'enter' : 'closed'}

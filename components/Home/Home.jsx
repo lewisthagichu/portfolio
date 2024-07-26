@@ -1,5 +1,4 @@
 import styles from './home.module.scss';
-import { useEffect } from 'react';
 import Section2 from './Section2/Section2';
 import Hero from './Hero/Hero';
 import Description from './Description/Description';

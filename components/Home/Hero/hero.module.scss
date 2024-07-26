@@ -1,7 +1,17 @@
 .container {
   position: relative;
-  min-height: 115vh;
+  height: 100vh;
   overflow: hidden;
+  
+  .imageContainer {
+    position: relative;
+    width: 100vw;
+    height: 110%;
+
+    img {
+      object-fit: cover;
+    }
+  }
 
   .topLeft {
       position: absolute;

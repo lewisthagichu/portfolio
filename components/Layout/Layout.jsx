@@ -19,7 +19,7 @@ function Layout({ children }) {
   }, []);
   return (
     <div className="main-wrap rel">
-      <Header />
+      {/* <Header /> */}
       {children}
     </div>
   );
