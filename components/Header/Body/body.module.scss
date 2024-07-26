@@ -21,56 +21,26 @@
             p{
                 position: relative;
                 display: flex;
-                overflow: hidden;
-                font-size: clamp(5rem, 11vw, 15rem);
-                font-weight: 400;
-                line-height: 1.2;
-                letter-spacing: -6px;                         
+                font-size: clamp(5rem,11vw, 12rem);
             }
         }
     }
 
 }
 
-// @media only screen and (max-width: 1024px) {   
-//     .body{
-//         order: 1;
-//         align-items: center;
-//         padding-left: 16vw;
-//     }
-// }
-
-// @media only screen and (max-width: 768px) {    
-//     .body{
-//         top: 0;
-//         .wrapper{
-//             a{
-//                 p{  
-//                     letter-spacing: -2px;
-//                 }
-//             }
-//         }
-//     }
-// }
+@media only screen and (max-width: 768px) {    
+    .body{
+        .wrapper{
+            a{
+                p{  
+                    line-height: 16vw;
+                }
+            }
+        }
+    }
+}
 
 
-// @media only screen and (max-width: 360px) {    
-//     .body{
-//         padding-left: 4vw;
-//     }
-// }
 
-// @media only screen and (max-height: 801px)  and (min-width: 1000px) {
-//     .body{
-//         top: 0;
-//         .wrapper{
-//             a{
-//                 p{  
-//                     font-size: 8vw;
-//                 }
-//             }
-//         }
-//     }
-// }
 
 

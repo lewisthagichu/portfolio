@@ -3,11 +3,11 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { fade } from '@/utils/anim';
 import { getChars } from '@/utils/getChars';
-import { ArchivoBlack } from '@/public/fonts/fonts';
+import { NeuehaasBody } from '@/public/fonts/fonts';
 
 function Body({ links, selectedLink, setSelectedLink }) {
   return (
-    <div className={`${styles.body} ${ArchivoBlack.className}`}>
+    <div className={`${styles.body} ${NeuehaasBody.className}`}>
       <div>
         {links.map((link, index) => {
           const { to, title } = link;
