@@ -10,7 +10,7 @@ function RoundButton({
   text,
 }) {
   return (
-    <Link href={href}>
+    <Link scroll={false} href={href}>
       <Magnetic>
         <button
           data-text-strength={textStrength}

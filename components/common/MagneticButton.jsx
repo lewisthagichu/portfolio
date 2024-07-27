@@ -13,6 +13,7 @@ function MagneticButton({
     <div className={`btnClick ${styles} ${NeuehaasBody.className}`}>
       <Magnetic>
         <Link
+          scroll={false}
           data-text-strength={textStrength}
           data-strength={magneticStrength}
           href={href}

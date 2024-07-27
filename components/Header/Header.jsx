@@ -25,7 +25,7 @@ function Header() {
   return (
     <div className={`${styles.header} ${NeuehaasBody.className}`}>
       <div className={styles.bar}>
-        <Link onMouseDown={() => setIsActive(false)} href="/">
+        <Link scroll={false} onMouseDown={() => setIsActive(false)} href="/">
           LEWIS THAGICHU
         </Link>
 

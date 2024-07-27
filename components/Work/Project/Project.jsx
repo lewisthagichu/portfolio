@@ -11,7 +11,7 @@ function Project({ title, description, link }) {
 
   return (
     <section className={`${styles.container} ${NeuehaasBody.className}`}>
-      <Link href={link}>
+      <Link scroll={false} href={link}>
         <ProjectMedia link={link} setActive={setActive} />
       </Link>
 

@@ -76,17 +76,32 @@ function Info() {
       <div className={`${styles.menu} ${styles.box}`}>
         <h4>Menu:</h4>
         <Magnetic>
-          <Link data-strength="20" data-text-strength="0" href="/">
+          <Link
+            scroll={false}
+            data-strength="20"
+            data-text-strength="0"
+            href="/"
+          >
             <span className="btn-text">Home</span>
           </Link>
         </Magnetic>
         <Magnetic>
-          <Link data-strength="20" data-text-strength="0" href="/about">
+          <Link
+            scroll={false}
+            data-strength="20"
+            data-text-strength="0"
+            href="/about"
+          >
             <span className="btn-text">About</span>
           </Link>
         </Magnetic>
         <Magnetic>
-          <Link data-strength="20" data-text-strength="0" href="/work">
+          <Link
+            scroll={false}
+            data-strength="20"
+            data-text-strength="0"
+            href="/work"
+          >
             <span className="btn-text">Work</span>
           </Link>
         </Magnetic>

@@ -14,6 +14,7 @@ function Body({ links, selectedLink, setSelectedLink }) {
           return (
             <div className={styles.wrapper} key={`wrapper_${index}`}>
               <Link
+                scroll={false}
                 href={to}
                 key={`link_${index}`}
                 onMouseEnter={() => setSelectedLink({ isActive: true, index })}
