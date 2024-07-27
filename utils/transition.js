@@ -15,7 +15,7 @@ export const expand = {
   enter: (i) => ({
     bottom: '100%',
     transition: {
-      duration: 0.5,
+      duration: 0.6,
       delay: 0.07 * i,
       ease: [0.215, 0.61, 0.355, 1],
     },
@@ -24,7 +24,7 @@ export const expand = {
   exit: (i) => ({
     height: '100vh',
     transition: {
-      duration: 0.5,
+      duration: 0.8,
       delay: 0.07 * i,
       ease: [0.215, 0.61, 0.355, 1],
     },

@@ -1,3 +1,4 @@
+import '@/styles/normalize.css';
 import '@/styles/globals.css';
 import { AnimatePresence } from 'framer-motion';
 import Header from '@/components/Header/Header';

@@ -2,24 +2,4 @@
     position: relative;
     background: inherit;
     z-index: 1;
-
-    .cursor,
-.cursorLabel {
-    position: absolute;
-    width: clamp(9em, 12vw, 11em);
-    height: clamp(9em, 12vw, 11em);
-    background-color: var(--color-cadet);
-    pointer-events: none;
-    border-radius: 50%;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 5;
-}
-
-.cursorLabel {
-   background-color: transparent; 
-   font-size: var(--small-text-size);
-}
 }

@@ -15,6 +15,8 @@ function SmoothScroll({ children }) {
     }
 
     requestAnimationFrame(raf);
+
+    window.scrollTo(0, 0);
   }, []);
 
   return <>{children}</>;
