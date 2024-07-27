@@ -110,6 +110,7 @@ a {
 .btnClick {     
   background-color: transparent;
   margin: 0 auto;
+  width: max-content;
 }
 
 .btnClick a {
@@ -130,7 +131,6 @@ a {
   position: relative;
   padding-left: 4rem;
   display: inline-block;
-  transform: translateX(-10px);
   transition: all .5s cubic-bezier(.76, 0, .24, 1);
 }
 

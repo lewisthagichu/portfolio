@@ -1,9 +1,7 @@
 import styles from './nav.module.scss';
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { height } from '@/utils/anim';
 import Body from '../Body/Body';
 import MenuBg from '../MenuBg/MenuBg';
+import { useState } from 'react';
 
 const links = [
   {
@@ -31,14 +29,7 @@ function Nav() {
   });
 
   return (
-    <div
-      id="nav"
-      variants={height}
-      initial="initial"
-      animate="enter"
-      exit="exit"
-      className={styles.nav}
-    >
+    <div id="nav" className={styles.nav}>
       <MenuBg />
       <Body
         links={links}

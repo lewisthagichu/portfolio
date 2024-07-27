@@ -2,27 +2,14 @@ import fs from 'fs';
 import path from 'path';
 import Case from '@/components/Case/Case';
 import PageTransition from '@/components/PageTransition/PageTransition';
-import Lenis from 'lenis';
-import { useEffect } from 'react';
+import SmoothScroll from '@/components/common/SmoothScroll';
 
 function ProjectPage({ projectData }) {
-  useEffect(() => {
-    const lenis = new Lenis({
-      lerp: 0.05,
-      wheelMultiplier: 0.7,
-      touchMultiplier: 0.7,
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
   return (
     <PageTransition>
-      <Case project={projectData} />
+      <SmoothScroll>
+        <Case project={projectData} />
+      </SmoothScroll>
     </PageTransition>
   );
 }
