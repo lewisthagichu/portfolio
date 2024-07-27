@@ -1,5 +1,5 @@
 import styles from './footer.module.scss';
-import { DrukCond, NeuehaasBody } from '@/public/fonts/fonts';
+import { ArgesHeavy, NeuehaasBody } from '@/public/fonts/fonts';
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import gsap from 'gsap';
@@ -48,7 +48,10 @@ function Footer() {
       <div className={styles.tag}></div>
 
       <div className={styles.sliderContainer}>
-        <div ref={slider} className={`${styles.slider} ${DrukCond.className}`}>
+        <div
+          ref={slider}
+          className={`${styles.slider} ${ArgesHeavy.className}`}
+        >
           <p ref={firstText}>
             Let's work together
             <span>
