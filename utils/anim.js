@@ -10,7 +10,7 @@ export const animm = (variants, custom = null) => {
   };
 };
 
-// Header
+// Header.jsx
 export const opacity = {
   initial: {
     opacity: 0,
@@ -43,6 +43,7 @@ export const translate = {
   }),
 };
 
+// Body.jsx
 export const fade = {
   initial: {
     filter: 'saturate(1)',
@@ -60,20 +61,7 @@ export const fade = {
   },
 };
 
-export const background = {
-  initial: {
-    height: 0,
-  },
-  open: {
-    height: '100vh',
-    transition,
-  },
-  closed: {
-    height: 0,
-    transition,
-  },
-};
-
+// Cursor.jsx
 export const scaleAnimation = {
   initial: { scale: 0, x: '-50%', y: '-50%' },
   enter: {
@@ -97,6 +85,6 @@ export const slideUp = {
   },
   enter: {
     y: 0,
-    transition: { duration: 0.6, ease: [0.33, 1, 0.68, 1], delay: 2.5 },
+    transition: { duration: 0.6, ease: [0.215, 0.61, 0.355, 1], delay: 0.2 },
   },
 };

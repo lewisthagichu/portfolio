@@ -2,15 +2,13 @@ import styles from './case.module.scss';
 import { ArgesHeavy } from '@/public/fonts/fonts';
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
+import { slideUp, animm } from '@/utils/anim';
 import CaseBody from './CaseBody/CaseBody';
 import NextCase from './NextCase/NextCase';
-import { useRouter } from 'next/router';
 
 function Case({ project }) {
   const { title, index } = project;
   const container = useRef(null);
-  const router = useRouter();
-  // console.log(router);
 
   const { scrollYProgress: titleProgress } = useScroll({
     target: container,
@@ -22,14 +20,18 @@ function Case({ project }) {
   const y = useTransform(titleProgress, [0, 0.9], [0, 800]);
 
   return (
-    <div ref={container} className={styles.container}>
+    <motion.div
+      {...animm(slideUp)}
+      ref={container}
+      className={styles.container}
+    >
       <motion.div style={{ opacity, scale, y }} className={styles.title}>
         <h2 className={ArgesHeavy.className}>{title}</h2>
       </motion.div>
 
       <CaseBody project={project} />
       <NextCase index={index} />
-    </div>
+    </motion.div>
   );
 }
 

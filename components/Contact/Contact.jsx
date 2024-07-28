@@ -1,12 +1,17 @@
 import styles from './contact.module.scss';
 import { NeuehaasBody } from '@/public/fonts/fonts';
+import { motion } from 'framer-motion';
+import { slideUp, animm } from '@/utils/anim';
 import Form from './Form/Form';
 import Info from './Info/Info';
 import SocialsLinks from '../Footer/SocialLinks/SocialsLinks';
 
 function Contact() {
   return (
-    <section className={`${NeuehaasBody.className} ${styles.container}`}>
+    <motion.section
+      {...animm(slideUp)}
+      className={`${NeuehaasBody.className} ${styles.container}`}
+    >
       <div className={styles.cta}>
         <h2>Get in Touch!</h2>
         <p>
@@ -21,7 +26,7 @@ function Contact() {
       </div>
 
       <SocialsLinks divStyles={styles.socialsContact} />
-    </section>
+    </motion.section>
   );
 }
 

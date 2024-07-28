@@ -4,15 +4,17 @@ import Hero from './Hero/Hero';
 import Description from './Description/Description';
 import SelectedWork from './SelectedWork/SelectedWork';
 import Footer from '../Footer/Footer';
+import { motion } from 'framer-motion';
+import { slideUp, animm } from '@/utils/anim';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <motion.div {...animm(slideUp)} className={styles.container}>
       <Hero />
       {/* <Section2 /> */}
       <Description />
       <SelectedWork />
       <Footer />
-    </div>
+    </motion.div>
   );
 }

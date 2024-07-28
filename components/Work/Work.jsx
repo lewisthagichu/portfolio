@@ -2,6 +2,7 @@ import styles from './work.module.scss';
 import { ArgesHeavy } from '@/public/fonts/fonts';
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
+import { slideUp, animm } from '@/utils/anim';
 import ProjectsWrapper from './ProjectsWrapper/ProjectsWrapper';
 import Footer from '../Footer/Footer';
 
@@ -18,14 +19,14 @@ function Work() {
   const y = useTransform(scrollYProgress, [0, 0.9], [0, 70]);
 
   return (
-    <div className={styles.container}>
+    <motion.div {...animm(slideUp)} className={styles.container}>
       <motion.section style={{ opacity, scale, y }} className={styles.title}>
         <h2 className={ArgesHeavy.className}>WORK</h2>
       </motion.section>
 
       <ProjectsWrapper />
       <Footer />
-    </div>
+    </motion.div>
   );
 }
 
