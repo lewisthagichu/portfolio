@@ -1,3 +1,13 @@
+export const animm = (variants, custom = null) => {
+  return {
+    initial: 'initial',
+    animate: 'enter',
+    exit: 'exit',
+    variants,
+    custom,
+  };
+};
+
 export const expand = {
   initial: {
     top: 0,
@@ -7,7 +17,7 @@ export const expand = {
     // top: '0',
     height: '100%',
     transition: {
-      duration: 0.6,
+      duration: 0.7,
       delay: 0.07 * i,
       ease: [0.215, 0.61, 0.355, 1],
     },

@@ -5,7 +5,7 @@ import { useScroll, useTransform, motion } from 'framer-motion';
 import useEnableAnimation from '@/hooks/useEnableAnimations';
 
 function MobileImages({ src }) {
-  const images = [`${src}/web1.jpg`, `${src}/web2.jpg`, `${src}/web1.jpg`];
+  const images = [`${src}/mob1.webp`, `${src}/mob2.webp`, `${src}/mob3.webp`];
   const enableAnimations = useEnableAnimation(991);
   const container = useRef(null);
 

@@ -1,0 +1,27 @@
+
+.container {
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+
+    p{
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: calc(var(--regular-text-size) * 2);
+       
+        
+        // &::before{
+        //     content: "";
+        //     display: inline-block;
+        //     width: .4em;
+        //     height: .4em;
+        //     background-color: white;
+        //     border-radius: 50%;
+        //     margin: calc(var(--gap-padding) / 4);
+        // }
+    }
+}

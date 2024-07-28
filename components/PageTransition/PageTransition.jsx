@@ -1,4 +1,4 @@
-import { animm, opacity, expand } from '@/utils/transition';
+import { animm, opacity, expand } from './pgTransition';
 import { motion } from 'framer-motion';
 import styles from './pageTransition.module.scss';
 

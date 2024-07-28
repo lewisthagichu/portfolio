@@ -13,7 +13,7 @@ function Hero() {
     offset: ['start start', 'end start'],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [0, 500]);
+  const y = useTransform(scrollYProgress, [0, 1], [0, 300]);
   return (
     <section className={styles.container}>
       <motion.div
@@ -21,13 +21,7 @@ function Hero() {
         ref={imageContainer}
         className={styles.imageContainer}
       >
-        <Image
-          src={bgImage}
-          fill={true}
-          alt="image"
-          placeholder="blur"
-          priority
-        />
+        <Image src={bgImage} alt="image" placeholder="blur" priority />
       </motion.div>
 
       <div className={styles.topLeft}>

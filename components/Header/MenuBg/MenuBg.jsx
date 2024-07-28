@@ -1,5 +1,4 @@
-import { animm } from '@/utils/transition';
-import { expand } from './navTransiton';
+import { expand, animm } from './navTransiton';
 import { motion } from 'framer-motion';
 import styles from '../nav/nav.module.scss';
 

@@ -1,18 +1,26 @@
 import '@/styles/normalize.css';
 import '@/styles/globals.css';
-import { AnimatePresence } from 'framer-motion';
 import Header from '@/components/Header/Header';
 import Head from 'next/head';
+import Preloader from '@/components/Preloader/Preloader';
+import { AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function App({ Component, pageProps, router }) {
+  const pathname = usePathname();
+  const isHome = pathname === '/';
+  const [isLoading, setIsLoading] = useState(isHome);
+
+  useEffect(() => {}, [isLoading]);
+
   return (
     <>
       <Head>
         <title>Lewis Thagichu Full-stack Developer</title>
         <meta
           name="description"
-          content="Lewis Thagichu is a software engineer based in Nairobi, Kenya. Keen on partnering with ambitious brands to develop innovative
-          software."
+          content="Lewis Thagichu is a software engineer based in Nairobi, Kenya. Keen on partnering with ambitious brands to develop innovative software."
         />
         <meta name="author" content="Lewis Thagichu" />
         <meta
@@ -32,10 +40,17 @@ export default function App({ Component, pageProps, router }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
-      <AnimatePresence mode="wait">
-        <Component key={router.asPath} {...pageProps} />
-      </AnimatePresence>
+      {isLoading && isHome ? (
+        <Preloader finishLoading={() => setIsLoading(false)} />
+      ) : (
+        <>
+          <Header />
+
+          <AnimatePresence mode="wait">
+            <Component key={router.asPath} {...pageProps} />
+          </AnimatePresence>
+        </>
+      )}
     </>
   );
 }

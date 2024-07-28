@@ -1,5 +1,16 @@
 const transition = { duration: 1, ease: [0.76, 0, 0.24, 1] };
 
+export const animm = (variants, custom = null) => {
+  return {
+    initial: 'initial',
+    animate: 'enter',
+    exit: 'exit',
+    variants,
+    custom,
+  };
+};
+
+// Header
 export const opacity = {
   initial: {
     opacity: 0,
@@ -14,20 +25,7 @@ export const opacity = {
   },
 };
 
-export const height = {
-  initial: {
-    height: 0,
-  },
-  enter: {
-    height: '100vh',
-    transition,
-  },
-  exit: {
-    height: 0,
-    transition,
-  },
-};
-
+// getChar.js
 export const translate = {
   initial: {
     y: '100%',
@@ -89,5 +87,16 @@ export const scaleAnimation = {
     x: '-50%',
     y: '-50%',
     transition: { duration: 0.4, ease: [0.32, 0, 0.67, 0] },
+  },
+};
+
+// Page Entry
+export const slideUp = {
+  initial: {
+    y: 300,
+  },
+  enter: {
+    y: 0,
+    transition: { duration: 0.6, ease: [0.33, 1, 0.68, 1], delay: 2.5 },
   },
 };
