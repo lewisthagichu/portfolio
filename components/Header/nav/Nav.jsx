@@ -22,7 +22,7 @@ const links = [
   },
 ];
 
-function Nav() {
+function Nav({ isActive }) {
   const [selectedLink, setSelectedLink] = useState({
     isActive: false,
     index: 0,

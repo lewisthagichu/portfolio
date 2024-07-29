@@ -28,11 +28,11 @@ export const opacity = {
 // getChar.js
 export const translate = {
   initial: {
-    y: '100%',
+    // y: '-10%',
     opacity: 0,
   },
   enter: (i) => ({
-    y: 0,
+    // y: 0,
     opacity: 1,
     transition: { duration: 1, ease: [0.76, 0, 0.24, 1], delay: i[0] },
   }),

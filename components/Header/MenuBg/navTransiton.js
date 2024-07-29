@@ -17,7 +17,7 @@ export const expand = {
     // top: '0',
     height: '100%',
     transition: {
-      duration: 0.7,
+      duration: 0.8,
       delay: 0.07 * i,
       ease: [0.215, 0.61, 0.355, 1],
     },

@@ -30,11 +30,6 @@ function Header() {
         </Link>
 
         <div onMouseDown={toggleNav} className={styles.el}>
-          {/* <div
-            className={`${styles.burger} ${
-              isActive ? styles.burgerActive : ''
-            }`}
-          ></div> */}
           <div className={styles.label}>
             <motion.p variants={opacity} animate={isActive ? 'closed' : 'open'}>
               MENU
