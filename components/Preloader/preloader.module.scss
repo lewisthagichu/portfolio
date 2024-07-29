@@ -1,7 +1,7 @@
 
 .container {
     height: 100vh;
-    background-color: #000;
+    background-color: var(--color-preloader);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,18 +10,7 @@
     p{
         display: flex;
         align-items: center;
-        color: white;
+        color: var(--color-white);
         font-size: calc(var(--regular-text-size) * 2);
-       
-        
-        // &::before{
-        //     content: "";
-        //     display: inline-block;
-        //     width: .4em;
-        //     height: .4em;
-        //     background-color: white;
-        //     border-radius: 50%;
-        //     margin: calc(var(--gap-padding) / 4);
-        // }
     }
 }

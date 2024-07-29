@@ -2,7 +2,7 @@
     padding: 0 calc(var(--section-padding) / 2) ;
     position: relative;
     height: 100vh;
-    background: #6D7688;
+    background: var(--color-preloader);
     display: flex;
     flex-direction: column;
     justify-content: space-between;

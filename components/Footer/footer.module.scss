@@ -1,12 +1,11 @@
 .container {
     position: relative;
     height: 100vh;
-    background: var(--color-cadet);
+    background: var(--color-preloader);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
-    // will-change: transform;
 
     .sliderContainer {
         position: absolute;

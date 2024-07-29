@@ -1,10 +1,10 @@
 import styles from './bio.module.scss';
-import RoundButton from '@/components/common/RoundButton';
+import Magnetic from '@/components/common/Magnetic';
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 function Bio({ project }) {
-  const { client, year, technologies, role, src, live, github } = project;
+  const { client, year, technologies, role, live, github } = project;
   const container = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -56,15 +56,21 @@ function Bio({ project }) {
         </p>
       </div>
 
-      {live ? (
-        <motion.div style={{ y }} className={styles.liveBtn}>
-          <RoundButton href={live} text={'View Live'} />
-        </motion.div>
-      ) : (
-        <motion.div style={{ y }} className={styles.liveBtn}>
-          <RoundButton href={github} text={'View Code'} />
-        </motion.div>
-      )}
+      <motion.div style={{ y }} className={styles.liveBtn}>
+        <a href={live ? live : github} target="_blank">
+          <Magnetic>
+            <button
+              data-text-strength={50}
+              data-strength={100}
+              className={`roundBtn ${styles}`}
+            >
+              <span className={`btn-text`}>
+                {live ? 'View live' : 'View Code'}
+              </span>
+            </button>
+          </Magnetic>
+        </a>
+      </motion.div>
     </div>
   );
 }

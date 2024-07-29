@@ -5,7 +5,9 @@
   --color-cadet: #6D7688;
   --color-light-blue: #c2e9fb;
   --color-btn: #7E8B8B;
+  --color-nav: #45565E;
   --alert-error: #ff4444;
+  --color-preloader: #253341;
 
   --section-padding: clamp(4rem, 10vw, 16rem);
   --container-padding: calc(clamp(5em, 21vw, 12em) * 1.5);
@@ -177,7 +179,7 @@ a {
   justify-content: center;
   align-items: center;
   font-size: calc(var(--small-text-size) );
-  background-color: var(--color-cadet);
+  background-color: var(--color-nav);
 }
 
 /* Hover cursor */
