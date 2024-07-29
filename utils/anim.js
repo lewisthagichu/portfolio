@@ -1,4 +1,4 @@
-const transition = { duration: 1, ease: [0.76, 0, 0.24, 1] };
+const ease = [0.76, 0, 0.24, 1];
 
 export const animm = (variants, custom = null) => {
   return {
@@ -34,12 +34,12 @@ export const translate = {
   enter: (i) => ({
     // y: 0,
     opacity: 1,
-    transition: { duration: 1, ease: [0.76, 0, 0.24, 1], delay: i[0] },
+    transition: { duration: 1, ease, delay: i[0] },
   }),
   exit: (i) => ({
     y: '100%',
     opacity: 0,
-    transition: { duration: 0.4, ease: [0.76, 0, 0.24, 1], delay: i[1] },
+    transition: { duration: 0.4, ease, delay: i[1] },
   }),
 };
 
@@ -51,7 +51,7 @@ export const fade = {
   },
   open: {
     filter: 'saturate(0.3)',
-    opacity: 0.6,
+    opacity: 0.5,
     transition: { ease: 'linear', duration: 0.7 },
   },
   closed: {
@@ -68,7 +68,7 @@ export const scaleAnimation = {
     scale: 1,
     x: '-50%',
     y: '-50%',
-    transition: { duration: 0.4, ease: [0.76, 0, 0.24, 1] },
+    transition: { duration: 0.4, ease: [0.32, 0, 0.67, 0] },
   },
   closed: {
     scale: 0,

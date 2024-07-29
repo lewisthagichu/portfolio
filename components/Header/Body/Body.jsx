@@ -1,11 +1,13 @@
 import styles from './body.module.scss';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { fade } from '@/utils/anim';
-import { getChars } from '@/utils/getChars';
+import { fade, translate } from '@/utils/anim';
 import { NeuehaasBody } from '@/public/fonts/fonts';
+import { usePathname } from 'next/navigation';
 
 function Body({ links, selectedLink, setSelectedLink }) {
+  const pathname = usePathname();
+  console.log(pathname);
   return (
     <div className={`${styles.body} ${NeuehaasBody.className}`}>
       <div>
@@ -29,7 +31,16 @@ function Body({ links, selectedLink, setSelectedLink }) {
                       : 'closed'
                   }
                 >
-                  {getChars(title)}
+                  <motion.span
+                    className={pathname === to ? styles.active : ''}
+                    variants={translate}
+                    custom={[0.4, 0.1]}
+                    initial="initial"
+                    animate="enter"
+                    exit="exit"
+                  >
+                    <span>{title}</span>
+                  </motion.span>
                 </motion.p>
               </Link>
             </div>
