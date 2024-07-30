@@ -6,7 +6,7 @@ import Cursor from '@/components/common/Cursor';
 import ProjectTitle from './ProjectTitle';
 import ProjectMedia from './ProjectMedia';
 
-function Project({ title, description, link }) {
+function Project({ title, tag, link }) {
   const [active, setActive] = useState(false);
 
   return (
@@ -15,7 +15,7 @@ function Project({ title, description, link }) {
         <ProjectMedia link={link} setActive={setActive} />
       </Link>
 
-      <ProjectTitle title={title} description={description} />
+      <ProjectTitle title={title} tag={tag} />
       <Cursor active={active} />
     </section>
   );

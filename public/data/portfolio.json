@@ -1,6 +1,7 @@
 {
     "index": 2,
     "title": "Porfolio",
+    "tag": "A website to showcase my skills and projects.",
     "description": "A website to showcase my skills and projects.",
     "technologies": ["NextJS", "Sass", "Framer-motion"],
     "year": 2024,

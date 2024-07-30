@@ -1,7 +1,8 @@
 {
   "index": 0,
   "title": "HomeFinder",
-  "description": "A platform designed to streamline the process of finding rental properties and homes for sale.",
+  "tag": "A platform designed to streamline the process of finding rental properties.",
+  "description": "A website developed to streamline the process of finding rental properties, inspired by challenges I and others have faced in the market. The platform includes user authentication and authorization, and personalized user profiles with listings. Key features include property listing with multiple image uploads, internal messaging,and the ability to share listings on social media.",
   "technologies": ["NextJS", "Redux", "MongoDB", "Sass", "Cloudinary"],
   "year": 2024,
   "client": "Personal",

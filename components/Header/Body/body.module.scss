@@ -21,7 +21,7 @@
             p{
                 position: relative;
                 display: flex;
-                font-size: clamp(5rem,11vw, 12rem);
+                font-size: clamp(5rem, 6vw, 12rem);
                 
                 span {
                     position: relative;
@@ -56,7 +56,7 @@
         .wrapper{
             a{
                 p{  
-                    line-height: 16vw;
+                    line-height: 13vw;
                 }
             }
         }

@@ -1,7 +1,8 @@
 {
     "index": 4,
     "title": "SketchPad",
-    "description": "A site that brings the classic Etch A Sketch experience to the digital world.",
+    "tag": "A site that brings the classic Etch A Sketch experience to the digital world.",
+    "description": "A browser-based drawing application that blends the fun of a traditional Etch-A-Sketch with digital creativity. This project was inspired by my interest in art and drawing, and it served as a great learning experience in core web development. Users can draw on a virtual canvas, experiment with different colors, and reset the canvas to start fresh.",
     "technologies": ["HTML", "CSS", "Javascript"],
     "year": 2023,
     "client": "Personal",

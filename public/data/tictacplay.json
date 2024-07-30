@@ -1,7 +1,8 @@
 {
     "index": 3,
     "title": "TicTacPlay",
-    "description": "A fun and interactive site where users can enjoy playing Tic-Tac-Toe.",
+    "tag": "A fun and interactive site where users can enjoy playing Tic-Tac-Toe.",
+    "description": "This is a  simple yet meaningful project that marks my early exploration into computer science fundamentals. Developed as part of The Odin Project, it is a classic implementation of Tic Tac Toe, allowing players to compete against friends or an AI with varying difficulty levels. The game is built using HTML5, CSS3, and JavaScript, with animations powered by GSAP. Key features include customizable player names, an intuitive score tally, and smooth animations. This project symbolizes growth, a theme I cherish and strive for in my career and life. ",
     "technologies": ["HTML", "CSS", "Javascript", "GSAP"],
     "year": 2023,
     "client": "Personal",

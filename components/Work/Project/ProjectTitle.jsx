@@ -1,10 +1,10 @@
 import styles from './project.module.scss';
 
-function ProjectTitle({ title, description }) {
+function ProjectTitle({ title, tag }) {
   return (
     <div className={styles.title}>
       <h4>{title}</h4>
-      <p>{description}</p>
+      <p>{tag}</p>
     </div>
   );
 }
