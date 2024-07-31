@@ -18,7 +18,7 @@ function CardMedia({ project, scrollYProgess, setActive }) {
       <Link scroll={false} href={link}>
         <motion.div style={{ scale: imageScale }} className={styles.image}>
           <Image
-            src={`/media${link}/web1.jpg`}
+            src={`/media${link}/web1.webp`}
             fill
             sizes="100vw"
             alt="image"

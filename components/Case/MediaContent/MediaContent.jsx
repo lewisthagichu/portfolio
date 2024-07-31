@@ -16,6 +16,7 @@ function MediaContent({ src }) {
           preload="none"
         >
           <source src={`${src}/workVideo.mp4`} type="video/mp4" />
+          <source src={`${src}/workVideo.webm`} type="video/webm" />
           Your browser does not support the video tag.
         </video>
       </div>

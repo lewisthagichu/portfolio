@@ -7,7 +7,6 @@ function Bio({ project }) {
   const { client, year, technologies, role, tag, description, live, github } =
     project;
   const container = useRef(null);
-  console.log(description);
 
   const { scrollYProgress } = useScroll({
     target: container,

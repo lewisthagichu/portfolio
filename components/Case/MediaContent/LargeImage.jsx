@@ -20,7 +20,7 @@ function LargeImage({ src }) {
           width={0}
           height={0}
           sizes="100vw"
-          src={`${src}/web2.jpg`}
+          src={`${src}/web1.webp`}
           alt="Project Image"
         />
       </motion.div>

@@ -22,7 +22,7 @@ function ProjectMedia({ setActive, link }) {
     >
       <motion.div style={{ y }} className={styles.image}>
         <Image
-          src={`/media${link}/web1.jpg`}
+          src={`/media${link}/web1.webp`}
           width={0}
           height={0}
           sizes="100vw"

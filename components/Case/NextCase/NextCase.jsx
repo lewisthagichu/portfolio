@@ -29,7 +29,7 @@ function NextCase({ index }) {
     >
       <div className={styles.imageContainer}>
         <Image
-          src={`/media${nextCase.link}/web1.jpg`}
+          src={`/media${nextCase.link}/web1.webp`}
           fill
           alt="Next project"
         />

@@ -7,7 +7,6 @@ import { usePathname } from 'next/navigation';
 
 function Body({ links, selectedLink, setSelectedLink }) {
   const pathname = usePathname();
-  console.log(pathname);
   return (
     <div className={`${styles.body} ${NeuehaasBody.className}`}>
       <div>
