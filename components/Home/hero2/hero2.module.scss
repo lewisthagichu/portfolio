@@ -1,0 +1,48 @@
+.container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    
+    .imageContainer {
+      background: linear-gradient(to right, #ED4C07, #991F04);
+      background: #DA4607;
+      position: relative;
+      width: 100vw;
+      height: 110%;
+      top: -10%;
+  
+      img {
+        position: absolute;
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  
+    .topLeft {
+        position: absolute;
+        top: 15rem;
+        left: 8rem;
+        display: flex;
+        flex-direction: column;
+        transform-style: preserve-3d;
+    }
+    
+    .bottomRight {
+      position: absolute;
+      bottom: 7.5rem;
+      right: 8rem;
+      display: flex;
+      flex-direction: column;
+      transform-style: preserve-3d;
+      align-items: flex-end;
+    }
+  }
+  
+    
+  
+    
+    
+   

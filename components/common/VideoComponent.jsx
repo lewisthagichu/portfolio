@@ -10,6 +10,7 @@ function VideoComponent({ videoContainer, video, videoElement, link }) {
           muted
           playsInline
           loop
+          // controls
           aria-label="Video player"
           preload="none"
         >

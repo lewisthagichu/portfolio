@@ -19,7 +19,7 @@ export const aboutMe = [
   "I'm Lewis Thagichu, a software engineer based in Nairobi, Kenya.",
   'I believe that the best products come from a blend of creativity, technical expertise, and strong teamwork. Therefore my strategy to building focuses on combining creative thinking with an analytical approach to solve problems at the intersection of business and technology.',
   'As someone dedicated to personal growth, I view each project as an opportunity for self-improvement. I can handle projects independently or seamlessly integrate into existing developer teams.',
-  'I am a music and sports enthusiast, and I also consider myself to be quite the photographer.',
+  "I am a music and sports enthusiast, and I've been told am quite the photographer.",
 ];
 
 export const stack = [
