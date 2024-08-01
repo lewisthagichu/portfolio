@@ -1,5 +1,4 @@
 import styles from './home.module.scss';
-import Section2 from './Section2/Section2';
 import Hero from './Hero/Hero';
 import Description from './Description/Description';
 import SelectedWork from './SelectedWork/SelectedWork';
@@ -12,7 +11,6 @@ export default function Home() {
   return (
     <motion.div {...animm(slideUp)} className={styles.container}>
       <Hero />
-      {/* <Section2 /> */}
       <MarqueesWrapper />
       <Description />
       <SelectedWork />
