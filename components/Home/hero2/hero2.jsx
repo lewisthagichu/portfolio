@@ -1,5 +1,5 @@
 import styles from './hero.module.scss';
-import Text3d from '../Hero/Text3d/Text3d';
+import Text3d from './Text3d/Text3d';
 import Image from 'next/image';
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';

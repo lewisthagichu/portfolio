@@ -4,75 +4,82 @@
   height: 100vh;
   overflow: hidden;
   color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 
-  .content {
-    height: calc(100% - (100vw / (11* 0.6)));
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  .quote {
+    padding: 5rem var(--section-padding);
+
+    h4 {
+      font-size: calc(var(--small-text-size) * .8);
+      opacity: .5;
+    }
     
-    .quote {
-      padding: 5rem var(--section-padding);
-
-      h4 {
-        font-size: calc(var(--small-text-size) * .8);
-        opacity: .5;
-      }
-      
-      p{
-        font-size: var(--small-text-size);
-        max-width: 30rem;
-        line-height: 1.3;
-        text-align: justify;
-      }
-
-      &:nth-of-type(2) {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-      }
+    p{
+      font-size: var(--small-text-size);
+      max-width: 30rem;
+      line-height: 1.3;
+      text-align: justify;
     }
 
+    &.second {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
 
-    .circularText {
-      position: absolute;
-      bottom: calc(100vw / (10* 0.6));
-      left: calc(var(--section-padding) / 4);
-      width: 90px;
-      height: 90px;
-      background-image: url(../../../public/media/home/circular_text.svg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      animation: rotation 10s infinite linear;
+  .bio { 
+    text-transform: uppercase;  
+    display: grid;  
+    grid-template-columns: repeat(14, 1fr);
+    grid-template-rows: 1fr auto;
+    text-align: end;
 
-      &::before {
-        content: "";
-        width: 10px;
-        height: 10px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: var(--color-white);
-        border-radius: 99px
+    .homeTitle {
+      margin: 0;
+      font-size: 18vw;
+      line-height: .9;
+      letter-spacing: 2px;
+      grid-area: 1 / 3 / 1 / 13;
+    }
+
+    .location {
+      grid-area: 2 / 3 / 2 / 13;
+
+      p {
+        margin-top: .4em;
+        font-size: var(--regular-text-size);
       }
-  }
+    }
   }
 
-  .name {
+
+  .circularText {
     position: absolute;
-    left: 0;
-    bottom: -11vw;
+    bottom: 15px;
+    left: calc(var(--section-padding) / 4);
+    width: 90px;
+    height: 90px;
+    background-image: url(../../../public/media/home/circular_text.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: rotation 10s infinite linear;
 
-    h1 {
-      font-size: calc(100vw / (11.1* 0.6));
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+    &::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--color-white);
+      border-radius: 99px
     }
-  }
-  
+} 
   
 }
 
@@ -86,21 +93,42 @@
   }
 }
 
+@media screen and (max-width: 992px) {
+  .container {
+    .bio {
+      padding: 0 var(--section-padding);
+      display: block;
+      text-align: start;
+    }
+  }
+  
+}
+
+
+
 @media screen and (max-width: 512px) {
   .container {
-    .content {
-      .quote {
-        padding: 0 calc(var(--section-padding) / 2);
-
+    .quote {
+        padding: 0 var(--mobile-padding);
         p {
           font-size: calc(var(--small-text-size) * .8);
           max-width: 25rem;
         }
+    }
+    
+    .bio {
+      padding: 0 var(--mobile-padding);
+
+      .homeTitle {
+        font-size: clamp(7rem, 20vw, 12rem);
+        letter-spacing: 1px;
       }
     }
   }
   
 }
+
+
 
   
 
