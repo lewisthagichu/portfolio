@@ -27,7 +27,7 @@ function LargeImage({ src, slogan, title }) {
         />
       </motion.div>
       <div className={`${styles.slogan} ${NeuehaasBody.className}`}>
-        <h1>{title === 'Portfolio' ? 'Nipsey' : title}</h1>
+        <h1>{title === 'Portfolio' ? 'Nipsey Hussle' : title}</h1>
         <p>{slogan}</p>
       </div>
       <div className="overlay"></div>

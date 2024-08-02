@@ -37,19 +37,19 @@ function MarqueesWrapper() {
       <Marquee
         index={0}
         images={[images[0], images[1], images[2], images[3]]}
-        text={'consistent'}
+        text={'focus'}
         x={x1}
       />
       <Marquee
         index={0}
         images={[images[4], images[5], images[6], images[7]]}
-        text={'unique'}
+        text={'honesty'}
         x={x2}
       />
       <Marquee
         index={1}
         images={[images[8], images[9], images[10], images[11]]}
-        text={'rarity'}
+        text={'respect'}
         x={x3}
       />
     </section>
