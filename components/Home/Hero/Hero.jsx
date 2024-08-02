@@ -1,5 +1,6 @@
+import FlipText from '@/components/FlipText/FlipText';
 import styles from './hero.module.scss';
-import { NeuehaasBody, ArgesHeavy } from '@/public/fonts/fonts';
+import { NeuehaasBody, ArgesHeavy, BigShoulders } from '@/public/fonts/fonts';
 
 function Hero() {
   return (
@@ -13,11 +14,9 @@ function Hero() {
         </p>
       </div>
 
-      <div className={styles.bio}>
-        <h1 className={`${styles.homeTitle} ${ArgesHeavy.className}`}>
-          Lewis Thagichu
-        </h1>
-        <div className={styles.location}>
+      <div className={`${styles.bio} ${ArgesHeavy.className}`}>
+        <FlipText divStyles={styles.homeTitle}>Lewis Thagichu</FlipText>
+        <div className={`${styles.location} ${NeuehaasBody.className}`}>
           <p>Full-stack developer</p>
           <p>Based in Nairobi</p>
         </div>
