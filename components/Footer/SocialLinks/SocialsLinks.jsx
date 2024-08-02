@@ -1,4 +1,5 @@
 import Magnetic from '@/components/common/Magnetic';
+import FlipText from '@/components/FlipText/FlipText';
 
 function SocialsLinks({ divStyles = '' }) {
   return (
@@ -10,16 +11,16 @@ function SocialsLinks({ divStyles = '' }) {
       </Magnetic>{' '}
       <div className="links">
         <a href="https://github.com/lewisthagichu" target="_blank">
-          <span>Github</span>
+          <FlipText>Github</FlipText>
         </a>
         <a href="https://dev.to/thagichucodes" target="_blank">
-          <span>DEV</span>
+          <FlipText>DEV</FlipText>
         </a>
         <a href="https://www.linkedin.com/in/lewis-thagichu/" target="_blank">
-          <span>Linkedin</span>
+          <FlipText>Linkedln</FlipText>
         </a>
         <a href="https://x.com/thagichucodes" target="_blank">
-          <span>X</span>
+          <FlipText>X</FlipText>
         </a>
       </div>
     </div>

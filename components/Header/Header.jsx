@@ -7,6 +7,7 @@ import { opacity } from '@/utils/anim';
 import { useDateTime } from '@/utils/useDateTime';
 import { NeuehaasBody } from '@/public/fonts/fonts';
 import Nav from './nav/Nav';
+import FlipText from '../FlipText/FlipText';
 
 function Header() {
   const [isActive, setIsActive] = useState(false);
@@ -26,7 +27,7 @@ function Header() {
     <div className={`${styles.header} ${NeuehaasBody.className}`}>
       <div className={styles.bar}>
         <Link scroll={false} onMouseDown={() => setIsActive(false)} href="/">
-          LEWIS THAGICHU
+          <FlipText>LEWIS THAGICHU</FlipText>
         </Link>
 
         <div onMouseDown={toggleNav} className={styles.el}>
@@ -34,10 +35,8 @@ function Header() {
             <motion.p variants={opacity} animate={isActive ? 'closed' : 'open'}>
               MENU
             </motion.p>
-            <motion.p
-              variants={opacity}
-              animate={!isActive ? 'closed' : 'open'}
-            >
+
+            <motion.p variants={opacity} animate={isActive ? 'open' : 'closed'}>
               CLOSE
             </motion.p>
           </div>

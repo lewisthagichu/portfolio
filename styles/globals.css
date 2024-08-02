@@ -180,6 +180,26 @@ a {
   align-items: center;
   font-size: calc(var(--small-text-size) );
   background-color: var(--color-nav);
+
+}
+
+.roundBtn span {
+  display: flex;
+  align-items: center;
+}
+
+.arrow {
+  position: relative;
+  width: var(--regular-text-size);
+  display: flex;
+  align-items: center;
+  
+}
+
+.arrow svg {
+  width: 100%;
+  fill: var(--color-white);
+  opacity: 1;
 }
 
 /* Hover cursor */

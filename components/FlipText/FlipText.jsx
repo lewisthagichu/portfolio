@@ -1,7 +1,7 @@
 import styles from './flipText.module.scss';
 import { motion } from 'framer-motion';
 
-function FlipText({ divStyles, children }) {
+function FlipText({ divStyles = '', children }) {
   const DURATION = 0.2;
   return (
     <motion.div

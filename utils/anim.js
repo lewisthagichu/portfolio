@@ -52,12 +52,12 @@ export const fade = {
   open: {
     filter: 'saturate(0.3)',
     opacity: 0.5,
-    transition: { ease: 'linear', duration: 0.7 },
+    transition: { ease: 'linear', duration: 0.25 },
   },
   closed: {
     filter: 'saturate(1)',
     opacity: 1,
-    transition: { ease: 'linear', duration: 0.7 },
+    transition: { ease: 'linear', duration: 0.25 },
   },
 };
 
