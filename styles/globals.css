@@ -6,8 +6,9 @@
   --color-light-blue: #c2e9fb;
   --color-btn: #7E8B8B;
   --color-nav: #45565E;
+  --color-footer: #253341;
   --alert-error: #ff4444;
-  --color-preloader: #253341;
+  --color-preloader: #000;
 
   --section-padding: clamp(4rem, 10vw, 16rem);
   --container-padding: calc(clamp(5em, 21vw, 12em) * 1.5);

@@ -2,15 +2,11 @@ import styles from './footer.module.scss';
 import { ArgesHeavy, NeuehaasBody } from '@/public/fonts/fonts';
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
 import MagneticButton from '../common/MagneticButton';
 import SocialsLinks from './SocialLinks/SocialsLinks';
 
 function Footer() {
   const container = useRef(null);
-  const firstText = useRef(null);
-  const secondText = useRef(null);
   const slider = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -22,22 +18,6 @@ function Footer() {
 
   let xPercent = 0;
   let direction = -1;
-
-  useGSAP(() => {
-    // requestAnimationFrame(animate);
-  }, []);
-
-  const animate = () => {
-    if (xPercent < -100) {
-      xPercent = 0;
-    } else if (xPercent > 0) {
-      xPercent = -100;
-    }
-    gsap.set(firstText.current, { xPercent: xPercent });
-    gsap.set(secondText.current, { xPercent: xPercent });
-    requestAnimationFrame(animate);
-    xPercent += 0.1 * direction;
-  };
 
   return (
     <motion.section
@@ -52,7 +32,7 @@ function Footer() {
           ref={slider}
           className={`${styles.slider} ${ArgesHeavy.className}`}
         >
-          <p ref={firstText}>
+          <p>
             Let's work together
             <span>
               <svg
@@ -94,7 +74,7 @@ function Footer() {
               </svg>
             </span>
           </p>
-          <p ref={secondText}>
+          <p>
             Let's work together
             <span>
               <svg

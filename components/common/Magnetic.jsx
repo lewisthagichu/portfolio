@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
 function Magnetic({ children }) {
-  const magnetic = useRef();
+  const magnetic = useRef(null);
 
   useGSAP(() => {
     const textElement = magnetic.current.querySelector('.btn-text');
