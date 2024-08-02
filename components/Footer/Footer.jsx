@@ -1,7 +1,7 @@
 import styles from './footer.module.scss';
-import { ArgesHeavy, NeuehaasBody } from '@/public/fonts/fonts';
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
+import { ArgesHeavy, NeuehaasBody } from '@/public/fonts/fonts';
 import MagneticButton from '../common/MagneticButton';
 import SocialsLinks from './SocialLinks/SocialsLinks';
 
@@ -15,9 +15,6 @@ function Footer() {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [-500, 0]);
-
-  let xPercent = 0;
-  let direction = -1;
 
   return (
     <motion.section
