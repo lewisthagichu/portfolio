@@ -2,7 +2,7 @@ import styles from './mediaContent.module.scss';
 import LargeImage from './LargeImage';
 import MobileImages from './MobileImages';
 
-function MediaContent({ src }) {
+function MediaContent({ src, slogan, title }) {
   return (
     <div className={styles.container}>
       <div className={styles.pad}>
@@ -23,7 +23,7 @@ function MediaContent({ src }) {
         </div>
       </div>
 
-      <LargeImage src={src} />
+      <LargeImage src={src} title={title} slogan={slogan} />
       <MobileImages src={src} />
     </div>
   );

@@ -2,9 +2,11 @@ import styles from './mediaContent.module.scss';
 import Image from 'next/image';
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
+import { NeuehaasBody } from '@/public/fonts/fonts';
 
-function LargeImage({ src }) {
+function LargeImage({ src, slogan, title }) {
   const container = useRef(null);
+  console.log(title);
 
   const { scrollYProgress } = useScroll({
     target: container,
@@ -24,6 +26,11 @@ function LargeImage({ src }) {
           alt="Project Image"
         />
       </motion.div>
+      <div className={`${styles.slogan} ${NeuehaasBody.className}`}>
+        <h1>{title === 'Portfolio' ? 'Nipsey' : title}</h1>
+        <p>{slogan}</p>
+      </div>
+      <div className="overlay"></div>
     </div>
   );
 }

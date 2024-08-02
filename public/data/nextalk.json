@@ -1,6 +1,7 @@
 {
   "index": 1,
   "title": "Nextalk",
+  "slogan": "Instant chat, lasting connections.",
   "tag":
     "A real-time chat application designed to facilitate seamless and instant communication. Built with a focus on user experience and reliability.",
   "description": "This is a chat application I developed as my capstone project for my ALX software engineering certification. NexTalk enables real-time communication using Socket.IO and includes key features such as user authentication, file uploads, new message notifications, and online/offline status tracking. After presenting the project, I decided to continue working on it and am currently in the process of adding new features.",

@@ -1,6 +1,7 @@
 {
     "index": 2,
-    "title": "Porfolio",
+    "title": "Portfolio",
+    "slogan": "Never stop learning",
     "tag": "A website I designed and developed to showcase my skills and projects.",
     "description": "A website to showcase my skills and projects.",
     "technologies": ["NextJS", "Sass", "Framer-motion"],
