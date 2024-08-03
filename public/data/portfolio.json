@@ -4,7 +4,7 @@
     "slogan": "Dedication, hardwork, plus patience.",
     "tag": "A website I designed and developed to showcase my skills and projects.",
     "description": "A website to showcase my skills and projects.",
-    "technologies": ["NextJS", "Sass", "Framer-motion"],
+    "technologies": ["NextJS", "Sass", "Framer-motion", "GSAP"],
     "year": 2024,
     "client": "Personal",
     "role": "Design & Development",
