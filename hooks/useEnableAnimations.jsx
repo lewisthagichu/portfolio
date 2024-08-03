@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const useEnableAnimation = (breakpoint = 768) => {
+const useEnableAnimation = (breakpoint = 992) => {
   const [enableAnimation, setEnableAnimation] = useState(true);
 
   useEffect(() => {

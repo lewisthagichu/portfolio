@@ -37,7 +37,7 @@ function MarqueesWrapper() {
       <Marquee
         index={0}
         images={[images[0], images[1], images[2], images[3]]}
-        text={'focus'}
+        text={'dedication'}
         x={x1}
       />
       <Marquee
