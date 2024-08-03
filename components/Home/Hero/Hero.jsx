@@ -25,7 +25,7 @@ function Hero() {
       <div className={`${styles.quote} ${styles.second}`}>
         <h4>Embrace failure</h4>
         <p>
-          To live is to fail. Life is messy, and perfection is an illusion.
+          To fail is to live. Life is messy, and perfection is an illusion.
           Start where you are with what you have. The perfect moment to begin is
           now.
         </p>

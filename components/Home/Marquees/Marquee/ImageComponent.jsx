@@ -4,7 +4,7 @@ import styles from './marquee.module.scss';
 function ImageComponent({ image }) {
   return (
     <div className={styles.imageContainer}>
-      <Image src={`/media/home/${image}`} fill alt="image" />
+      <Image src={`/media/home/${image}`} sizes="25vw" fill alt="image" />
     </div>
   );
 }

@@ -18,12 +18,12 @@
             text-transform: uppercase;
             filter: brightness(1.25);  
 
-            p{
+            .par{
                 position: relative;
                 display: flex;
                 font-size: clamp(5rem, 6vw, 12rem);
                 
-                span {
+                .span {
                     position: relative;
                     display: flex;
                     align-items: center;
@@ -55,7 +55,7 @@
     .body{
         .wrapper{
             a{
-                p{  
+                .par{  
                     line-height: 13vw;
                 }
             }

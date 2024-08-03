@@ -116,7 +116,7 @@ function Form() {
             value={message}
             onChange={handleChange}
             rows={12}
-            placeholder="Hi lewis, I need assistance with..."
+            placeholder="Hello Lewis, I need assistance with..."
             // required
           ></textarea>
           {messageError && (

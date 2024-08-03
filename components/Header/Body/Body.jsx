@@ -22,7 +22,8 @@ function Body({ links, selectedLink, setSelectedLink }) {
                 onMouseEnter={() => setSelectedLink({ isActive: true, index })}
                 onMouseLeave={() => setSelectedLink({ isActive: false, index })}
               >
-                <motion.p
+                <motion.div
+                  className={styles.par}
                   variants={fade}
                   initial="initial"
                   animate={
@@ -31,18 +32,19 @@ function Body({ links, selectedLink, setSelectedLink }) {
                       : 'closed'
                   }
                 >
-                  <motion.span
-                    className={pathname === to ? styles.active : ''}
+                  <motion.div
+                    className={`${styles.span} ${
+                      pathname === to ? styles.active : ''
+                    }`}
                     variants={translate}
                     custom={[0.4, 0.1]}
                     initial="initial"
                     animate="enter"
                     exit="exit"
                   >
-                    {/* <span>{title}</span> */}
                     <FlipText>{title}</FlipText>
-                  </motion.span>
-                </motion.p>
+                  </motion.div>
+                </motion.div>
               </Link>
             </div>
           );
