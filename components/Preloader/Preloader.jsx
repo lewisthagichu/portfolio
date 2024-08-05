@@ -3,17 +3,17 @@ import anime from 'animejs';
 import { useState, useEffect, useRef } from 'react';
 
 const words = [
+  'Hello',
+  '你好',
+  'Hola',
+  'Bonjour',
+  'Sawubona',
+  'مرحبا',
+  'Konnichiwa',
   'Habari',
-  'Afande please',
-  'Chief',
-  'Mkuu',
-  'やあ',
-  'Salimia',
-  'Bazuu',
-  'Anguka nayo',
 ];
 
-// Inspired by Hasna Qasmei https://www.youtube.com/watch?v=I-2Qwlw24u0
+// Inspired by Hasna Qasmei https://www.youtube.com/watch?v=I-2Qwlw24u0 && Dennis Snellennberg
 function Preloader({ finishLoading }) {
   const [currentIndex, setCurrentIndex] = useState(-1);
   const text = useRef(null);
@@ -37,7 +37,7 @@ function Preloader({ finishLoading }) {
             if (currentIndex < words.length - 1) {
               setCurrentIndex((prevIndex) => prevIndex + 1);
             } else {
-              finishLoading();
+              setTimeout(() => finishLoading(), 350);
             }
           }, duration);
         },

@@ -43,7 +43,7 @@ function MarqueesWrapper() {
       <Marquee
         index={0}
         images={[images[4], images[5], images[6], images[7]]}
-        text={'honesty'}
+        text={'integrity'}
         x={x2}
       />
       <Marquee
