@@ -1,4 +1,4 @@
-import '@/styles/normalize.css';
+// import '@/styles/normalize.css';
 import '@/styles/globals.css';
 import Header from '@/components/Header/Header';
 import Head from 'next/head';

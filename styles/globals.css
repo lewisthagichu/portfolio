@@ -16,7 +16,7 @@
   --mobile-padding: calc(var(--section-padding) / 2);
 
   --regular-text-size: clamp(1.5rem, 2.8vw, 2.8rem);
-  --small-text-size: clamp(1.3rem, 2vw, 1.6rem);
+  --small-text-size: clamp(1.3rem, 2vw, 2rem);
 
   --small-heading: clamp(4rem, 7vw, 8rem);
   --regular-heading: 18vw;

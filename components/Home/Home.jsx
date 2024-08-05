@@ -9,7 +9,12 @@ import MarqueesWrapper from './Marquees/MarqueesWrapper';
 
 export default function Home() {
   return (
-    <motion.div {...animm(slideUp)} className={styles.container}>
+    <motion.div
+      variants={slideUp}
+      initial="initial"
+      animate="enter"
+      className={styles.container}
+    >
       <Hero />
       <MarqueesWrapper />
       <Description />
