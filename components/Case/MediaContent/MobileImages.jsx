@@ -6,7 +6,7 @@ import useEnableAnimation from '@/hooks/useEnableAnimations';
 
 function MobileImages({ src }) {
   const images = [`${src}/mob1.webp`, `${src}/mob2.webp`, `${src}/mob3.webp`];
-  const enableAnimations = useEnableAnimation(991);
+  const enableAnimations = useEnableAnimation();
   const container = useRef(null);
 
   const { scrollYProgress } = useScroll({

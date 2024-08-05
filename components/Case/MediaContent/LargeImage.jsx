@@ -6,7 +6,6 @@ import { NeuehaasBody } from '@/public/fonts/fonts';
 
 function LargeImage({ src, slogan, title }) {
   const container = useRef(null);
-  console.log(title);
 
   const { scrollYProgress } = useScroll({
     target: container,

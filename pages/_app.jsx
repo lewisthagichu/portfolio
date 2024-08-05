@@ -6,11 +6,13 @@ import Preloader from '@/components/Preloader/Preloader';
 import { AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
+import { useNextCssRemovalPrevention } from '@madeinhaus/nextjs-page-transition';
 
 export default function App({ Component, pageProps, router }) {
   const pathname = usePathname();
   const isHome = pathname === '/';
   const [isLoading, setIsLoading] = useState(isHome);
+  useNextCssRemovalPrevention();
 
   useEffect(() => {}, [isLoading]);
 
