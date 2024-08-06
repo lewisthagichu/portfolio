@@ -1,6 +1,6 @@
 import FlipText from '@/components/FlipText/FlipText';
 import styles from './hero.module.scss';
-import { NeuehaasBody, ArgesHeavy, BigShoulders } from '@/public/fonts/fonts';
+import { NeuehaasBody, ArgesHeavy } from '@/public/fonts/fonts';
 
 function Hero() {
   return (
