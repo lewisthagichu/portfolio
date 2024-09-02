@@ -4,8 +4,7 @@ import Description from './Description/Description';
 import SelectedWork from './SelectedWork/SelectedWork';
 import Footer from '../Footer/Footer';
 import { motion } from 'framer-motion';
-import { slideUp, animm } from '@/utils/anim';
-import MarqueesWrapper from './Marquees/MarqueesWrapper';
+import { slideUp } from '@/utils/anim';
 
 export default function Home() {
   return (
@@ -16,7 +15,7 @@ export default function Home() {
       className={styles.container}
     >
       <Hero />
-      <MarqueesWrapper />
+      {/* <MarqueesWrapper /> */}
       <Description />
       <SelectedWork />
       <Footer />
