@@ -1,6 +1,6 @@
 .textContainer {
     padding: var(--section-padding);
-    padding-bottom: calc(var(--section-padding) * 2);
+    // padding-bottom: calc(var(--section-padding));
     display: grid;
     grid-template-columns: auto 1fr;
     z-index: 1;
