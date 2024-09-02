@@ -1,0 +1,42 @@
+.mobileImages {
+    padding: calc(var(--section-padding) * 2) var(--section-padding);
+    width: 100%;
+
+    .row {
+        flex-wrap: wrap;
+        display: flex;
+        width: 100%;
+
+        .column {
+            position: relative;
+            width: 33.33%;
+            display: flex;
+            justify-content: center;                
+            
+            .singleImage {
+                position: relative;
+                width: 68%;
+                aspect-ratio: 9 / 21;
+                
+                img {
+                    background: lightgray;
+                    object-fit: cover;
+                    border-radius: 1.6rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .mobileImages {
+        padding: calc(var(--section-padding) * 2) 0;
+        .row {
+            .column {
+                .singleImage {
+                    width: 80%;
+                }
+            }
+        }
+    }    
+}

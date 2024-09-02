@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styles from './mediaContent.module.scss';
+import styles from './mobileImages.module.scss';
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import useEnableAnimation from '@/hooks/useEnableAnimations';

@@ -1,11 +1,11 @@
 import styles from './mediaContent.module.scss';
-import LargeImage from './LargeImage';
-import MobileImages from './MobileImages';
+import LargeImage from './LargeImage/LargeImage';
+import MobileImages from './MobileImages/MobileImages';
 
 function MediaContent({ src, slogan, title }) {
   return (
     <div className={styles.container}>
-      <div className={styles.pad}>
+      <div className={styles.wrapper}>
         <div className={styles.videoContainer}>
           <video
             className={styles.videoElement}

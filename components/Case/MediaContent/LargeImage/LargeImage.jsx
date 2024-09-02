@@ -1,4 +1,4 @@
-import styles from './mediaContent.module.scss';
+import styles from './largeImage.module.scss';
 import Image from 'next/image';
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
