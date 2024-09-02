@@ -1,11 +1,10 @@
-import SocialsLinks from '@/components/Footer/SocialLinks/SocialsLinks';
 import styles from './nextCase.module.scss';
-import Image from 'next/image';
-import { ArgesHeavy, NeuehaasBody } from '@/public/fonts/fonts';
 import { useRef } from 'react';
-import { useScroll, useTransform, motion } from 'framer-motion';
-import Link from 'next/link';
 import { cases } from '@/data/projectsData';
+import { ArgesHeavy, NeuehaasBody } from '@/public/fonts/fonts';
+import { useScroll, useTransform, motion } from 'framer-motion';
+import Image from 'next/image';
+import SocialsLinks from '@/components/Footer/SocialLinks/SocialsLinks';
 import RoundButton from '@/components/common/RoundButton';
 
 function NextCase({ index }) {
@@ -45,7 +44,7 @@ function NextCase({ index }) {
         <RoundButton href={nextCase?.link} text={'View Project'} />
       </motion.div>
 
-      <SocialsLinks />
+      <SocialsLinks divStyles={styles.socials} />
     </motion.div>
   );
 }

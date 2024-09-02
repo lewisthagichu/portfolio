@@ -1,5 +1,5 @@
 .container {
-    padding: 0 calc(var(--section-padding) / 2) ;
+    padding: 6rem calc(var(--section-padding) / 2) 0;
     position: relative;
     height: 100vh;
     background: var(--color-preloader);
@@ -7,6 +7,25 @@
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
+
+    .imageContainer {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 2rem;   
+   
+        img {
+            object-fit: cover; 
+            max-width: 100%;
+            transform-style: preserve-3d;
+            transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+            
+            &:hover {
+                transform: scale3d(1.1, 1.1, 1)                
+            }
+        }    
+    }
 
     .textContainer {
         position: absolute;
@@ -26,30 +45,7 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-    }
-    
-
-    .imageContainer {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        margin: calc(var(--section-padding) / 2) 0;
-        overflow: hidden;
-        border-radius: 2rem;   
-   
-        img {
-            object-fit: cover; 
-            max-width: 100%;
-            transform-style: preserve-3d;
-            transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1);
-            
-            &:hover {
-                transform: scale3d(1.1, 1.1, 1)                
-            }
-        }   
-        
-        
-    }
+    } 
 
     .nextBtn {
         position: absolute;
@@ -58,14 +54,9 @@
         z-index: 2;
     }
 
-    
-}
-
-@media screen and (max-width: 600px) {
-    .container {
-        .imageContainer {
-            margin: calc(var(--section-padding)) 0;
-        }
+    .socials {
+        padding-top: 2rem;
     }
+
     
 }
