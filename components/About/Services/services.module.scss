@@ -45,7 +45,7 @@
                 flex-direction: column;
                 text-transform: uppercase;
                 font-size: 8vw;
-                line-height: 6.2vw;
+                line-height: 6.5vw;
                 text-align: center;
                 padding: 0 calc(var(--section-padding) / 2);
 
@@ -114,13 +114,13 @@
     
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 540px) {
     .container {
         .wrapper {
             .textContainer {
                 h2 {
                     font-size: 15vw;
-                    line-height: 13vw;
+                    line-height: 12.5vw;
 
                     span {
                         font-size: 14vw;

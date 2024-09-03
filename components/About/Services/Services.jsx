@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { offers } from '@/data/aboutData';
-import { ArgesHeavy, BlackStone } from '@/public/fonts/fonts';
+import { ArgesHeavy, BlackStone, NeuehaasBody } from '@/public/fonts/fonts';
 import CurvedBorder from '@/components/common/CurvedBorder';
 
 function Services() {
@@ -32,7 +32,7 @@ function Services() {
             to scale and drive{' '}
             <span className={BlackStone.className}>sustained growth</span>
           </h2>
-          <div className={styles.services}>
+          <div className={`${styles.services} ${NeuehaasBody.className}`}>
             <h3>Services:</h3>
             <div className={styles.offers}>
               {offers.map(({ title, description }, i) => (
