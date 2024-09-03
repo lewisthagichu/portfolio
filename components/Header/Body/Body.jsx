@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { fade, translate } from '@/utils/anim';
 import { NeuehaasBody } from '@/public/fonts/fonts';
 import { usePathname } from 'next/navigation';
-import FlipText from '@/components/FlipText/FlipText';
 
 function Body({ links, selectedLink, setSelectedLink }) {
   const pathname = usePathname();
@@ -42,7 +41,7 @@ function Body({ links, selectedLink, setSelectedLink }) {
                     animate="enter"
                     exit="exit"
                   >
-                    <FlipText>{title}</FlipText>
+                    {title}
                   </motion.div>
                 </motion.div>
               </Link>
