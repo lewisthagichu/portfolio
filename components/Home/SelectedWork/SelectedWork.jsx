@@ -4,7 +4,7 @@ import { useScroll, useTransform, motion } from 'framer-motion';
 import { ArgesHeavy, PPMori } from '@/public/fonts/fonts';
 import MagneticButton from '@/components/common/MagneticButton';
 import CurvedBorder from '@/components/common/CurvedBorder';
-import CardWrapper from './CardWrapper/CardWrapper';
+import ProjectsWrapper from '@/components/Work/ProjectsWrapper/ProjectsWrapper';
 
 function SelectedWork() {
   const container = useRef(null);
@@ -41,7 +41,7 @@ function SelectedWork() {
         </p>
       </motion.div>
 
-      <CardWrapper />
+      <ProjectsWrapper home={true} />
 
       <MagneticButton
         styles={styles.btnClickSelected}

@@ -1,10 +1,10 @@
 .container {
     position: relative;
-    z-index: 1;
+    background: var(--color-dark);
+    color: var(--color-white);
     display: flex;
     flex-direction: column;
-    color: var(--color-white);
-    background: var(--color-dark);
+    z-index: 1;
 
     .title {
         position: sticky;
