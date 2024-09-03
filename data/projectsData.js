@@ -1,11 +1,11 @@
 export const cases = [
   {
     index: 0,
-    title: 'HomeFinder',
+    title: 'QuickHunt',
     tag: 'A platform designed to streamline the process of finding rental properties.',
-    link: '/work/homefinder',
+    link: '/work/quickhunt',
     background: '#fff',
-    tech: ['NextJS', 'Redux', 'MongoDB', 'Sass', 'Cloudinary'],
+    tech: ['NextJS', 'MongoDB', 'Sass', 'Cloudinary'],
     year: 2024,
   },
   {
