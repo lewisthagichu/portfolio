@@ -3,16 +3,16 @@
     background: var(--color-dark);
     color: var(--color-white);
     padding: 0 var(--section-padding);
-    padding-top: var(--section-padding);
+    padding-top: var(--mobile-padding);
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    // justify-content: flex-end;
 
  
     .wrapper {
         display: flex;
         flex-direction: column;
-        gap: 8rem;
+        gap: 4rem;
         max-width: 992px;
         margin: 0 auto;
         line-height: 1.5;
@@ -78,8 +78,7 @@
     }
 
     .btnClickDescription {     
-        padding-top: var(--mobile-padding); 
-        padding-bottom: var(--section-padding);
+        padding: var(--mobile-padding) 0; 
 
         a {
             border: var(--light-border);
@@ -90,12 +89,14 @@
 }
 
 
-
-
 @media screen and (max-width: 768px) {
     .container {
         .wrapper{   
-            gap: 3rem;
+            gap: 2rem;
+
+            .description {
+                gap: 2rem;
+            }
         }
     }
 
