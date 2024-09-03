@@ -6,7 +6,7 @@ import { useScroll, useTransform } from 'framer-motion';
 import Project from '../Project/Project';
 import CurvedBorder from '@/components/common/CurvedBorder';
 
-function ProjectsWrapper() {
+function ProjectsWrapper({ home = false }) {
   const container = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -14,9 +14,11 @@ function ProjectsWrapper() {
     offset: ['start start', 'end start'],
   });
   const height = useTransform(scrollYProgress, [0, 1], [200, 0]);
+
+  const projects = home ? cases.slice(0, 4) : cases;
   return (
     <div ref={container} className={styles.wrapper}>
-      {cases.map((project, i) => (
+      {projects.map((project, i) => (
         <Project key={`p_${i}`} {...project} />
       ))}
 
