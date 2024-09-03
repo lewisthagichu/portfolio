@@ -1,0 +1,14 @@
+{
+    "index": 4,
+    "title": "Ignite",
+    "slogan": "Track, Analyze, Succeed: All in One Dashboard.",
+    "tag": "A responsive CRM dashboard that provides an intuitive interface to manage and track customer information, deals, and performance.",
+    "description": "This project was a hands-on learning experience that deepened my understanding of core web development fundamentals. The dashboard features a responsive design and light and dark themes toogle. It also provides insightful data visualizations using Chart.js. This project honed my skills in HTML, CSS, JavaScript, and data visualization.",
+    "technologies": ["HTML", "CSS", "Javascript", "Chart.js"],
+    "year": 2023,
+    "client": "Personal",
+    "role": "Design & Development",
+    "live": "https://lewisthagichu.github.io/dashboard",
+    "github": "https://github.com/lewisthagichu/dashboard"  
+  }
+    

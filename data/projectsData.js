@@ -38,11 +38,11 @@ export const cases = [
 
   {
     index: 4,
-    title: 'SketchPad',
-    tag: 'A site that brings the classic Etch A Sketch experience to the digital world.',
-    link: '/work/sketchpad',
+    title: 'Ignite',
+    tag: 'A responsive CRM dashboard that provides an intuitive interface to manage and track customer information, deals, and performance.',
+    link: '/work/ignite',
     background: '#62A9A8',
-    tech: ['HTML', 'CSS', 'Javascript'],
+    tech: ['HTML', 'CSS', 'Javascript', 'Chart.js'],
     year: 2023,
   },
 ];
