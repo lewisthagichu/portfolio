@@ -1,6 +1,5 @@
 .textContainer {
     padding: var(--section-padding);
-    // padding-bottom: calc(var(--section-padding));
     display: grid;
     grid-template-columns: auto 1fr;
     z-index: 1;
@@ -58,7 +57,6 @@
                     }
                 }
 
-
                 .text:hover + .arrow {
                     transform: translateY(0);
                 }
@@ -69,6 +67,7 @@
 
     .description {
         padding-left: calc(var(--section-padding) * 2);
+
         p {
             display: block;
             word-break: break-word;

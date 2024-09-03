@@ -1,13 +1,15 @@
 import styles from './bio.module.scss';
-import Magnetic from '@/components/common/Magnetic';
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { NeuehaasBody } from '@/public/fonts/fonts';
+import Magnetic from '@/components/common/Magnetic';
 import FlipText from '@/components/FlipText/FlipText';
 
 function Bio({ project }) {
-  const { client, year, technologies, role, tag, description, live, github } =
+  const { client, year, technologies, role, description, live, github } =
     project;
   const container = useRef(null);
+  console.log(live);
 
   const { scrollYProgress } = useScroll({
     target: container,
@@ -17,7 +19,10 @@ function Bio({ project }) {
   const y = useTransform(scrollYProgress, [0, 1], [300, -200]);
 
   return (
-    <div ref={container} className={styles.textContainer}>
+    <div
+      ref={container}
+      className={`${styles.textContainer} ${NeuehaasBody.className}`}
+    >
       <div className={styles.details}>
         <div className={styles.box}>
           <h4>Client</h4>
@@ -40,7 +45,7 @@ function Bio({ project }) {
 
         <div className={styles.box}>
           {live && (
-            <a href={live}>
+            <a href={live} target="_blank">
               <FlipText divStyles={styles.text}>Live Site</FlipText>
               <div className={styles.arrow}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
@@ -50,7 +55,7 @@ function Bio({ project }) {
             </a>
           )}
           {github && (
-            <a href={github}>
+            <a href={github} target="_blank">
               <FlipText divStyles={styles.text}>Source Code</FlipText>
               <div className={styles.arrow}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
