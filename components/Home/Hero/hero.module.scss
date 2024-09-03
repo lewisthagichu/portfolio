@@ -34,7 +34,7 @@
     display: grid;  
     grid-template-columns: repeat(14, 1fr);
     grid-template-rows: 1fr auto;
-    text-align: end;
+    text-align: start;
     
     .homeTitle {
       align-content: end;
@@ -57,6 +57,7 @@
 
 
   .circularText {
+    display: none;
     position: absolute;
     bottom: 15px;
     left: calc(var(--section-padding) / 4);
