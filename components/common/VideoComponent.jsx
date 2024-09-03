@@ -14,8 +14,8 @@ function VideoComponent({ videoContainer, video, videoElement, link }) {
           aria-label="Video player"
           preload="none"
         >
-          <source src={`/media${link}/homeVideo.mp4`} type="video/mp4" />
           <source src={`/media${link}/homeVideo.webm`} type="video/webm" />
+          <source src={`/media${link}/homeVideo.mp4`} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
