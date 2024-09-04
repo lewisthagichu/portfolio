@@ -18,7 +18,7 @@ export const expertises = [
 export const aboutMe = [
   "I'm Lewis Thagichu, a software engineer based in Nairobi, Kenya. My strategy to building focuses on combining creative thinking with an analytical approach to solve problems at the intersection of business and technology.",
   'As someone dedicated to personal growth, I view each project as an opportunity for self-improvement. I can handle projects independently or seamlessly integrate into existing developer teams.',
-  "Outside of work, I'm passionate about music, sports, and have been told I have a keen eye for photography.",
+  "Outside of work, I'm the co-founder of Creators of Impact, an NGO dedicated to educating young people on governance and fostering social responsibility.",
 ];
 
 export const stack = [
