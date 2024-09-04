@@ -5,8 +5,8 @@ function SmoothScroll({ children }) {
   useEffect(() => {
     const lenis = new Lenis({
       lerp: 0.05,
-      wheelMultiplier: 0.7,
-      touchMultiplier: 0.7,
+      wheelMultiplier: 0.5,
+      touchMultiplier: 0.5,
     });
 
     function raf(time) {
