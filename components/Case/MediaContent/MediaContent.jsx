@@ -24,7 +24,14 @@ function MediaContent({ src, slogan, title }) {
               }`}
               type="video/webm"
             />
-            {/* <source src={`${src}/workVideo.mp4`} type="video/mp4" /> */}
+            <source
+              src={`${src}/${
+                src === 'media/work/tictacplay' || src === 'media/work/ignite'
+                  ? 'workVideo.mp4'
+                  : 'homeVideo.mp4'
+              }`}
+              type="video/mp4"
+            />
             Your browser does not support the video tag.
           </video>
         </div>
