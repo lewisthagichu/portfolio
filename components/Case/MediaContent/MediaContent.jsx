@@ -16,8 +16,15 @@ function MediaContent({ src, slogan, title }) {
             aria-label="Video player"
             preload="none"
           >
-            <source src={`${src}/workVideo.webm`} type="video/webm" />
-            <source src={`${src}/workVideo.mp4`} type="video/mp4" />
+            <source
+              src={`${src}/${
+                src === 'media/work/tictacplay' || src === 'media/work/ignite'
+                  ? 'workVideo.webm'
+                  : 'homeVideo.webm'
+              }`}
+              type="video/webm"
+            />
+            {/* <source src={`${src}/workVideo.mp4`} type="video/mp4" /> */}
             Your browser does not support the video tag.
           </video>
         </div>
