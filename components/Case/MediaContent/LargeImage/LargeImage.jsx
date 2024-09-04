@@ -1,10 +1,12 @@
 import styles from './largeImage.module.scss';
 import Image from 'next/image';
+import useEnableAnimation from '@/hooks/useEnableAnimations';
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { NeuehaasBody } from '@/public/fonts/fonts';
 
 function LargeImage({ src, slogan, title }) {
+  const enableAnimations = useEnableAnimation();
   const container = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -16,7 +18,10 @@ function LargeImage({ src, slogan, title }) {
 
   return (
     <div ref={container} className={styles.largeImage}>
-      <motion.div style={{ y }} className={styles.imageContainer}>
+      <motion.div
+        style={{ y: enableAnimations ? y : 0 }}
+        className={styles.imageContainer}
+      >
         <Image
           width={0}
           height={0}

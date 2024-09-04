@@ -27,7 +27,7 @@ function Header() {
     <div className={`${styles.header} ${NeuehaasBody.className}`}>
       <div className={styles.bar}>
         <Link scroll={false} onMouseDown={() => setIsActive(false)} href="/">
-          <FlipText>LEWIS THAGICHU</FlipText>
+          <FlipText divStyles={styles.name}>LEWIS THAGICHU</FlipText>
         </Link>
 
         <div onMouseDown={toggleNav} className={styles.el}>

@@ -5,8 +5,10 @@ import { ArgesHeavy, PPMori } from '@/public/fonts/fonts';
 import MagneticButton from '@/components/common/MagneticButton';
 import CurvedBorder from '@/components/common/CurvedBorder';
 import ProjectsWrapper from '@/components/Work/ProjectsWrapper/ProjectsWrapper';
+import useEnableAnimation from '@/hooks/useEnableAnimations';
 
 function SelectedWork() {
+  const enableAnimations = useEnableAnimation();
   const container = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -26,12 +28,15 @@ function SelectedWork() {
   const height = useTransform(scrollYProgress2, [0, 1], [200, 0]);
 
   return (
-    <motion.section
-      id="selectedWork"
-      ref={container}
-      className={styles.container}
-    >
-      <motion.div style={{ opacity, scale, y }} className={styles.title}>
+    <section id="selectedWork" ref={container} className={styles.container}>
+      <motion.div
+        style={{
+          opacity: enableAnimations ? opacity : 1,
+          scale: enableAnimations ? scale : 1,
+          y: enableAnimations ? y : 0,
+        }}
+        className={styles.title}
+      >
         <h3 className={ArgesHeavy.className}>
           <span className={styles.selected}>selected</span>
           <span className={styles.work}>work/</span>
@@ -50,7 +55,7 @@ function SelectedWork() {
       />
 
       <CurvedBorder height={height} />
-    </motion.section>
+    </section>
   );
 }
 

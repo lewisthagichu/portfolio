@@ -3,8 +3,10 @@ import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import Image from 'next/image';
 import VideoComponent from '@/components/common/VideoComponent';
+import useEnableAnimation from '@/hooks/useEnableAnimations';
 
 function ProjectMedia({ setActive, link }) {
+  const enableAnimations = useEnableAnimation();
   const container = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -20,7 +22,10 @@ function ProjectMedia({ setActive, link }) {
       onMouseLeave={() => setActive(false)}
       className={styles.imageContainer}
     >
-      <motion.div style={{ y }} className={styles.image}>
+      <motion.div
+        style={{ y: enableAnimations ? y : 0 }}
+        className={styles.image}
+      >
         <Image
           src={`/media${link}/web1.webp`}
           width={0}

@@ -25,6 +25,14 @@
    }
 }
 
+@media screen and (max-width: 1024px) {
+   .container {
+       .title {
+           position: relative;
+       }
+   } 
+}
+
 @media screen and (max-width: 991px) {
    .container {
       .title {

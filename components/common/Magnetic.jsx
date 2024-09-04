@@ -48,7 +48,7 @@ function Magnetic({ children }) {
       });
     };
 
-    if (window.innerWidth > 540) {
+    if (window.innerWidth > 1024) {
       magnetic.current.addEventListener('mousemove', handleMouseMove);
       magnetic.current.addEventListener('mouseleave', handleMouseLeave);
     }

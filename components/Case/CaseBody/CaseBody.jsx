@@ -4,8 +4,10 @@ import MediaContent from '../MediaContent/MediaContent';
 import styles from './caseBody.module.scss';
 import { useRef } from 'react';
 import { useScroll, useTransform } from 'framer-motion';
+import useEnableAnimation from '@/hooks/useEnableAnimations';
 
 function CaseBody({ project }) {
+  const enableAnimations = useEnableAnimation();
   const { src, slogan, title } = project;
   const container = useRef(null);
 
@@ -19,7 +21,7 @@ function CaseBody({ project }) {
     <section ref={container} className={styles.container}>
       <Bio project={project} />
       <MediaContent src={src} title={title} slogan={slogan} />
-      <CurvedBorder height={height} />
+      {enableAnimations && <CurvedBorder height={height} />}
     </section>
   );
 }

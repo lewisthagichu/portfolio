@@ -6,8 +6,10 @@ import { useScroll, useTransform, motion } from 'framer-motion';
 import Image from 'next/image';
 import SocialsLinks from '@/components/Footer/SocialLinks/SocialsLinks';
 import RoundButton from '@/components/common/RoundButton';
+import useEnableAnimation from '@/hooks/useEnableAnimations';
 
 function NextCase({ index }) {
+  const enableAnimations = useEnableAnimation();
   const currentIndex = cases.findIndex((c) => c.index === index);
   const nextIndex = (currentIndex + 1) % cases.length;
   const nextCase = cases[nextIndex];
@@ -23,7 +25,7 @@ function NextCase({ index }) {
   return (
     <motion.div
       ref={container}
-      style={{ y }}
+      style={{ y: enableAnimations ? y : 0 }}
       className={`${NeuehaasBody.className} ${styles.container}`}
     >
       <div className={styles.imageContainer}>
@@ -40,7 +42,10 @@ function NextCase({ index }) {
 
         <div className="overlay"></div>
       </div>
-      <motion.div style={{ y: btnY }} className={styles.nextBtn}>
+      <motion.div
+        style={{ y: enableAnimations ? btnY : 0 }}
+        className={styles.nextBtn}
+      >
         <RoundButton href={nextCase?.link} text={'View Project'} />
       </motion.div>
 

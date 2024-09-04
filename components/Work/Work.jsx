@@ -5,8 +5,10 @@ import { useScroll, useTransform, motion } from 'framer-motion';
 import { slideUp, animm } from '@/utils/anim';
 import ProjectsWrapper from './ProjectsWrapper/ProjectsWrapper';
 import Footer from '../Footer/Footer';
+import useEnableAnimation from '@/hooks/useEnableAnimations';
 
 function Work() {
+  const enableAnimations = useEnableAnimation();
   const container = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -20,7 +22,14 @@ function Work() {
 
   return (
     <motion.div {...animm(slideUp)} className={styles.container}>
-      <motion.section style={{ opacity, scale, y }} className={styles.title}>
+      <motion.section
+        style={{
+          opacity: enableAnimations ? opacity : 1,
+          scale: enableAnimations ? scale : 1,
+          y: enableAnimations ? y : 0,
+        }}
+        className={styles.title}
+      >
         <h2 className={ArgesHeavy.className}>WORK</h2>
       </motion.section>
 

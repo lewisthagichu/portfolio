@@ -4,8 +4,10 @@ import { useScroll, useTransform, motion } from 'framer-motion';
 import { ArgesHeavy, NeuehaasBody } from '@/public/fonts/fonts';
 import MagneticButton from '../common/MagneticButton';
 import SocialsLinks from './SocialLinks/SocialsLinks';
+import useEnableAnimation from '@/hooks/useEnableAnimations';
 
 function Footer() {
+  const enableAnimations = useEnableAnimation();
   const container = useRef(null);
   const slider = useRef(null);
 
@@ -19,7 +21,7 @@ function Footer() {
   return (
     <motion.section
       ref={container}
-      style={{ y }}
+      style={{ y: enableAnimations ? y : 0 }}
       className={`${styles.container} ${NeuehaasBody.className}`}
     >
       <div className={styles.tag}></div>

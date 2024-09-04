@@ -5,8 +5,10 @@ import { useScroll, useTransform, motion } from 'framer-motion';
 import { slideUp, animm } from '@/utils/anim';
 import CaseBody from './CaseBody/CaseBody';
 import NextCase from './NextCase/NextCase';
+import useEnableAnimation from '@/hooks/useEnableAnimations';
 
 function Case({ project }) {
+  const enableAnimations = useEnableAnimation();
   const { title, index } = project;
   const container = useRef(null);
 
@@ -25,7 +27,14 @@ function Case({ project }) {
       ref={container}
       className={styles.container}
     >
-      <motion.div style={{ opacity, scale, y }} className={styles.title}>
+      <motion.div
+        style={{
+          opacity: enableAnimations ? opacity : 1,
+          scale: enableAnimations ? scale : 1,
+          y: enableAnimations ? y : 0,
+        }}
+        className={styles.title}
+      >
         <h2 className={ArgesHeavy.className}>{title}</h2>
       </motion.div>
 
