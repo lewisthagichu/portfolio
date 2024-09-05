@@ -79,6 +79,21 @@
     }
 }
 
+@media screen and (max-width: 1024px) {
+    .container {
+        .imageContainer {
+            .image {
+                height: 100%;
+
+                img {
+                    top: 0;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 786px) {
     .container {        
         .imageContainer {
