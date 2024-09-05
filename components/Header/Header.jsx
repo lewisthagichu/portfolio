@@ -43,12 +43,15 @@ function Header() {
         </div>
 
         <div className={styles.region}>
-          <p className={styles.date}>{dateTime.date}</p>
           <p className={styles.status}>
-            Available for projects <span className={styles.blinkingDot}></span>
+            <Link href="/contact" scroll={false}>
+              Available for projects{' '}
+              <span className={styles.blinkingDot}></span>
+            </Link>
           </p>
-          <p className={styles.time}>{dateTime.time}</p>
           <p className={styles.location}>Nairobi, KE</p>
+          <p className={styles.date}>{dateTime.date}</p>
+          <p className={styles.time}>{dateTime.time}</p>
         </div>
       </div>
 
