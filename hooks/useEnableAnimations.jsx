@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const useEnableAnimation = (breakpoint = 1024) => {
-  const [enableAnimation, setEnableAnimation] = useState(true);
+  const [enableAnimation, setEnableAnimation] = useState(false);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia(`(max-width: ${breakpoint}px)`);
