@@ -4,11 +4,13 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { NeuehaasBody } from '@/public/fonts/fonts';
 import Magnetic from '@/components/common/Magnetic';
 import FlipText from '@/components/FlipText/FlipText';
+import useEnableAnimation from '@/hooks/useEnableAnimations';
 
 function Bio({ project }) {
   const { client, year, technologies, role, description, live, github } =
     project;
   const container = useRef(null);
+  const enableAnimations = useEnableAnimation(540);
 
   const { scrollYProgress } = useScroll({
     target: container,
@@ -69,7 +71,10 @@ function Bio({ project }) {
         <p>{description}</p>
       </div>
 
-      <motion.div style={{ y }} className={styles.liveBtn}>
+      <motion.div
+        style={{ y: enableAnimations ? y : 0 }}
+        className={styles.liveBtn}
+      >
         <a href={live ? live : github} target="_blank">
           <Magnetic>
             <button
