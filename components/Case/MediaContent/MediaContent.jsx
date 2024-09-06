@@ -15,6 +15,7 @@ function MediaContent({ src, slogan, title }) {
             loop
             aria-label="Video player"
             preload="none"
+            controls
           >
             <source
               src={`${src}/${
