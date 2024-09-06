@@ -1,19 +1,24 @@
 import styles from './form.module.scss';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { NeuehaasBody } from '@/public/fonts/fonts';
+import { toast } from 'react-toastify';
 import Magnetic from '@/components/common/Magnetic';
+import emailjs from '@emailjs/browser';
 
 function Form() {
-  const [usernameError, setUsernameError] = useState('');
-  const [emailError, setEmailError] = useState('');
-  const [messageError, setMessageError] = useState('');
+  const formRef = useRef(null);
+  const [errors, setErrors] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
   const [formData, setFormData] = useState({
-    username: '',
+    name: '',
     email: '',
     message: '',
   });
 
-  const { username, email, message } = formData;
+  const { name, email, message } = formData;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -25,57 +30,80 @@ function Form() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let hasError = false;
+    try {
+      if (name.trim() === '') {
+        setErrors((prevState) => ({
+          ...prevState,
+          name: 'Please enter your name',
+        }));
+        return;
+      }
 
-    if (username.trim() === '') {
-      setUsernameError('Please enter your name.');
-      hasError = true;
-    } else {
-      setUsernameError('');
-    }
+      if (email.trim() === '' || !email.includes('@')) {
+        setErrors((prevState) => ({
+          ...prevState,
+          email: 'Please enter a valid email address.',
+        }));
+        return;
+      }
 
-    if (email.trim() === '') {
-      setEmailError('Please enter your email address.');
-      hasError = true;
-    } else {
-      setEmailError('');
-    }
+      if (message.trim() === '') {
+        setErrors((prevState) => ({
+          ...prevState,
+          message: 'Please enter your message.',
+        }));
 
-    if (message.trim() === '') {
-      setMessageError('Please enter your message.');
-      hasError = true;
-    } else {
-      setMessageError('');
-    }
+        return;
+      }
 
-    if (!hasError) {
-      console.log('Form submitted:', formData);
+      emailjs
+        .sendForm('service_c9uerbf', 'template_pijqjbw', formRef.current, {
+          publicKey: '51GrnnqtQ3FE-YPhq',
+        })
+        .then(
+          () => {
+            setFormData({
+              name: '',
+              email: '',
+              message: '',
+            });
+            setErrors({
+              name: '',
+              email: '',
+              message: '',
+            });
+            toast.success('Message sent successfully');
+          },
+          (error) => {
+            console.log(error);
+            throw new Error('Something went wrong. Please try again');
+          }
+        );
+    } catch (error) {
+      toast.error('Something went wrong. Please try again.');
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className={styles.form}>
+    <form ref={formRef} onSubmit={handleSubmit} className={styles.form}>
       <div className={styles.formRow}>
         <div className={styles.formCol}>
-          <label
-            style={{ opacity: username === '' ? 1 : 0.5 }}
-            htmlFor="username"
-          >
+          <label style={{ opacity: name === '' ? 1 : 0.5 }} htmlFor="name">
             Your Name*
           </label>
           <input
             type="text"
-            id="username"
-            name="username"
-            value={username}
+            id="name"
+            name="name"
+            value={name}
             onChange={handleChange}
             placeholder="Enter your name"
             autoComplete="on"
-            // required
+            required
           />
-          {usernameError && (
+          {errors.name && (
             <div className={styles.alert}>
-              <span>{usernameError}</span>
+              <span>{errors.name}</span>
             </div>
           )}
         </div>
@@ -94,9 +122,9 @@ function Form() {
             autoComplete="on"
             // required
           />
-          {emailError && (
+          {errors.email && (
             <div className={styles.alert}>
-              <span>{emailError}</span>
+              <span>{errors.email}</span>
             </div>
           )}
         </div>
@@ -119,9 +147,9 @@ function Form() {
             placeholder="Hello Lewis, I need assistance with..."
             // required
           ></textarea>
-          {messageError && (
+          {errors.message && (
             <div className={styles.alert}>
-              <span>{messageError}</span>
+              <span>{errors.message}</span>
             </div>
           )}
         </div>

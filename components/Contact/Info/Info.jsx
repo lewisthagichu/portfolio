@@ -12,9 +12,9 @@ function Info() {
             <a
               data-strength="20"
               data-text-strength="0"
-              href="mailto:hello@lewisthagichu.com"
+              href="mailto:info@lewisthagichu.com"
             >
-              <span className="btn-text">hello@lewisthagichu.com</span>
+              <span className="btn-text">info@lewisthagichu.com</span>
             </a>
           </Magnetic>
           <Magnetic>

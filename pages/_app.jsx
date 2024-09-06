@@ -52,8 +52,8 @@ export default function App({ Component, pageProps, router }) {
 
           <AnimatePresence mode="wait">
             <Component key={router.asPath} {...pageProps} />
-            <ToastContainer />
           </AnimatePresence>
+          <ToastContainer />
         </>
       )}
     </>
