@@ -1,5 +1,6 @@
 // import '@/styles/normalize.css';
 import '@/styles/globals.css';
+import 'react-toastify/dist/ReactToastify.css';
 import Header from '@/components/Header/Header';
 import Head from 'next/head';
 import Preloader from '@/components/Preloader/Preloader';
@@ -7,6 +8,7 @@ import { AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { useNextCssRemovalPrevention } from '@madeinhaus/nextjs-page-transition';
+import { ToastContainer } from 'react-toastify';
 
 export default function App({ Component, pageProps, router }) {
   const pathname = usePathname();
@@ -50,6 +52,7 @@ export default function App({ Component, pageProps, router }) {
 
           <AnimatePresence mode="wait">
             <Component key={router.asPath} {...pageProps} />
+            <ToastContainer />
           </AnimatePresence>
         </>
       )}
