@@ -52,6 +52,29 @@
         margin-top: .4em;
         font-size: var(--regular-text-size);
       }
+
+      .links {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        margin-top: .8em;
+
+        a {
+          background-color: transparent;
+          width: max-content;
+        }
+
+        svg {
+          height: 2.8em;
+          width: 2.8em;
+          transition: all 100ms ease-in;
+
+          &:hover {
+            fill: var(--color-beige);
+          }
+        }
+      }
+
     }
   }
 
@@ -103,6 +126,15 @@
       padding: 0 var(--section-padding);
       display: block;
       text-align: start;
+
+      .location {
+        .links {
+          svg {
+            height: 2em;
+            width: 2em;
+          }
+        }
+      }
     }
   }
   

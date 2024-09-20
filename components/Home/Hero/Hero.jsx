@@ -1,5 +1,7 @@
 import styles from './hero.module.scss';
 import { NeuehaasBody, ArgesHeavy } from '@/public/fonts/fonts';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import Link from 'next/link';
 
 function Hero() {
   return (
@@ -19,6 +21,17 @@ function Hero() {
         <div className={`${styles.location} ${NeuehaasBody.className}`}>
           <p>Full-stack developer</p>
           <p>Based in Nairobi</p>
+          <div className={styles.links}>
+            <a href="https://github.com/lewisthagichu" target="_blank">
+              <FaGithub />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/lewis-thagichu/"
+              target="_blank"
+            >
+              <FaLinkedin />
+            </a>
+          </div>
         </div>
       </div>
 
