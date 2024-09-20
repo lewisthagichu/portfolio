@@ -34,7 +34,7 @@ function Summary() {
           ))}
         </div>
         <div className={styles.box}>
-          <h4>Technologies</h4>
+          <h4>Skills</h4>
           <div className={styles.tech}>
             {stack.map((tech, i) => (
               <span key={`t_${i}`}>{tech}</span>

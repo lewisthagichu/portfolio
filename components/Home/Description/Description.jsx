@@ -15,7 +15,7 @@ function Description() {
           ))}
         </div>
         <div className={styles.expertise}>
-          <h4>SKILLS</h4>
+          <h4>TECHNOLOGIES</h4>
           <div>
             {expertises.map((expertise, index) => (
               <p key={`exp_${index}`}>
