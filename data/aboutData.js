@@ -1,7 +1,7 @@
 // Description component
 export const paragraphs = [
   'I’m a full-stack developer dedicated to turning ideas into memorable digital experiences. My focus is on delivering high-performance applications that drive engagement and growth.',
-  "Currently I'm  driving innovation at Feastify which seeks to transform how people access and enjoy personalized culinary experiences.",
+  "Currently I'm  driving innovation at Creator of Impact which focuses on mentoring young adults and educating them on governance and fostering social responsibility.",
 ];
 
 export const expertises = [
@@ -23,7 +23,6 @@ export const expertises = [
 // Summary component
 export const aboutMe = [
   "I'm Lewis Thagichu, a software engineer based in Nairobi, Kenya. I enjoy building software in the sweet spot where design and engineering meet — things that look good but are also built well under the hood.",
-  "Outside of work, I'm the co-founder of Creators of Impact, an NGO dedicated to mentoring young adults and educating them on governance and fostering social responsibility.",
 ];
 
 export const stack = [
