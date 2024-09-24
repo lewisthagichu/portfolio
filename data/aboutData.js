@@ -1,7 +1,7 @@
 // Description component
 export const paragraphs = [
   'I’m a full-stack developer dedicated to turning ideas into memorable digital experiences. My focus is on delivering high-performance applications that drive engagement and growth.',
-  "Currently I'm  driving innovation at Creator of Impact which focuses on mentoring young adults and educating them on governance and fostering social responsibility.",
+  "I'm currently building a digital platform at Creators of Impact, an organization which seeks to mentor young adults, educate them on governance, and encourage social responsibility. When I’m not working, I enjoy hiking, reading, and spending time with friends.",
 ];
 
 export const expertises = [
