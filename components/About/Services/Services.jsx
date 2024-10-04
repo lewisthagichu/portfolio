@@ -33,7 +33,7 @@ function Services() {
             <span className={BlackStone.className}>sustained growth</span>
           </h2>
           <div className={`${styles.services} ${NeuehaasBody.className}`}>
-            <h3>Services:</h3>
+            <h3>Services</h3>
             <div className={styles.offers}>
               {offers.map(({ title, description }, i) => (
                 <div className={styles.offer} key={`o_${i}`}>
