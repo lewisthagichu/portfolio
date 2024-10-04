@@ -9,7 +9,7 @@ import { slideUp, animm } from '@/utils/anim';
 function About() {
   return (
     <motion.div {...animm(slideUp)} className={styles.container}>
-      <AboutHero />
+      {/* <AboutHero /> */}
       <Summary />
       <Services />
       <Footer />
