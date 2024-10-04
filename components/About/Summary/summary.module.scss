@@ -1,7 +1,7 @@
 .container {
     position: relative;
     background-color: var(--color-dark);
-    padding: var(--section-padding);
+    padding: calc(var(--section-padding));
     color: var(--color-white);
     display: grid;
     grid-template-columns: auto auto; 
@@ -89,6 +89,6 @@
 
 @media screen and (max-width: 512px) {
     .container {
-        padding: var(--section-padding) var(--mobile-padding);
+        padding: calc(var(--section-padding)*2) var(--mobile-padding);
     }
 }
