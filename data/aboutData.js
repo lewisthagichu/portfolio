@@ -1,7 +1,7 @@
 // Description component
 export const paragraphs = [
   'I’m a full-stack developer dedicated to turning ideas into memorable digital experiences. My focus is on delivering high-performance applications that drive engagement and growth.',
-  "I'm currently building a digital platform at Creators of Impact, an organization which seeks to mentor young adults, educate them on governance, and encourage social responsibility. When I’m not working, I enjoy hiking, reading, and spending time with friends.",
+  "I'm currently building an accessible and responsive platform for our users at Creators of Impact.",
 ];
 
 export const expertises = [
@@ -11,6 +11,7 @@ export const expertises = [
   'Node.js',
   'Express.js',
   'Django',
+  'Flask',
   'Redis',
   'MongoDB',
   'PostgreSQL',
