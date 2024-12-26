@@ -16,7 +16,7 @@
     "framer-motion": "^11.2.12",
     "gsap": "^3.12.5",
     "lenis": "^1.1.4",
-    "next": "14.2.12",
+    "next": "14.2.21",
     "normalize.css": "^8.0.1",
     "react": "^18",
     "react-dom": "^18",
