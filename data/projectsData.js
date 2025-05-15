@@ -1,6 +1,15 @@
 export const cases = [
   {
     index: 0,
+    title: 'Jazaplan',
+    tag: 'A peer-to-peer lending platform that bridges financial gaps by connecting capital with opportunity.',
+    link: '/work/jazaplan',
+    background: '#3F93E2',
+    tech: ['Nest.js', 'React', 'PostgreSQL', 'Tailwind', 'Docker'],
+    year: 2025,
+  },
+  {
+    index: 1,
     title: 'QuickHunt',
     tag: 'A platform designed to streamline the process of finding rental properties.',
     link: '/work/quickhunt',
@@ -9,7 +18,7 @@ export const cases = [
     year: 2024,
   },
   {
-    index: 1,
+    index: 2,
     title: 'NexTalk',
     tag: 'A real-time chat application designed to facilitate seamless and instant communication.',
     link: '/work/nextalk',
@@ -18,7 +27,7 @@ export const cases = [
     year: 2024,
   },
   {
-    index: 2,
+    index: 3,
     title: 'Portfolio',
     tag: 'A website to showcase my skills and projects.',
     link: '/work/portfolio',
@@ -27,7 +36,7 @@ export const cases = [
     year: 2024,
   },
   {
-    index: 3,
+    index: 4,
     title: 'TicTacPlay',
     tag: 'A fun and interactive site where users can enjoy playing Tic-Tac-Toe.',
     link: '/work/tictacplay',
@@ -35,9 +44,8 @@ export const cases = [
     tech: ['HTML', 'CSS', 'Javascript', 'Gsap'],
     year: 2023,
   },
-
   {
-    index: 4,
+    index: 5,
     title: 'Ignite',
     tag: 'A responsive CRM dashboard that provides an intuitive interface to manage and track customer information, deals, and performance.',
     link: '/work/ignite',

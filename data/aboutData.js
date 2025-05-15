@@ -1,14 +1,14 @@
 // Description component
 export const paragraphs = [
-  'I’m a full-stack developer dedicated to turning ideas into memorable digital experiences. My focus is on delivering high-performance applications that drive engagement and growth.',
-  "I'm currently building an accessible and responsive platform for our users at Creators of Impact.",
+  'I’m a full-stack engineer dedicated to turning ideas into memorable digital experiences. My focus is on delivering high-performance applications that drive engagement and growth.',
+  "I'm currently working as a lead engineer at LML Digitals, a digital innovation forge located in Seattle.",
 ];
 
 export const expertises = [
   'Next.js',
   'React',
-  'Tyescript',
-  'Node.js',
+  'TypeScript',
+  'Docker',
   'Express.js',
   'Django',
   'Flask',
@@ -17,7 +17,6 @@ export const expertises = [
   'PostgreSQL',
   'MySQL',
   'Tailwind',
-  'Sass',
   'Git',
 ];
 
@@ -28,12 +27,15 @@ export const aboutMe = [
 
 export const stack = [
   'Responsive Web Design',
-  'Interactive Design',
-  'Creative Development',
-  'API Development',
-  'Database Management',
-  'Performance Optimization',
-  'Version Control',
+  'API Development & Integration',
+  'Database Management (SQL/NoSQL)',
+  'Performance Optimization (Frontend & Backend)',
+  'Version Control (Git, GitHub/GitLab)',
+  'DevOps & CI/CD Pipelines (Docker, Kubernetes, Jenkins)',
+  'Cloud Infrastructure (AWS, Azure, GCP)',
+  'Infrastructure as Code (Terraform, Ansible)',
+  'Monitoring & Logging (Prometheus, Grafana, ELK)',
+  'Scripting & Automation (Bash, Python)',
 ];
 
 // Services component

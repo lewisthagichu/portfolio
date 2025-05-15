@@ -1,0 +1,12 @@
+{
+    "index": 0,
+    "title": "Jazaplan",
+    "slogan": "Connect. Invest. Grow Together.",
+    "tag": "A peer-to-peer lending platform that bridges financial gaps by connecting capital with opportunity.",
+    "description": "JazaPlan revolutionizes community lending by connecting investors with trustworthy borrowers through a secure, transparent platform. It seeks to empower local entrepreneurs with quick access to capital while providing lenders with reliable returns. The streamlined process eliminates paperwork, reduces risk, and builds financial inclusion transforming how communities grow wealth together.",
+    "technologies": ["Nest.js", "React", "PostgreSQL", "Docker", "BitBucket", "Jira"],
+    "year": "2024-2025",
+    "client": "Muva Technologies",
+    "role": "Design & Development",
+    "live": "https://jazaplan.com"
+  }
