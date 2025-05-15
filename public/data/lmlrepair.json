@@ -1,0 +1,12 @@
+{
+    "index": 0,
+    "title": "LML Repair",
+    "slogan": "Click. Schedule. Fixed.",
+    "tag": "A visually clean, performance-optimized site that mirrors LML Repair’s reliability.",
+    "description": "The LML Repair website is a user-centric platform designed to streamline the electronics repair process. Featuring real-time service booking, transparent pricing, and mobile-responsive navigation, the site reduces friction for customers seeking quick, reliable fixes.",
+    "technologies": ["Next.js", "Supabase", "PostgreSQL", "Trello"],
+    "year": "2024-2025",
+    "client": "LML Digitals",
+    "role": "Design & Development",
+    "live": "https://lmlrepair.com"
+  }
