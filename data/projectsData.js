@@ -1,15 +1,24 @@
 export const cases = [
   {
     index: 0,
+    title: 'Sowphie',
+    tag: 'A smart farm management app that helps farmers optimize their operations and increase productivity.',
+    link: '/work/sowphie',
+    background: '#475802',
+    tech: ['React Native', 'Supabase', 'FastApi'],
+    year: 'Present',
+  },
+  {
+    index: 1,
     title: 'LML Repair',
     tag: 'A visually clean, performance-optimized site that mirrors LML Repair’s reliability.',
     link: '/work/lmlrepair',
     background: '#62A9A8',
-    tech: ['Next.js', 'Supabase', 'PostgreSQL', 'Tailwind'],
+    tech: ['Next.js', 'Supabase', 'Tailwind'],
     year: 2025,
   },
   {
-    index: 1,
+    index: 2,
     title: 'Jazaplan',
     tag: 'A peer-to-peer lending platform that bridges financial gaps by connecting capital with opportunity.',
     link: '/work/jazaplan',
@@ -18,7 +27,7 @@ export const cases = [
     year: 2025,
   },
   {
-    index: 2,
+    index: 3,
     title: 'QuickHunt',
     tag: 'A platform designed to streamline the process of finding rental properties.',
     link: '/work/quickhunt',
@@ -27,7 +36,7 @@ export const cases = [
     year: 2024,
   },
   {
-    index: 3,
+    index: 4,
     title: 'NexTalk',
     tag: 'A real-time chat application designed to facilitate seamless and instant communication.',
     link: '/work/nextalk',
@@ -36,7 +45,7 @@ export const cases = [
     year: 2024,
   },
   {
-    index: 4,
+    index: 5,
     title: 'Portfolio',
     tag: 'A website to showcase my skills and projects.',
     link: '/work/portfolio',

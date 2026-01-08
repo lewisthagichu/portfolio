@@ -1,22 +1,22 @@
 // Description component
 export const paragraphs = [
   'I’m a full-stack engineer dedicated to turning ideas into memorable digital experiences. My focus is on delivering high-performance applications that drive engagement and growth.',
-  "I'm currently working as a lead engineer at LML Digitals, a digital innovation forge located in Seattle.",
+  "I'm currently working as a tech lead at Sowphie, whose mission is to empower farmers across Sub-Saharan Africa to manage their entire operations from one platform.",
 ];
 
 export const expertises = [
-  'Next.js',
   'React',
+  'React Native',
+  'Kotlin',
+  'Golang',
+  'Next.js',
   'TypeScript',
   'Docker',
   'Express.js',
   'Django',
-  'Flask',
+  'FastApi',
   'Redis',
-  'MongoDB',
   'PostgreSQL',
-  'MySQL',
-  'Tailwind',
   'Git',
 ];
 
@@ -26,7 +26,7 @@ export const aboutMe = [
 ];
 
 export const stack = [
-  'Responsive Web Design',
+  'Responsive Mobile and Web Design',
   'API Development & Integration',
   'Database Management (SQL/NoSQL)',
   'Performance Optimization (Frontend & Backend)',
@@ -43,7 +43,7 @@ export const offers = [
   {
     title: '[01] Front-end Development',
     description:
-      'I craft visually engaging and user-friendly interfaces, specializing in responsive design for seamless experiences on any device. My expertise lies in bringing interactive elements to life.',
+      'I craft visually engaging and user-friendly mobile and web interfaces, specializing in responsive design for seamless experiences on any device. My expertise lies in bringing interactive elements to life.',
   },
   {
     title: '[02] Back-end Development',

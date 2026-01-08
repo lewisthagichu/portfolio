@@ -1,0 +1,12 @@
+{
+    "index": 0,
+    "title": "Sowphie",
+    "slogan": "Farm Management Made Simple",
+    "tag": "A smart farm management app that helps farmers optimize their operations and increase productivity.",
+    "description": "An integrated platform that allows farm owners and their  entire team to collaborate across all their farming activities, with complete history and records that actually inform better decisions for the future",
+    "technologies": ["React Native", "FastApi", "Supabase"],
+    "year": "Present",
+    "client": "Sowphie Ltd.",
+    "role": "Design & Development",
+    "live": "https://sowphie.io/"
+  }

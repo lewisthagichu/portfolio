@@ -6,7 +6,7 @@ function SocialsLinks({ divStyles = '' }) {
     <div className={`socials ${divStyles}`}>
       <Magnetic>
         <p data-strength="20" data-text-strength="0">
-          <span className="btn-text">© Lewis Thagichu 2024</span>
+          <span className="btn-text">© Lewis Thagichu 2026</span>
         </p>
       </Magnetic>{' '}
       <div className="links">
